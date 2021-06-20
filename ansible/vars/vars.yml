@@ -1,0 +1,8 @@
+---
+siteuser: aqua
+servicename: aqua
+installpath: "/opt/{{ siteuser }}"
+gitrepo: "https://github.com/Manotomo-Alliance-Support-Squad/aqua-sweet-dreams"
+backend_proto: "https"
+backend_ip: "ganbareakutan.manotomo.com"
+backend_port: "443"
