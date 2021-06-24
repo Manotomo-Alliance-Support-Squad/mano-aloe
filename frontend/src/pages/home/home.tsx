@@ -17,6 +17,10 @@ import HeaderSection from "../../components/headerSection/header";
 import FooterSection from "../../components/footerSection/footer";
 import AltNav from '../../components/navigation/altnav';
 import AnchorSingleSection from "../../components/anchor/anchorSingleSection";
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import AnchorStandaloneBotan from "../../components/anchor/anchorStandaloneBotan";
+
+import ProjectCard from '../../components/projectSection/projectCard.tsx';
 
 // CSS
 import './home.css';
@@ -48,9 +52,9 @@ export interface HomePageState {
 
 const Anchors: Anchor[] = [
     {
-        href: "#video-anchor",
-        svgIcon: AnchorBotan,
-        text: "Video",
+        href: "#projects-anchor",
+        svgIcon: ExpandMoreIcon,
+        text: "Projects",
     },
 ]
 
@@ -238,10 +242,6 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
         return comboCardData
     }
 
-    pad (pixels: int = 25) {
-        return (<div style={{ height: pixels }}></div>);
-    }
-
     render() {
         const comboCardData = this.compileCardData()
         const { activeHrefs } = this.state;
@@ -251,8 +251,15 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                     <div className="home-header">
                         <h1 className="home-header-title">Dear Coco,</h1>
                         <div className="home-header-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                        <AnchorStandaloneBotan anchor={Anchors[0]} />
                     </div>
-                    <div style={{ height: "200px" }} />
+                    <AnchorSupportedSection anchor={Anchors[0]} onVisible={this.onAnchorVisible}>
+                        <>
+                            <div style={{ height: "5rem" }} />
+                            <ProjectCard title={"test\ntest3"}/>
+                        </>
+                    </AnchorSupportedSection>
+                    <div style={{ height: "2000px" }} />
                 </div>
             </div>
         )

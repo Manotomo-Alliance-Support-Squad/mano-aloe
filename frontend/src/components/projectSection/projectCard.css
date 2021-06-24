@@ -1,0 +1,23 @@
+.project-card {
+    display: flex;
+}
+
+/* css is pain */
+.project-card .left,.project-card .right {
+    flex: 1 1;
+    color: var(--project-card-foreground-color);
+    background-color: var(--project-card-background-color);
+}
+
+.project-card-project {
+    padding: 1rem;
+}
+
+.project-card-description {
+    padding: 1rem;
+    white-space: pre-wrap; /* Allow line breaks */
+}
+
+.project-card-description .project-username {
+    text-align: right;
+}
