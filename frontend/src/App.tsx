@@ -1,19 +1,13 @@
 import React, { Suspense, lazy } from "react";
 import { Route, Switch, Redirect } from 'react-router-dom';
 
-import ButtonAppBar from './components/navigation/navbar';
 import './App.css';
 
 import SessionService from "./services/session.service";
 import { LanguageContext, LanguageContextValue } from "./components/languageSwitch/languageContext";
 import DisplayedLanguage from "./models/language";
 
-import HeaderSection from "./components/headerSection/header";
-import FooterSection from "./components/footerSection/footer";
-
 import HomePage from './pages/home/home';
-import AltNav from './components/navigation/altnav';
-import AnchorSingleSection from "./components/anchor/anchorSingleSection";
 import { AnchorSectionPosition } from "./models/achor";
 import { ReactComponent as AnchorBotan } from "./assets/icons/toTopAnchorIcon.svg";
 
@@ -43,23 +37,12 @@ export default class App extends React.Component<AppProps, LanguageContextValue>
     render() {
         return (
             <LanguageContext.Provider value={this.state}>
-                <HeaderSection />
-                <ButtonAppBar />
-                <main className="main">
-                    <Switch>
-                        <Route exact path='/'>
-                            <Redirect to="/home" />
-                        </Route>
-                        <Route path='/home' component={HomePage} />
-                    </Switch>
-                </main>
-                <div style={{ height: "25px" }} />
-                <AltNav />
-                <FooterSection />
-                <AnchorSingleSection position={AnchorSectionPosition.BOTTOM_RIGHT} anchor={{
-                    href: "#header",
-                    svgIcon: AnchorBotan, //TODO: replace this with aqua onion
-                }} />
+                <Switch>
+                    <Route exact path='/'>
+                        <Redirect to="/home" />
+                    </Route>
+                    <Route path='/home' component={HomePage} />
+                </Switch>
             </LanguageContext.Provider>
         );
     }
