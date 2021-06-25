@@ -31,6 +31,8 @@
 
     --header-background-color: #ffffff;
     --separator-background-color: #ffffff;
+
+    --theme-font: "Caveat";
 }
 
 body {

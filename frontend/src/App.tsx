@@ -8,7 +8,7 @@ import { LanguageContext, LanguageContextValue } from "./components/languageSwit
 import DisplayedLanguage from "./models/language";
 
 import HomePage from './pages/home/home';
-import { AnchorSectionPosition } from "./models/achor";
+import { AnchorSectionPosition } from "./models/anchor";
 import { ReactComponent as AnchorBotan } from "./assets/icons/toTopAnchorIcon.svg";
 
 interface AppProps {

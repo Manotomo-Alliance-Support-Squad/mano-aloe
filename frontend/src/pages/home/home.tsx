@@ -5,12 +5,14 @@ import { Message } from "../../models/message";
 import ManoAloeService from "../../controllers/mano-aloe.service";
 import SessionService from "../../services/session.service";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import ArrowDropDownCircleOutlinedIcon from '@material-ui/icons/ArrowDropDownCircleOutlined';
+import EmailIcon from '@material-ui/icons/Email';
+import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
 import { Announcement } from "../../models/announcement"
 import { Artwork, MultiArtwork } from "../../models/artwork"
 import { Video } from "../../models/video"
 import AnnouncementSection from "../../components/announcementSection/announcementSection";
-import AnchorSupportedSection from "../../components/anchorSupportedSection/anchorSupportedSection";
+import AnchorSupportedSection, { handleSectionVisibility } from "../../components/anchorSupportedSection/anchorSupportedSection";
+import GameSection from '../../components/gamesSection/gameSection';
 
 import ButtonAppBar from '../../components/navigation/navbar';
 import HeaderSection from "../../components/headerSection/header";
@@ -20,7 +22,7 @@ import AnchorSingleSection from "../../components/anchor/anchorSingleSection";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AnchorStandaloneBotan from "../../components/anchor/anchorStandaloneBotan";
 
-import ProjectCard from '../../components/projectSection/projectCard.tsx';
+import ProjectCard from '../../components/projectSection/projectCard';
 
 // CSS
 import './home.css';
@@ -30,9 +32,10 @@ import '../../shared/globalStyles/global.css'
 import { LanguageContext, LanguageContextValue } from '../../components/languageSwitch/languageContext';
 import MessageCard from '../../components/messageSection/messageCard/messageCard';
 import '../../components/headerSection/header.css';
-import { Anchor, AnchorSectionPosition } from '../../models/achor';
-import AnchorMultipleSection from '../../components/anchor/anchorMultipleSection';
+import { Anchor, AnchorSectionPosition } from '../../models/anchor';
+import AnchorMultipleSection, { MultipleAnchorStates } from '../../components/anchor/anchorMultipleSection';
 import { ReactComponent as AnchorBotan } from "../../assets/icons/anchorIcon.svg";
+import { Game } from '../../models/game';
 
 export interface HomePageProps {
 
@@ -47,12 +50,18 @@ export interface HomePageState {
     artworks: Artwork[];
     multiArtworks: MultiArtwork[];
     videos: Video[];
-    activeHrefs: string[];
+    games: Game[];
+    activeHrefs: MultipleAnchorStates[];
 }
 
 const Anchors: Anchor[] = [
     {
         href: "#projects-anchor",
+        svgIcon: ExpandMoreIcon,
+        text: "Projects",
+    },
+    {
+        href: "#messages-anchor",
         svgIcon: ExpandMoreIcon,
         text: "Projects",
     },
@@ -69,6 +78,8 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
         this.loadAnnouncements = this.loadAnnouncements.bind(this);
         this.loadMessages = this.loadMessages.bind(this);
         this.loadMultiGallery = this.loadMultiGallery.bind(this);
+        this.loadGames = this.loadGames.bind(this);
+
         this.onAnchorVisible = this.onAnchorVisible.bind(this);
     }
 
@@ -80,6 +91,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
         announcements: [],
         artworks: [],
         videos: [],
+        games: [],
         multiArtworks: [],
         activeHrefs: [],
     }
@@ -94,10 +106,11 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
         this.loadArtwork();
         this.loadVideo();
         this.loadMultiGallery();
+        this.loadGames();
     }
 
     onAnchorVisible(isVisible: boolean, activeHref: string) {
-        AnchorSupportedSection.onSectionVisible(this, isVisible, activeHref);
+        handleSectionVisibility(this, isVisible, activeHref);
     }
 
     async loadMessages() {
@@ -168,6 +181,22 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
         } else {
             getMultipleArtworkFromService().finally(
                 () => SessionService.saveMultiGallery(this.state.multiArtworks)
+            );
+        }
+    }
+
+    async loadGames() {
+        const setGamesToState = (games: Game[]) => this.setState({ games });
+        const getGamseFromService = () => this.manoAloeService.getGame()
+            .then(setGamesToState)
+            .catch(console.error);
+
+        const games = SessionService.getGame() ?? [];
+        if (games?.length) {
+            setGamesToState(games);
+        } else {
+            getGamseFromService().finally(
+                () => SessionService.saveGame(this.state.games)
             );
         }
     }
@@ -251,7 +280,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                     <div className="home-header">
                         <h1 className="home-header-title">Dear Coco,</h1>
                         <div className="home-header-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                        <AnchorStandaloneBotan anchor={Anchors[0]} />
+                        <AnchorStandaloneBotan anchor={Anchors[0]} position={AnchorSectionPosition.LEFT} />
                     </div>
                     <div style={{ height: "5rem" }} />
                     <AnchorSupportedSection anchor={Anchors[0]} onVisible={this.onAnchorVisible}>
@@ -259,11 +288,13 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                             <ProjectCard 
                                 username="Revel"
                                 title="A Song, for You" 
+                                projectlink="https://duckduckgo.com"
                                 description={"Dame da ne, dame yo, dame na no yo"} 
                                 thumbnail="https://cdn.discordapp.com/attachments/856038775826022411/857377808706961448/Goodbye_Coco_thumbnail.png"/>
                             <ProjectCard 
-                                username="-With love, from fans all across the world."
+                                username="With love, from fans all across the world."
                                 title="A Game, for You" 
+                                projectlink="https://duckduckgo.com"
                                 description={"A seam in the sky birthed They of the dark,\n\
 Then, with fire roared the dragon of new starts,\n\
 Thus fled They with no bite and only bark,\n\
@@ -273,7 +304,10 @@ Much thanks to Kaichou and this amazing community that she’s helped bring toge
                                 thumbnail="https://cdn.discordapp.com/attachments/752324770196095057/857089193124429845/unknown.png"/>
                         </div>
                     </AnchorSupportedSection>
-                    <div style={{ height: "2000px" }} />
+                    <AnchorSupportedSection anchor={Anchors[1]} onVisible={this.onAnchorVisible}>
+                        {this.renderCardSection(comboCardData)}
+                    </AnchorSupportedSection>
+                    <div style={{ height: "600px" }} />
                 </div>
             </div>
         )

@@ -2,13 +2,12 @@
     display: flex;
     margin-left: 2vw;
     margin-right: 2vw;
-    font-family: 'Caveat';
+    font-family: var(--theme-font);
     text-shadow: 0px 0px 3px white;
-    font-size: 1.4rem;
 }
 
 .project-card-container {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +21,7 @@
 }
 
 .project-card-thumbnail-container {
-    height: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,11 +60,13 @@
         flex-direction: row;
         margin-left: 10vw;
         margin-right: 10vw;
+        font-size: 1.6rem;
     }
 }
 
 @media (max-width: 800px) {
     .project-card {
         flex-direction: column-reverse;
+        font-size: 1.2rem;
     }
 }

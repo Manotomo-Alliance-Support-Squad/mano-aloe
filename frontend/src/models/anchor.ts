@@ -1,7 +1,11 @@
+import { OverridableComponent } from '@material-ui/core/OverridableComponent';
+import { SvgIconTypeMap } from '@material-ui/core';
+
 export interface Anchor {
     href: string;
-    svgIcon: React.FunctionComponent<React.SVGProps<SVGSVGElement>> | null;
+    svgIcon: React.FunctionComponent<React.SVGProps<SVGSVGElement>> | OverridableComponent<SvgIconTypeMap<{}, "svg">> | null;
     text?: string;
+    threshold?: number;
 }
 
 export enum AnchorSectionPosition {

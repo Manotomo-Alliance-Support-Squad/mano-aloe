@@ -31,8 +31,7 @@ export default abstract class BaseSection<T> extends React.Component<BaseSection
                 {(value: LanguageContextValue) => {
                     const { language } = value;
                     if (!this.props.data.length) {
-                        const emptyAnnouncemment: Announcement = { announcementID: 0, message: "Nothing here! Check back later!" };
-                        return <AnnouncementCard object={emptyAnnouncemment} cardStyleIndex={0} language={language} />;
+                        return <div className="base-empty-message">Nothing here yet! Check back later!</div>
                     } else {
                         return (
                             <div className={sectionStyle}>
