@@ -253,11 +253,25 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                         <div className="home-header-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                         <AnchorStandaloneBotan anchor={Anchors[0]} />
                     </div>
+                    <div style={{ height: "5rem" }} />
                     <AnchorSupportedSection anchor={Anchors[0]} onVisible={this.onAnchorVisible}>
-                        <>
-                            <div style={{ height: "5rem" }} />
-                            <ProjectCard title={"test\ntest3"}/>
-                        </>
+                        <div className="project-card-section">
+                            <ProjectCard 
+                                username="Revel"
+                                title="A Song, for You" 
+                                description={"Dame da ne, dame yo, dame na no yo"} 
+                                thumbnail="https://cdn.discordapp.com/attachments/856038775826022411/857377808706961448/Goodbye_Coco_thumbnail.png"/>
+                            <ProjectCard 
+                                username="-With love, from fans all across the world."
+                                title="A Game, for You" 
+                                description={"A seam in the sky birthed They of the dark,\n\
+Then, with fire roared the dragon of new starts,\n\
+Thus fled They with no bite and only bark,\n\
+From she who saves and mends our broken hearts.\n\
+\n\
+Much thanks to Kaichou and this amazing community that she’s helped bring together. What a blessing this wonderful journey has been. Let’s all keep smiling and have many more together! To Kaichou, you may be out of our sights for a little bit, but you’ll never leave our hearts! KIRYU-KAI FOREVER!"} 
+                                thumbnail="https://cdn.discordapp.com/attachments/752324770196095057/857089193124429845/unknown.png"/>
+                        </div>
                     </AnchorSupportedSection>
                     <div style={{ height: "2000px" }} />
                 </div>

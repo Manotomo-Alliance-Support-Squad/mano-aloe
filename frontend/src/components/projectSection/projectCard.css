@@ -1,5 +1,17 @@
 .project-card {
     display: flex;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-family: 'Caveat';
+    text-shadow: 0px 0px 3px white;
+    font-size: 1.4rem;
+}
+
+.project-card-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* css is pain */
@@ -9,15 +21,51 @@
     background-color: var(--project-card-background-color);
 }
 
-.project-card-project {
-    padding: 1rem;
+.project-card-thumbnail-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card-description-sign {
+    margin-right: 1rem;
+    text-align: right;
+}
+
+.project-card-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
 }
 
 .project-card-description {
     padding: 1rem;
-    white-space: pre-wrap; /* Allow line breaks */
 }
 
-.project-card-description .project-username {
+.project-card-description-container {
+    white-space: pre-wrap; /* Allow line breaks */
+    padding: 1rem;
+}
+
+.project-card-description-container .project-username {
     text-align: right;
+}
+
+.project-card-section {
+}
+
+/* desktop specific rules */
+@media (min-width: 800px) {
+    .project-card {
+        flex-direction: row;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .project-card {
+        flex-direction: column-reverse;
+    }
 }
