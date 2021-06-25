@@ -63,7 +63,7 @@ const Anchors: Anchor[] = [
     {
         href: "#messages-anchor",
         svgIcon: ExpandMoreIcon,
-        text: "Projects",
+        text: "Messages",
     },
 ]
 
@@ -287,13 +287,13 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                         <div className="project-card-section">
                             <ProjectCard 
                                 username="Revel"
-                                title="A Song, for You" 
+                                title="Song title goes here" 
                                 projectlink="https://duckduckgo.com"
                                 description={"Dame da ne, dame yo, dame na no yo"} 
                                 thumbnail="https://cdn.discordapp.com/attachments/856038775826022411/857377808706961448/Goodbye_Coco_thumbnail.png"/>
                             <ProjectCard 
                                 username="With love, from fans all across the world."
-                                title="A Game, for You" 
+                                title="Game title goes here" 
                                 projectlink="https://duckduckgo.com"
                                 description={"A seam in the sky birthed They of the dark,\n\
 Then, with fire roared the dragon of new starts,\n\
