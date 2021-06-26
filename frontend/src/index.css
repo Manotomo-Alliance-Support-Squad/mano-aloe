@@ -17,8 +17,8 @@
     --theme-card-header-background: #ffffff;
 
     --theme-special-text: #f0f0f0;
-    --theme-special-background: #353772;
-    --theme-special-background-alt: #555792;
+    --theme-special-background: #843057;
+    --theme-special-background-alt: #FF985C;
 
     --main-background: url(assets/backgrounds/Background-Footer-by-Mr-Cres.png);
     --main-background-color: #ffffff;
@@ -30,6 +30,7 @@
     --separator-background-color: #ffffff;
 
     --card-font-size: 1.6rem;
+    --credits-font-size: 1.2rem;
 
     --theme-font: "Indie Flower", "Charmonman";
     --theme-text-shadow: 0px 0px 3px white;
