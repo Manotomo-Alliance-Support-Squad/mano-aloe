@@ -1,5 +1,5 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Charmonman&family=Indie+Flower&display=swap');
 
 /* css */
 :root {
@@ -14,7 +14,7 @@
     --theme-card-text1: #202020;
     --theme-card-text2: #000000;
     --theme-card-background: #ffffff;
-    --theme-card-header-background: #5f5097;
+    --theme-card-header-background: #ffffff;
 
     --theme-special-text: #f0f0f0;
     --theme-special-background: #353772;
@@ -32,7 +32,10 @@
     --header-background-color: #ffffff;
     --separator-background-color: #ffffff;
 
-    --theme-font: "Caveat";
+    --card-font-size: 1.6rem;
+
+    --theme-font: "Indie Flower", "Charmonman";
+    --theme-text-shadow: 0px 0px 3px white;
 }
 
 body {

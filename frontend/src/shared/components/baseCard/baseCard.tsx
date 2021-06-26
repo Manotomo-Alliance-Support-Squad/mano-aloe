@@ -1,13 +1,17 @@
 import { Component } from "react";
 import CSS from "csstype";
 import './baseCard.css';
-import CardStyle1 from "../../../assets/cards/AKUKIN_Card_Header.png";
-import CardStyle2 from "../../../assets/cards/AKUKIN_Card_Header1.png";
+import CardStyle1 from "../../../assets/sprites/FriedPeanuts-star.png";
+import CardStyle2 from "../../../assets/sprites/nicooooooo-brooch.png";
+import CardStyle3 from "../../../assets/sprites/nicooooooo-tail.png";
 import { InView } from 'react-intersection-observer';
+
+import FadeIn from '../../../components/fadeInSection/fadeInSection';
 
 export const CardStyles = [
     [CardStyle1, "var(--main-text-wrapper-background-color)"],
     [CardStyle2, "var(--main-text-wrapper-background-color)"],
+    [CardStyle3, "var(--main-text-wrapper-background-color)"],
 ]
 
 export interface BaseCardProps<T> {
@@ -43,16 +47,18 @@ export default class BaseCard<T, P extends BaseCardProps<T>, S extends BaseCardS
             backgroundImage: `url(${CardStyles[this.cardStyleIndex][0]})`,
         };
         return (
-            <InView className={"base-card" + (loaded ? "" : " view-port-hidden")} onChange={this.toggleVisibility.bind(this)} skip={loaded} threshold={.8}>
-                <div className="card-header" />
-                <div className="card-header-decal-wrapper">
-                    <div className="card-header-decal" style={rootStyles} />
-                </div>
-                <div className="card-content">
-                    {content}
-                </div>
-                <div className="card-footer" />
-            </InView>
+            <FadeIn className="fade-in fade-in-expand">
+                <InView className={"base-card"} onChange={this.toggleVisibility.bind(this)} skip={loaded} threshold={.8}>
+                    <div className="card-header" />
+                    <div className="card-header-decal-wrapper">
+                        <div className="card-header-decal" style={rootStyles} />
+                    </div>
+                    <div className="card-content">
+                        {content}
+                    </div>
+                    <div className="card-footer" />
+                </InView>
+            </FadeIn>
         );
     }
 }
