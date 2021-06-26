@@ -33,7 +33,7 @@ export default class ProjectCard extends Component<ProjectCardProps>{
                         </div>
                     </div>
                     <div className="project-card-thumbnail-container left">
-                        <a href={this.props.projectlink} target="_blank">
+                        <a href={this.props.projectlink} target="_blank" rel="noopener noreferrer">
                             <img src={this.props.thumbnail} className="project-card-thumbnail" />
                         </a>
                     </div>

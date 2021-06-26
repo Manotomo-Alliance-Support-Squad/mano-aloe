@@ -3,9 +3,11 @@ It was not long enough, and we will miss you Coco. Congratulations on your gradu
 
 # Credits
 
-## 2C2D Collaborators
+## 2D2C Collaborators
 
-TBD
+ChienHS
+
+Nyanako [NanakoTW]
 
 ## Website Contributors
 
@@ -15,26 +17,56 @@ Zapple (Frontend, Backend)
 
 LrJim (Frontend, Backend)
 
+Laska (Frontend)
 
-## Project Creators and Managers
+## Project Creators and Leads
 
-TBD
+XOF ("Dragon Heart" Game and original arts collection)
+
+Capt-Jules (Digital scrapbook)
+
+Revel (Original music for Coco)
+
+PheelGagg (Letters to Coco)
+
+jtron (Farewell song for Coco)
+
+BadGrammar (Coco Dance Animation)
+
+Kelanduo (World-level Giant Minecraft Fanart)
 
 ## Art and Design Contributors
 
-TBD
+nicooooooo (Coco brooch and asacoco tail assets)
+
+FriedPeanuts (Coco star hairpin asset)
+
+Rara (Diploma design and webpage tiling)
+
+Mr. Cres (Site background)
+
+Guy (Color consultant)
 
 ## Coordinators and Other Awesome Peoples in the Shadows
 
 Ice
 
+RazorNaitor
+
 Necrosis
 
 VintageGhost
 
+
 # Join the MASS Discord
 
 https://discord.gg/yTY9rdp
+
+
+# Join the 2D2C Discord
+
+https://discord.gg/whnHahqQeg
+
 
 # Contact Us
 

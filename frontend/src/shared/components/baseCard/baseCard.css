@@ -20,7 +20,7 @@
 }
 
 .card-header-decal {
-    width: 175px;
+    width: 75px;
     height: 75px;
     position: relative;
     top: -80px;
@@ -33,7 +33,7 @@
     align-content: center;
     display: flex;
     height: 0px;
-    justify-content: center;
+    justify-content: right;
 }
 
 .card-section {

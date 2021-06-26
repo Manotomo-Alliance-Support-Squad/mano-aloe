@@ -315,11 +315,11 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                                     title="Game title goes here"
                                     projectlink="https://duckduckgo.com"
                                     description={"A seam in the sky birthed They of the dark,\n\
-  Then, with fire roared the dragon of new starts,\n\
-  Thus fled They with no bite and only bark,\n\
-  From she who saves and mends our broken hearts.\n\
-  \n\
-  Much thanks to Kaichou and this amazing community that she’s helped bring together. What a blessing this wonderful journey has been. Let’s all keep smiling and have many more together! To Kaichou, you may be out of our sights for a little bit, but you’ll never leave our hearts! KIRYU-KAI FOREVER!"}
+Then, with fire roared the dragon of new starts,\n\
+Thus fled They with no bite and only bark,\n\
+From she who saves and mends our broken hearts.\n\
+\n\
+Much thanks to Kaichou and this amazing community that she’s helped bring together. What a blessing this wonderful journey has been. Let’s all keep smiling and have many more together! To Kaichou, you may be out of our sights for a little bit, but you’ll never leave our hearts! KIRYU-KAI FOREVER!"}
                                     thumbnail="https://cdn.discordapp.com/attachments/752324770196095057/857089193124429845/unknown.png" />
                             </FadeIn>
                             <div className="project-separator" />
