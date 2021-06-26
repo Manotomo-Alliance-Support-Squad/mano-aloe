@@ -1,7 +1,8 @@
 import React from "react";
 import { Anchor, AnchorSectionProps } from "../../models/anchor";
 import AnchorButton from "./anchorButton";
-import "./anchorSection.css";
+import "./anchorMultipleSection.css";
+import CircleIcon from '@material-ui/icons/FiberManualRecord';
 
 export interface MultipleAnchorStates {
     href: string,
@@ -14,18 +15,31 @@ interface AnchorMultipleSectionProps extends AnchorSectionProps {
 }
 
 export default class AnchorMultipleSection extends React.Component<AnchorMultipleSectionProps> {
-    render() {
-        const { anchors, position } = this.props;
+    constructor(props: AnchorMultipleSectionProps) {
+        super(props);
+        this.renderAnchor = this.renderAnchor.bind(this);
+    }
+
+    renderAnchor(anchor: Anchor, index: number) {
+        const { anchors } = this.props;
         let { activeHrefs = [] } = this.props;
         activeHrefs = activeHrefs.sort((a, b) => a.lastUpdate > b.lastUpdate ? -1 : 1);
+        
+        const activeClass = activeHrefs.length > 0 && activeHrefs[0].href === anchor.href ? "active" : "";
+        const lastClass = index == anchors.length - 1 ? " last" : "";
+
+        return (
+            <div key={anchor.href} className={activeClass + lastClass}>
+                <AnchorButton anchor={{ ...anchor, svgIcon: CircleIcon }} />
+            </div>
+        );
+    }
+
+    render() {
+        const { anchors, position } = this.props;
         return (
             <div className={"anchor-section multiple " + position} style={{ "--element-count": anchors.length } as React.CSSProperties}>
-                {anchors.map(anchor => (
-                    <div key={anchor.href} className={activeHrefs.length > 0 && activeHrefs[0].href === anchor.href ? "active" : ""}>
-                        <div className="anchor-seperator" />
-                        <AnchorButton anchor={anchor} />
-                    </div>
-                ))}
+                {anchors.map(this.renderAnchor)}
             </div>
         );
     }

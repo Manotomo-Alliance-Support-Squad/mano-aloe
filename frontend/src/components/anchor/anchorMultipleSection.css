@@ -1,0 +1,73 @@
+:root {
+    --multiple-anchors-background-color: #00000041;
+    --multiple-anchors-background-color-hover: #00000050;
+    --multiple-anchors-seperator-color: #ffffff65;
+    --anchor-text-color: white;
+}
+
+.multiple {
+    --element-count: 0;
+    margin-top: calc(-1 * 2.5% * var(--element-count));
+    padding: 5px;
+    border-radius: 25px 0px 0px 25px;
+    background-color: var(--multiple-anchors-background-color);
+    width: 40px;
+    overflow: hidden;
+}
+
+.multiple:hover {
+    background-color: var(--multiple-anchors-background-color-hover);
+}
+
+.multiple>div {
+    margin: 10px 0;
+}
+
+.multiple>div[class="active last"] {
+    margin-bottom: 20px;
+}
+
+.multiple .anchor-button {
+    margin-left: -20px;
+}
+
+.multiple .anchor-button svg {
+    padding-left: 35%;
+    opacity: .4;
+    transition: opacity 0.5s ease;
+}
+
+.anchor-button:hover svg {
+    opacity: 1;
+}
+
+@media (max-width: 425px) {
+    .multiple {
+        visibility: hidden;
+    }
+}
+
+.multiple .active>.anchor-button svg {
+    display: none;
+}
+
+.multiple .anchor-button p {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    transform: rotate( 270deg);
+    font-style: italic;
+    margin: 0;
+}
+
+.multiple .anchor-button:hover p {
+    opacity: 0;
+}
+
+.multiple .active>.anchor-button p {
+    opacity: 1;
+    width: fit-content;
+    margin-top: 65%;
+    margin-bottom: 55%;
+    visibility: visible;
+}

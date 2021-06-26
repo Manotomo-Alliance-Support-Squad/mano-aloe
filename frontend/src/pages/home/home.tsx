@@ -340,6 +340,7 @@ Much thanks to Kaichou and this amazing community that she’s helped bring toge
                     </AnchorSupportedSection>
                     <div style={{ height: "600px" }} />
                 </div>
+                <AnchorMultipleSection position={AnchorSectionPosition.RIGHT} activeHrefs={activeHrefs} anchors={Anchors} />
             </div>
         )
     }
