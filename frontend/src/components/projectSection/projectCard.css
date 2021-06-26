@@ -4,8 +4,7 @@
     text-shadow: 0px 0px 3px white;
 }
 
-.project-separator {
-}
+.project-separator {}
 
 .project-card-container {
     min-height: 100vh;
@@ -16,7 +15,8 @@
 
 /* css is pain. These aren't props for the project cards, 
  * but rather for the left and right classes inside a projcard */
-.project-card .left,.project-card .right {
+
+.project-card .left, .project-card .right {
     flex: 1 1;
     color: var(--project-card-foreground-color);
     background-color: var(--project-card-background-color);
@@ -38,17 +38,11 @@
     width: 100%;
     height: auto;
     border-radius: 15px;
-    -webkit-transition: margin 0.5s ease;
-    -moz-transition: margin 0.5s ease;
-    -o-transition: margin 0.5s ease;
+    transition: box-shadow 0.5s ease;
 }
 
 .project-card-thumbnail:hover {
     box-shadow: 0px 0px 5px white;
-    margin: 5px;
-    -webkit-transition: margin 0.5s ease;
-    -moz-transition: margin 0.5s ease;
-    -o-transition: margin 0.5s ease;
 }
 
 .project-card-description {
@@ -56,7 +50,8 @@
 }
 
 .project-card-description-container {
-    white-space: pre-wrap; /* Allow line breaks */
+    white-space: pre-wrap;
+    /* Allow line breaks */
     padding: 1rem;
 }
 
@@ -64,8 +59,7 @@
     text-align: right;
 }
 
-.project-card-section {
-}
+.project-card-section {}
 
 /* desktop specific rules */
 @media (min-width: 800px) {
