@@ -80,3 +80,8 @@
         background-image: url(../../assets/cards/AKUKIN_Card_Header_Base_14.png);
     }
 }
+
+.home-hidden-text {
+    opacity: 0;
+    font-size: 1px;
+}
