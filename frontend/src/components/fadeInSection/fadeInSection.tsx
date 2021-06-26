@@ -1,4 +1,4 @@
-import { Component, setState } from 'react';
+import { Component } from 'react';
 import { InView } from 'react-intersection-observer';
 
 import './fadeInSection.css'
