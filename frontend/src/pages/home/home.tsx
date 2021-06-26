@@ -282,6 +282,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
         return (
             <div className="home-root">
                 <div>
+                    <div className="home-hidden-text">Fix home-header from clipping when reloading the page while at topmost or first time load the site</div>
                     <div className="home-header fade-in">
                         <h1 className="home-header-title">Dear Coco,</h1>
                         <div className="home-header-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
@@ -291,37 +292,37 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                     <AnchorSupportedSection anchor={Anchors[0]} onVisible={this.onAnchorVisible}>
                         <div className="project-card-section">
                             <FadeIn className="fade-in">
-                                <ProjectCard 
+                                <ProjectCard
                                     username="Revel"
-                                    title="Goodbye Coco" 
+                                    title="Goodbye Coco"
                                     projectlink="https://youtu.be/900P2WPzl-M"
-                                    description={"The time may have been short, but the memes will last a lifetime. So don't cry my friends, and let us send Coco off with laughs in the air and smiles on our faces, as we wish her a good life ahead of her. Please listen to this short song I wrote for Coco and know that this is not the end of a story, but the start of a legend that we can tell our friends without an end."} 
-                                    thumbnail={Project1Thumb}/>
+                                    description={"The time may have been short, but the memes will last a lifetime. So don't cry my friends, and let us send Coco off with laughs in the air and smiles on our faces, as we wish her a good life ahead of her. Please listen to this short song I wrote for Coco and know that this is not the end of a story, but the start of a legend that we can tell our friends without an end."}
+                                    thumbnail={Project1Thumb} />
                             </FadeIn>
-                            <div className="project-separator"/>
+                            <div className="project-separator" />
                             <FadeIn className="fade-in">
-                                <ProjectCard 
+                                <ProjectCard
                                     username="Capt-Jules"
-                                    title="Scrapbook for Coco" 
+                                    title="Scrapbook for Coco"
                                     projectlink="https://duckduckgo.com"
-                                    description={"Hello everyone! Here's a little something for you all! Presenting a small digital scrapbook featuring some of Coco's memorable moments! So, let's take a bit and look back at those happy memories, hope you all enjoy! 💕\n\nOf course, thank you Kaichou for everything you have done in this VTubing world and to this wonderful community for never failing to show your love! It has been a fun ride that I'm sure will keep on going! It may be a sad time for some of us, but things will get better. With that said, thank you and take care, everyone!"} 
-                                    thumbnail={Project2Thumb}/>
+                                    description={"Hello everyone! Here's a little something for you all! Presenting a small digital scrapbook featuring some of Coco's memorable moments! So, let's take a bit and look back at those happy memories, hope you all enjoy! 💕\n\nOf course, thank you Kaichou for everything you have done in this VTubing world and to this wonderful community for never failing to show your love! It has been a fun ride that I'm sure will keep on going! It may be a sad time for some of us, but things will get better. With that said, thank you and take care, everyone!"}
+                                    thumbnail={Project2Thumb} />
                             </FadeIn>
-                            <div className="project-separator"/>
+                            <div className="project-separator" />
                             <FadeIn className="fade-in">
-                                <ProjectCard 
+                                <ProjectCard
                                     username="With love, from fans all across the world."
-                                    title="Game title goes here" 
+                                    title="Game title goes here"
                                     projectlink="https://duckduckgo.com"
                                     description={"A seam in the sky birthed They of the dark,\n\
 Then, with fire roared the dragon of new starts,\n\
 Thus fled They with no bite and only bark,\n\
 From she who saves and mends our broken hearts.\n\
 \n\
-Much thanks to Kaichou and this amazing community that she’s helped bring together. What a blessing this wonderful journey has been. Let’s all keep smiling and have many more together! To Kaichou, you may be out of our sights for a little bit, but you’ll never leave our hearts! KIRYU-KAI FOREVER!"} 
-                                    thumbnail="https://cdn.discordapp.com/attachments/752324770196095057/857089193124429845/unknown.png"/>
+Much thanks to Kaichou and this amazing community that she’s helped bring together. What a blessing this wonderful journey has been. Let’s all keep smiling and have many more together! To Kaichou, you may be out of our sights for a little bit, but you’ll never leave our hearts! KIRYU-KAI FOREVER!"}
+                                    thumbnail="https://cdn.discordapp.com/attachments/752324770196095057/857089193124429845/unknown.png" />
                             </FadeIn>
-                            <div className="project-separator"/>
+                            <div className="project-separator" />
                         </div>
                     </AnchorSupportedSection>
                     <div style={{ height: "100px" }} />
