@@ -29,6 +29,13 @@
     opacity: 1;
 }
 
+.standalone .anchor-button {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
 .anchor-button p {
     opacity: 0;
     margin: 0;

@@ -11,7 +11,7 @@ export default class AnchorStandaloneBotan extends React.Component<AnchorStandal
     render() {
         const { anchor } = this.props;
         return (
-            <div className="anchorbotan">
+            <div className="anchorbotan standalone">
                 <AnchorButton anchor={anchor} />
             </div>
         );
