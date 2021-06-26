@@ -1,3 +1,7 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&display=swap');
+
+/* css */
 :root {
     --theme-color1: #000000; /*root background*/
     --theme-color2: #f05872; /*used for card text*/
@@ -16,7 +20,7 @@
     --theme-special-background: #353772;
     --theme-special-background-alt: #555792;
 
-    --main-background: url(assets/backgrounds/App-root-bg-by-Kenn.svg);
+    --main-background: url(assets/backgrounds/App-root-bg-by-Mr-Cres.png);
     --main-background-color: #ffffff;
 
     --header-background: url(assets/backgrounds/header-bg-by-Chainwalker.png);
@@ -27,6 +31,8 @@
 
     --header-background-color: #ffffff;
     --separator-background-color: #ffffff;
+
+    --theme-font: "Caveat";
 }
 
 body {

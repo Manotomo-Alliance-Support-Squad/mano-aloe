@@ -10,11 +10,28 @@ import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
 import { Announcement } from "../../models/announcement"
 import { Artwork, MultiArtwork } from "../../models/artwork"
 import { Video } from "../../models/video"
-import './home.css';
-import '../../shared/globalStyles/global.css'
 import AnnouncementSection from "../../components/announcementSection/announcementSection";
 import AnchorSupportedSection, { handleSectionVisibility } from "../../components/anchorSupportedSection/anchorSupportedSection";
 import GameSection from '../../components/gamesSection/gameSection';
+
+import ButtonAppBar from '../../components/navigation/navbar';
+import HeaderSection from "../../components/headerSection/header";
+import FooterSection from "../../components/footerSection/footer";
+import AltNav from '../../components/navigation/altnav';
+import AnchorSingleSection from "../../components/anchor/anchorSingleSection";
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import AnchorStandaloneBotan from "../../components/anchor/anchorStandaloneBotan";
+
+import ProjectCard from '../../components/projectSection/projectCard';
+import FadeIn from '../../components/fadeInSection/fadeInSection';
+
+//Thumbnails
+import Project1Thumb from '../../assets/thumbnails/Goodbye_Coco_thumbnail-Revel.jpg';
+import Project2Thumb from '../../assets/thumbnails/Cocos_Scrapbook_Cover-Capt-Jules.jpg';
+
+// CSS
+import './home.css';
+import '../../shared/globalStyles/global.css'
 
 // Hack for community card before messages
 import { LanguageContext, LanguageContextValue } from '../../components/languageSwitch/languageContext';
@@ -44,29 +61,15 @@ export interface HomePageState {
 
 const Anchors: Anchor[] = [
     {
-        href: "#video-anchor",
-        svgIcon: AnchorBotan,
-        text: "Video",
-        threshold: .2,
+        href: "#projects-anchor",
+        svgIcon: ExpandMoreIcon,
+        text: "Projects",
     },
     {
-        href: "#message-anchor",
-        svgIcon: AnchorBotan,
+        href: "#messages-anchor",
+        svgIcon: ExpandMoreIcon,
         text: "Messages",
-        threshold: .1,
     },
-    {
-        href: "#games-anchor",
-        svgIcon: AnchorBotan,
-        text: "Games",
-        threshold: .5,
-    },
-    {
-        href: "#footer-anchor",
-        svgIcon: AnchorBotan,
-        text: "Credits",
-        threshold: 1,
-    }
 ]
 
 export default class HomePage extends React.Component<HomePageProps, HomePageState> {
@@ -277,81 +280,58 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
         const comboCardData = this.compileCardData()
         const { activeHrefs } = this.state;
         return (
-            <>
-                <section id='anchor'>
-                    <div className="home-root">
-                        <AnchorSupportedSection anchor={Anchors[0]} onVisible={this.onAnchorVisible} >
-                            <div className="main-video-container">
-                                <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/Snn2gWq-3KY" title="YouTube video player" frameBorder="0"></iframe>
-                            </div>
-                        </AnchorSupportedSection>
-                        <AnchorSupportedSection anchor={Anchors[1]} onVisible={this.onAnchorVisible}>
-                            <>
-                                <div className="separator">
-                                    <AnchorLink href='#message-anchor'>
-                                        <EmailIcon className="anchor-link" style={{ width: 28, height: 36 }} />
-                                    </AnchorLink>
-                                </div>
-                                <div id="message-anchor" className="justify-center">
-                                    <div className="justify-align-center">
-                                        <AnnouncementSection data={this.state.announcements} customSectionStyle="single-column notice-container wrapper-overlay" />
-                                    </div>
-                                </div>
-                                <div className="justify-center padding-top">
-                                    <LanguageContext.Consumer>
-                                        {(value: LanguageContextValue) => {
-                                            const { language } = value;
-                                            return (
-                                                <div className="justify-align-center notice-container main-message" style={{ "whiteSpace": "pre-line" }}>
-                                                    <MessageCard key={1} object={{
-                                                        messageID: 0,
-                                                        orig_msg: "私たちはあくあクルーの代表者であり、あくたんのための支援プロジェクトを用意しています! 多くはありませんが、あくたんが私たちがここにいることを覚えておいてください.\n\n\
-                                                        私たちはあなたの復帰を嬉しく思います。あくたんの配信を楽しみにしています! \n\n\
-                                                        おかえりなさい、あくたん！\
-                                                        ",
-                                                        tl_msg: "We are some representatives of the Aqua Crew! We have prepared several messages from fans all around the world for you! It's not much, but we hope Aqutan remembers that we’re here cheering you up no matter what happens~ \n\n\
-                                                        We are happy for your return and we will be looking forward to Aqutan’s streams!\n\n\
-                                                        Welcome back, Aqua!\
-                                                        ",
-                                                        country: "", username: "AKUKIN HQ",
-                                                    }} cardStyleIndex={1} language={language} />
-                                                </div>
-                                            );
-                                        }
-                                        }
-                                    </LanguageContext.Consumer>
-                                </div>
-                                {this.renderCardSection(comboCardData)}
-                            </>
-                        </AnchorSupportedSection>
-                        <AnchorSupportedSection anchor={Anchors[2]} onVisible={this.onAnchorVisible}>
-                            <>
-                                <div className="separator">
-                                    <AnchorLink href='#games-anchor'>
-                                        <SportsEsportsIcon className="anchor-link" style={{ width: 36, height: 36 }} />
-                                    </AnchorLink>
-                                </div>
-                                <div className="wrapper-overlay">
-                                    <GameSection data={this.state.games} customSectionStyle="game-section" />
-                                </div>
-                            </>
-                        </AnchorSupportedSection>
-                        <AnchorSupportedSection anchor={Anchors[3]} onVisible={this.onAnchorVisible}>
-                            <div className="justify-center">
-                                <div className="notice-container">
-                                    <div className="notice-content" style={{ borderRadius: 0 }}>
-                                        <p>These are all the messages we managed to collect!</p>
-                                        <p>Tweet at <a href="https://twitter.com/hashtag/Ganbare%E3%81%82%E3%81%8F%E3%81%9F%E3%82%93">#Ganbareあくたん</a> to send us a message!</p>
-                                        <p style={{ fontSize: 12 }}>If you find any problems with the website, or if you would like to report a message, please contact us at manotomo@googlegroups.com or at webmaster@manotomo.com</p>
-                                        <p style={{ fontSize: 12 }}>This is not an official Hololive site. We are just a group of fans supporting Aqua!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </AnchorSupportedSection>
+            <div className="home-root">
+                <div>
+                    <div className="home-header fade-in">
+                        <h1 className="home-header-title">Dear Coco,</h1>
+                        <div className="home-header-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                        <AnchorStandaloneBotan anchor={Anchors[0]} position={AnchorSectionPosition.LEFT} />
                     </div>
-                </section>
-                <AnchorMultipleSection position={AnchorSectionPosition.RIGHT} activeHrefs={activeHrefs} anchors={Anchors} />
-            </>
+                    <div style={{ height: "5rem" }} />
+                    <AnchorSupportedSection anchor={Anchors[0]} onVisible={this.onAnchorVisible}>
+                        <div className="project-card-section">
+                            <FadeIn className="fade-in">
+                                <ProjectCard 
+                                    username="Revel"
+                                    title="Song title goes here" 
+                                    projectlink="https://duckduckgo.com"
+                                    description={"Dame da ne, dame yo, dame na no yo"} 
+                                    thumbnail={Project1Thumb}/>
+                            </FadeIn>
+                            <div className="project-separator"/>
+                            <FadeIn className="fade-in">
+                                <ProjectCard 
+                                    username="Capt-Jules"
+                                    title="Scrapbook for Coco" 
+                                    projectlink="https://duckduckgo.com"
+                                    description={"Hello everyone! Here's a little something for you all! Presenting a small digital scrapbook featuring some of Coco's memorable moments! So, let's take a bit and look back at those happy memories, hope you all enjoy! 💕\n\nOf course, thank you Kaichou for everything you have done in this VTubing world and to this wonderful community for never failing to show your love! It has been a fun ride that I'm sure will keep on going! It may be a sad time for some of us, but things will get better. With that said, thank you and take care, everyone!"} 
+                                    thumbnail={Project2Thumb}/>
+                            </FadeIn>
+                            <div className="project-separator"/>
+                            <FadeIn className="fade-in">
+                                <ProjectCard 
+                                    username="With love, from fans all across the world."
+                                    title="Game title goes here" 
+                                    projectlink="https://duckduckgo.com"
+                                    description={"A seam in the sky birthed They of the dark,\n\
+    Then, with fire roared the dragon of new starts,\n\
+    Thus fled They with no bite and only bark,\n\
+    From she who saves and mends our broken hearts.\n\
+    \n\
+    Much thanks to Kaichou and this amazing community that she’s helped bring together. What a blessing this wonderful journey has been. Let’s all keep smiling and have many more together! To Kaichou, you may be out of our sights for a little bit, but you’ll never leave our hearts! KIRYU-KAI FOREVER!"} 
+                                    thumbnail="https://cdn.discordapp.com/attachments/752324770196095057/857089193124429845/unknown.png"/>
+                            </FadeIn>
+                            <div className="project-separator"/>
+                        </div>
+                    </AnchorSupportedSection>
+                    <AnchorSupportedSection anchor={Anchors[1]} onVisible={this.onAnchorVisible}>
+                        <FadeIn className="fade-in">
+                            {this.renderCardSection(comboCardData)}
+                        </FadeIn>
+                    </AnchorSupportedSection>
+                    <div style={{ height: "600px" }} />
+                </div>
+            </div>
         )
     }
 }

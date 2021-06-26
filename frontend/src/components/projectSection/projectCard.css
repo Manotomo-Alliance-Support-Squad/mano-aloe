@@ -1,0 +1,91 @@
+.project-card {
+    display: flex;
+    font-family: var(--theme-font);
+    text-shadow: 0px 0px 3px white;
+}
+
+.project-separator {
+}
+
+.project-card-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* css is pain. These aren't props for the project cards, 
+ * but rather for the left and right classes inside a projcard */
+.project-card .left,.project-card .right {
+    flex: 1 1;
+    color: var(--project-card-foreground-color);
+    background-color: var(--project-card-background-color);
+}
+
+.project-card-thumbnail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.project-card-description-sign {
+    margin-right: 1rem;
+    text-align: right;
+}
+
+.project-card-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    -webkit-transition: margin 0.5s ease;
+    -moz-transition: margin 0.5s ease;
+    -o-transition: margin 0.5s ease;
+}
+
+.project-card-thumbnail:hover {
+    box-shadow: 0px 0px 5px white;
+    margin: 5px;
+    -webkit-transition: margin 0.5s ease;
+    -moz-transition: margin 0.5s ease;
+    -o-transition: margin 0.5s ease;
+}
+
+.project-card-description {
+    padding: 1rem;
+}
+
+.project-card-description-container {
+    white-space: pre-wrap; /* Allow line breaks */
+    padding: 1rem;
+}
+
+.project-card-description-container .project-username {
+    text-align: right;
+}
+
+.project-card-section {
+}
+
+/* desktop specific rules */
+@media (min-width: 800px) {
+    .project-card {
+        flex-direction: row;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        font-size: 1.6rem;
+    }
+}
+
+/* mobile specific rules */
+@media (max-width: 800px) {
+    .project-card {
+        flex-direction: column-reverse;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        font-size: 1.2rem;
+    }
+    .project-separator {
+        height: 10vh;
+    }
+}
