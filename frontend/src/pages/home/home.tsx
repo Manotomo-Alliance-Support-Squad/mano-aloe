@@ -23,6 +23,11 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AnchorStandaloneBotan from "../../components/anchor/anchorStandaloneBotan";
 
 import ProjectCard from '../../components/projectSection/projectCard';
+import FadeIn from '../../components/fadeInSection/fadeInSection';
+
+//Thumbnails
+import Project1Thumb from '../../assets/thumbnails/Goodbye_Coco_thumbnail-Revel.jpg';
+import Project2Thumb from '../../assets/thumbnails/Cocos_Scrapbook_Cover-Capt-Jules.jpg';
 
 // CSS
 import './home.css';
@@ -277,7 +282,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
         return (
             <div className="home-root">
                 <div>
-                    <div className="home-header">
+                    <div className="home-header fade-in">
                         <h1 className="home-header-title">Dear Coco,</h1>
                         <div className="home-header-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                         <AnchorStandaloneBotan anchor={Anchors[0]} position={AnchorSectionPosition.LEFT} />
@@ -285,27 +290,44 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                     <div style={{ height: "5rem" }} />
                     <AnchorSupportedSection anchor={Anchors[0]} onVisible={this.onAnchorVisible}>
                         <div className="project-card-section">
-                            <ProjectCard 
-                                username="Revel"
-                                title="Song title goes here" 
-                                projectlink="https://duckduckgo.com"
-                                description={"Dame da ne, dame yo, dame na no yo"} 
-                                thumbnail="https://cdn.discordapp.com/attachments/856038775826022411/857377808706961448/Goodbye_Coco_thumbnail.png"/>
-                            <ProjectCard 
-                                username="With love, from fans all across the world."
-                                title="Game title goes here" 
-                                projectlink="https://duckduckgo.com"
-                                description={"A seam in the sky birthed They of the dark,\n\
-Then, with fire roared the dragon of new starts,\n\
-Thus fled They with no bite and only bark,\n\
-From she who saves and mends our broken hearts.\n\
-\n\
-Much thanks to Kaichou and this amazing community that she’s helped bring together. What a blessing this wonderful journey has been. Let’s all keep smiling and have many more together! To Kaichou, you may be out of our sights for a little bit, but you’ll never leave our hearts! KIRYU-KAI FOREVER!"} 
-                                thumbnail="https://cdn.discordapp.com/attachments/752324770196095057/857089193124429845/unknown.png"/>
+                            <FadeIn className="fade-in">
+                                <ProjectCard 
+                                    username="Revel"
+                                    title="Song title goes here" 
+                                    projectlink="https://duckduckgo.com"
+                                    description={"Dame da ne, dame yo, dame na no yo"} 
+                                    thumbnail={Project1Thumb}/>
+                            </FadeIn>
+                            <div className="project-separator"/>
+                            <FadeIn className="fade-in">
+                                <ProjectCard 
+                                    username="Capt-Jules"
+                                    title="Scrapbook for Coco" 
+                                    projectlink="https://duckduckgo.com"
+                                    description={"Hello everyone! Here's a little something for you all! Presenting a small digital scrapbook featuring some of Coco's memorable moments! So, let's take a bit and look back at those happy memories, hope you all enjoy! 💕\n\nOf course, thank you Kaichou for everything you have done in this VTubing world and to this wonderful community for never failing to show your love! It has been a fun ride that I'm sure will keep on going! It may be a sad time for some of us, but things will get better. With that said, thank you and take care, everyone!"} 
+                                    thumbnail={Project2Thumb}/>
+                            </FadeIn>
+                            <div className="project-separator"/>
+                            <FadeIn className="fade-in">
+                                <ProjectCard 
+                                    username="With love, from fans all across the world."
+                                    title="Game title goes here" 
+                                    projectlink="https://duckduckgo.com"
+                                    description={"A seam in the sky birthed They of the dark,\n\
+    Then, with fire roared the dragon of new starts,\n\
+    Thus fled They with no bite and only bark,\n\
+    From she who saves and mends our broken hearts.\n\
+    \n\
+    Much thanks to Kaichou and this amazing community that she’s helped bring together. What a blessing this wonderful journey has been. Let’s all keep smiling and have many more together! To Kaichou, you may be out of our sights for a little bit, but you’ll never leave our hearts! KIRYU-KAI FOREVER!"} 
+                                    thumbnail="https://cdn.discordapp.com/attachments/752324770196095057/857089193124429845/unknown.png"/>
+                            </FadeIn>
+                            <div className="project-separator"/>
                         </div>
                     </AnchorSupportedSection>
                     <AnchorSupportedSection anchor={Anchors[1]} onVisible={this.onAnchorVisible}>
-                        {this.renderCardSection(comboCardData)}
+                        <FadeIn className="fade-in">
+                            {this.renderCardSection(comboCardData)}
+                        </FadeIn>
                     </AnchorSupportedSection>
                     <div style={{ height: "600px" }} />
                 </div>

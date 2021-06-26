@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { InView } from 'react-intersection-observer';
 import "./projectCard.css";
 
 interface ProjectCardProps {
@@ -8,6 +9,7 @@ interface ProjectCardProps {
     thumbnail: string,
     projectlink: string,
 }
+
 
 export default class ProjectCard extends Component<ProjectCardProps>{
 
