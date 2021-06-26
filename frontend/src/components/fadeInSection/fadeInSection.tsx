@@ -18,7 +18,7 @@ export default class FadeIn extends Component<FadeInProps> {
     }
 
     state = {
-        animationClass: this.props.className,
+        animationClass: 'hidden',
     } as FadeInState
 
     triggerAnimation(inView: boolean) {
