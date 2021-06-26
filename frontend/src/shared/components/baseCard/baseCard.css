@@ -47,9 +47,9 @@
     /* overflow is required to keep cards 
      * from segmenting into different columns 
      * at certain resolutions */
-    overflow-x: visible;
-    overflow-y: hidden;
+    overflow: auto;
     height: 100%;
+    scrollbar-width: none;
 }
 
 .card-content {
