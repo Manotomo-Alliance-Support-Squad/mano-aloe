@@ -104,23 +104,3 @@
         max-width: 100vw;
     }
 }
-
-.fade-in {
-    -webkit-animation-name: fadein-up;
-    animation-name: fadein-up;
-    -webkit-animation-duration: 1.5s;
-    animation-duration: 1.5s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-
-@keyframes fadein-up {
-    0% {
-        opacity: 0;
-        transform: translate(0px,100vh);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0px,0px);
-    }
-}

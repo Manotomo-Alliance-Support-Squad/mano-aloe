@@ -293,9 +293,9 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                             <FadeIn className="fade-in">
                                 <ProjectCard 
                                     username="Revel"
-                                    title="Song title goes here" 
-                                    projectlink="https://duckduckgo.com"
-                                    description={"Dame da ne, dame yo, dame na no yo"} 
+                                    title="Goodbye Coco" 
+                                    projectlink="https://youtu.be/900P2WPzl-M"
+                                    description={"The time may have been short, but the memes will last a lifetime. So don't cry my friends, and let us send Coco off with laughs in the air and smiles on our faces, as we wish her a good life ahead of her. Please listen to this short song I wrote for Coco and know that this is not the end of a story, but the start of a legend that we can tell our friends without an end."} 
                                     thumbnail={Project1Thumb}/>
                             </FadeIn>
                             <div className="project-separator"/>
@@ -314,11 +314,11 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                                     title="Game title goes here" 
                                     projectlink="https://duckduckgo.com"
                                     description={"A seam in the sky birthed They of the dark,\n\
-    Then, with fire roared the dragon of new starts,\n\
-    Thus fled They with no bite and only bark,\n\
-    From she who saves and mends our broken hearts.\n\
-    \n\
-    Much thanks to Kaichou and this amazing community that she’s helped bring together. What a blessing this wonderful journey has been. Let’s all keep smiling and have many more together! To Kaichou, you may be out of our sights for a little bit, but you’ll never leave our hearts! KIRYU-KAI FOREVER!"} 
+  Then, with fire roared the dragon of new starts,\n\
+  Thus fled They with no bite and only bark,\n\
+  From she who saves and mends our broken hearts.\n\
+  \n\
+  Much thanks to Kaichou and this amazing community that she’s helped bring together. What a blessing this wonderful journey has been. Let’s all keep smiling and have many more together! To Kaichou, you may be out of our sights for a little bit, but you’ll never leave our hearts! KIRYU-KAI FOREVER!"} 
                                     thumbnail="https://cdn.discordapp.com/attachments/752324770196095057/857089193124429845/unknown.png"/>
                             </FadeIn>
                             <div className="project-separator"/>

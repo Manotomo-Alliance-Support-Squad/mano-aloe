@@ -11,6 +11,8 @@
     background-color: var(--theme-card-header-background);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: all 0.5s ease;
+    font-family: var(--theme-font);
+    font-size: var(--card-font-size);
 }
 
 .view-port-hidden {
@@ -45,7 +47,8 @@
     /* overflow is required to keep cards 
      * from segmenting into different columns 
      * at certain resolutions */
-    overflow: auto;
+    overflow-x: visible;
+    overflow-y: hidden;
     height: 100%;
 }
 
@@ -85,19 +88,15 @@
     height: 80px;
     background-size: 100% 100%;
     background-position-x: center;
-    background-repeat: round;
-    background-image: url(../../../assets/cards/AKUKIN_Card_Header_Base_10.png);
 }
 
 @media (max-width: 768px) {
     .card-header {
-        background-image: url(../../../assets/cards/AKUKIN_Card_Header_Base_8.png);
     }
 }
 
 @media (max-width: 426px) {
     .card-header {
-        background-image: url(../../../assets/cards/AKUKIN_Card_Header_Base_6.png);
     }
 }
 
