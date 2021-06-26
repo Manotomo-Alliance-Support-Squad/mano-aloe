@@ -13,6 +13,7 @@
     transition: all 0.5s ease;
     font-family: var(--theme-font);
     font-size: var(--card-font-size);
+    overflow: hidden;
 }
 
 .view-port-hidden {
