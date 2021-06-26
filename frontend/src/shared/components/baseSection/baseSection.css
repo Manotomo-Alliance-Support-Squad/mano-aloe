@@ -18,13 +18,13 @@
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
     .base-section {
         column-count: 2;
     }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1200px) {
     .base-section {
         column-count: 3;
     }

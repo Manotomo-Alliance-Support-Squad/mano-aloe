@@ -1,5 +1,7 @@
-import { Component, setState } from 'react';
+import { Component } from 'react';
 import { InView } from 'react-intersection-observer';
+
+import './fadeInSection.css'
 
 interface FadeInProps {
     className: string;
@@ -17,7 +19,7 @@ export default class FadeIn extends Component<FadeInProps> {
     }
 
     state = {
-        animationClass: this.props.animationClass,
+        animationClass: this.props.className,
     } as FadeInState
 
     triggerAnimation(inView: boolean) {
@@ -27,7 +29,7 @@ export default class FadeIn extends Component<FadeInProps> {
 
     render() {
         return (
-            <InView onChange={(inView, entry) => this.triggerAnimation(inView)} triggerOnce={true}>
+            <InView className="fade-in-expand" onChange={(inView, entry) => this.triggerAnimation(inView)} triggerOnce={true}>
                 <div className={this.state.animationClass}>
                     {this.props.children}
                 </div>
