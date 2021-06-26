@@ -39,7 +39,7 @@ nicooooooo (Coco brooch and asacoco tail assets)
 
 FriedPeanuts (Coco star hairpin asset)
 
-Rara (Diploma design)
+Rara (Diploma design and webpage tiling)
 
 Mr. Cres (Site background)
 
