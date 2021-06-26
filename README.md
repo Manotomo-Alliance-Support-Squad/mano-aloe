@@ -3,9 +3,11 @@ It was not long enough, and we will miss you Coco. Congratulations on your gradu
 
 # Credits
 
-## 2C2D Collaborators
+## 2D2C Collaborators
 
-TBD
+ChienHS
+
+Nyanako [NanakoTW]
 
 ## Website Contributors
 
