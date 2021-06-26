@@ -20,7 +20,7 @@
     font-size: 2rem;
     text-align: center;
     font-family: var(--theme-font);
-    text-shadow: 0px 0px 3px white;
+    text-shadow: var(--theme-text-shadow);
     min-height: 100vh;
     display: flex;
     justify-content: center; 
@@ -50,6 +50,13 @@
     box-sizing: border-box;
     height: 75vh;
     max-height: 768px;
+}
+
+.home-message-header {
+    font-family: var(--theme-font);
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: var(--theme-text-shadow);
 }
 
 @media (max-width: 900px) {
