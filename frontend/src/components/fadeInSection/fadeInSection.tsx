@@ -21,12 +21,8 @@ export default class FadeIn extends Component<FadeInProps> {
     } as FadeInState
 
     triggerAnimation(inView: boolean) {
-        console.log(inView);
         if (!inView) return;
-        console.log(this.state.animationClass)
-        console.log("setting animation now to "+ this.props.className);
         this.setState({animationClass: this.props.className})
-        console.log(this.state.animationClass)
     }
 
     render() {
