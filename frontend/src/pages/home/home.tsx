@@ -291,15 +291,18 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                             You are one of the most remarkable people we have ever known. Your amazing contributions to the community have brought countless overseas viewers down the rabbit hole and, although we are saddened by your decision to graduate, we will always remember and support you. May you fly to ever greater heights.
                             <br/><br/>For your work, we would like to present you this honorary degree for the Master of Kusa.
                         </div>
+                        <div style={{ height: "1rem" }} />
+                        <AnchorStandaloneBotan anchor={Anchors[0]} position={AnchorSectionPosition.LEFT} />
                     </div>
-                    <ImageCard
-                        projectlink="https://cdn.discordapp.com/attachments/745465408848527360/858470646824566814/diploma_final.png"
-                        thumbnail="https://cdn.discordapp.com/attachments/745465408848527360/858470646824566814/diploma_final.png" />
-                    <div style={{ height: "5rem" }} />
-                    <AnchorStandaloneBotan anchor={Anchors[0]} position={AnchorSectionPosition.LEFT} />
-                    <div style={{ height: "5rem" }} />
                     <AnchorSupportedSection anchor={Anchors[0]} onVisible={this.onAnchorVisible}>
+                        <div style={{ height: "5rem" }} />
                         <div className="project-card-section">
+                            <FadeIn className="fade-in">
+                                <ImageCard
+                                    projectlink="https://cdn.discordapp.com/attachments/745465408848527360/858470646824566814/diploma_final.png"
+                                    thumbnail="https://cdn.discordapp.com/attachments/745465408848527360/858470646824566814/diploma_final.png" />
+                            </FadeIn>
+                            <div className="project-separator" />
                             <FadeIn className="fade-in">
                                 <ProjectCard
                                     username="Revel"
