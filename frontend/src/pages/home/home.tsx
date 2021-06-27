@@ -29,6 +29,7 @@ import { Game } from '../../models/game';
 import CreditsModal from "../../components/modals/credits/creditsModal/creditsModal";
 
 // Icon for section
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MovieIcon from '@material-ui/icons/Movie';
 import EmailIcon from '@material-ui/icons/Email';
 import ErrorIcon from '@material-ui/icons/Error';
@@ -282,7 +283,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                     <div className="home-header fade-in">
                         <h1 className="home-header-title">Dear Coco,</h1>
                         <div className="home-header-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                        <AnchorStandaloneBotan anchor={Anchors[0]} position={AnchorSectionPosition.LEFT} />
+                        <AnchorStandaloneBotan anchor={Anchors[0]} svgIcon={ExpandMoreIcon} position={AnchorSectionPosition.LEFT} />
                     </div>
                     <div style={{ height: "5rem" }} />
                     <AnchorSupportedSection anchor={Anchors[0]} onVisible={this.onAnchorVisible}>
