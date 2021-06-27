@@ -1,5 +1,5 @@
 .image-card-thumbnail {
-    width: 100%;
+    width: 75%;
     max-width: 800px;
     min-width: 300px;
     height: auto;
@@ -37,8 +37,8 @@
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+  width: 100%;
+  max-width: 900px;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
