@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { InView } from 'react-intersection-observer';
 import "./projectCard.css";
 
@@ -17,6 +17,26 @@ export default class ProjectCard extends Component<ProjectCardProps>{
         super(props);
     }
 
+    isEmbedYoutubeLink(link: string): boolean {
+        return link.includes('youtube') && link.includes('embed');
+    }
+
+    renderContent() {
+        if (this.isEmbedYoutubeLink(this.props.projectlink)) {
+            return (
+                <iframe src={this.props.projectlink}
+                        allowFullScreen className="project-card-content project-card-video"/>
+            )
+        } else {
+            return (
+                <a href={this.props.projectlink} target="_blank" rel="noopener noreferrer">
+                    <img src={this.props.thumbnail} className="project-card-content project-card-thumbnail" alt="thumbnail"/>
+                </a>
+            )
+        }
+
+    }
+
     render() {
         return (
             <div className="project-card-container">
@@ -33,9 +53,7 @@ export default class ProjectCard extends Component<ProjectCardProps>{
                         </div>
                     </div>
                     <div className="project-card-thumbnail-container left">
-                        <a href={this.props.projectlink} target="_blank" rel="noopener noreferrer">
-                            <img src={this.props.thumbnail} className="project-card-thumbnail" />
-                        </a>
+                        {this.renderContent()}
                     </div>
                 </div>
             </div>

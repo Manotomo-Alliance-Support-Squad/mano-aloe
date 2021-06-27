@@ -34,11 +34,14 @@
     text-align: right;
 }
 
-.project-card-thumbnail {
+.project-card-content {
     width: 100%;
-    height: auto;
     border-radius: 15px;
     transition: box-shadow 0.5s ease;
+}
+
+.project-card-thumbnail {
+    height: auto;
 }
 
 .project-card-thumbnail:hover {
@@ -69,6 +72,11 @@
         margin-right: 5vw;
         font-size: 1.6rem;
     }
+
+    .project-card-video {
+        min-height: 40vh;
+        height: 100%;
+    }
 }
 
 /* mobile specific rules */
@@ -81,5 +89,9 @@
     }
     .project-separator {
         height: 10vh;
+    }
+
+    .project-card-video {
+        height: 50vw;
     }
 }
