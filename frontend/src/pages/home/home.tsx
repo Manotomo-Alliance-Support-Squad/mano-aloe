@@ -294,6 +294,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                     <ImageCard
                         projectlink="https://cdn.discordapp.com/attachments/745465408848527360/858470646824566814/diploma_final.png"
                         thumbnail="https://cdn.discordapp.com/attachments/745465408848527360/858470646824566814/diploma_final.png" />
+                    <div style={{ height: "5rem" }} />
                     <AnchorStandaloneBotan anchor={Anchors[0]} position={AnchorSectionPosition.LEFT} />
                     <div style={{ height: "5rem" }} />
                     <AnchorSupportedSection anchor={Anchors[0]} onVisible={this.onAnchorVisible}>
