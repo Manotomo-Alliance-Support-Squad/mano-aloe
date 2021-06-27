@@ -287,7 +287,8 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                         <div className="project-card-section">
                             <FadeIn className="fade-in">
                                 <ImageCard
-                                    projectlink="https://cdn.discordapp.com/attachments/745465408848527360/858470646824566814/diploma_final.png"
+                                    imageId="cocodiploma"
+                                    modalCaption=""
                                     thumbnail="https://cdn.discordapp.com/attachments/745465408848527360/858470646824566814/diploma_final.png" />
                             </FadeIn>
                             <div className="project-separator" />
