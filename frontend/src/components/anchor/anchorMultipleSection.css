@@ -1,5 +1,5 @@
 :root {
-    --multiple-anchors-background-color: #00000041;
+    --multiple-anchors-background-color: #00000000;
     --multiple-anchors-background-color-hover: #00000050;
     --multiple-anchors-seperator-color: #ffffff65;
     --anchor-text-color: white;
@@ -8,7 +8,7 @@
 .multiple {
     --element-count: 0;
     margin-top: calc(-1 * 2.5% * var(--element-count));
-    padding: 5px;
+    padding: 5px 0;
     border-radius: 25px 0px 0px 25px;
     background-color: var(--multiple-anchors-background-color);
     width: 40px;
@@ -23,6 +23,14 @@
     margin: 10px 0;
 }
 
+.multiple>div:nth-child(n+2)>.anchor-seperator {
+    height: 10px;
+    border-left: 2px solid var(--multiple-anchors-seperator-color);
+    margin: 5px 0px;
+    margin-left: calc(62% - 2px);
+    border-radius: 8%;
+}
+
 .multiple>div[class="active last"] {
     margin-bottom: 20px;
 }
@@ -32,7 +40,7 @@
 }
 
 .multiple .anchor-button svg {
-    padding-left: 35%;
+    padding-left: 45%;
     opacity: .4;
     transition: opacity 0.5s ease;
 }
@@ -70,4 +78,6 @@
     margin-top: 65%;
     margin-bottom: 55%;
     visibility: visible;
+    font-size: large;
+    font-family: var(--theme-font);
 }

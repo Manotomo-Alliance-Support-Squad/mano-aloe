@@ -2,7 +2,6 @@ import React from "react";
 import { Anchor, AnchorSectionProps } from "../../models/anchor";
 import AnchorButton from "./anchorButton";
 import "./anchorMultipleSection.css";
-import CircleIcon from '@material-ui/icons/FiberManualRecord';
 
 export interface MultipleAnchorStates {
     href: string,
@@ -24,13 +23,14 @@ export default class AnchorMultipleSection extends React.Component<AnchorMultipl
         const { anchors } = this.props;
         let { activeHrefs = [] } = this.props;
         activeHrefs = activeHrefs.sort((a, b) => a.lastUpdate > b.lastUpdate ? -1 : 1);
-        
+
         const activeClass = activeHrefs.length > 0 && activeHrefs[0].href === anchor.href ? "active" : "";
         const lastClass = index == anchors.length - 1 ? " last" : "";
 
         return (
             <div key={anchor.href} className={activeClass + lastClass}>
-                <AnchorButton anchor={{ ...anchor, svgIcon: CircleIcon }} />
+                <div className="anchor-seperator" />
+                <AnchorButton anchor={anchor} />
             </div>
         );
     }

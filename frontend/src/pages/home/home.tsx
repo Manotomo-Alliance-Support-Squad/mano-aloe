@@ -8,7 +8,6 @@ import { Announcement } from "../../models/announcement"
 import { Artwork, MultiArtwork } from "../../models/artwork"
 import { Video } from "../../models/video"
 import AnchorSupportedSection, { handleSectionVisibility } from "../../components/anchorSupportedSection/anchorSupportedSection";
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AnchorStandaloneBotan from "../../components/anchor/anchorStandaloneBotan";
 
 import ProjectCard from '../../components/projectSection/projectCard';
@@ -28,6 +27,11 @@ import { Anchor, AnchorSectionPosition } from '../../models/anchor';
 import AnchorMultipleSection, { MultipleAnchorStates } from '../../components/anchor/anchorMultipleSection';
 import { Game } from '../../models/game';
 import CreditsModal from "../../components/modals/credits/creditsModal/creditsModal";
+
+// Icon for section
+import MovieIcon from '@material-ui/icons/Movie';
+import EmailIcon from '@material-ui/icons/Email';
+import ErrorIcon from '@material-ui/icons/Error';
 
 export interface HomePageProps {
 
@@ -49,13 +53,18 @@ export interface HomePageState {
 const Anchors: Anchor[] = [
     {
         href: "#projects-anchor",
-        svgIcon: ExpandMoreIcon,
+        svgIcon: MovieIcon,
         text: "Projects",
     },
     {
         href: "#messages-anchor",
-        svgIcon: ExpandMoreIcon,
+        svgIcon: EmailIcon,
         text: "Messages",
+    },
+    {
+        href: "#credits-anchor",
+        svgIcon: ErrorIcon,
+        text: "Credits",
     },
 ]
 
@@ -325,9 +334,11 @@ Much thanks to Kaichou and this amazing community that she’s helped bring toge
                             {this.renderCardSection(comboCardData)}
                         </FadeIn>
                     </AnchorSupportedSection>
-                    <FadeIn className="fade-in">
-                        <CreditsModal/>
-                    </FadeIn>
+                    <AnchorSupportedSection anchor={Anchors[2]} onVisible={this.onAnchorVisible}>
+                        <FadeIn className="fade-in">
+                            <CreditsModal/>
+                        </FadeIn>
+                    </AnchorSupportedSection>
                     <div style={{ height: "600px" }} />
                 </div>
                 <AnchorMultipleSection position={AnchorSectionPosition.RIGHT} activeHrefs={activeHrefs} anchors={Anchors} />
