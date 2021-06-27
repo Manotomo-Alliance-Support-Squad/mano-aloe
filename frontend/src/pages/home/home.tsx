@@ -345,7 +345,7 @@ Much thanks to Kaichou and this amazing community that she’s helped bring toge
                             <FadeIn className="fade-in">
                                 <ProjectCard
                                     username="BadGrammar"
-                                    title="[ANIMATION COMING SOON] Dragon Legend"
+                                    title="[ANIMATION COMING SOON]"
                                     projectlink="https://duckduckgo.com"
                                     description={"Hi, from humble cine bundle team, we present you with short video about Coco, combining some of the legacy that she is leaving behind\n\nCoco model - Zany\nAssets modelling and animation - Zingy, 1001powerups, BadGrammar"}
                                     thumbnail={Project5Thumb} />
@@ -365,6 +365,7 @@ Much thanks to Kaichou and this amazing community that she’s helped bring toge
                             {this.renderCardSection(comboCardData)}
                         </FadeIn>
                     </AnchorSupportedSection>
+                    <div style={{ height: "5rem" }} />
                     <AnchorSupportedSection anchor={Anchors[2]} onVisible={this.onAnchorVisible}>
                         <FadeIn className="fade-in">
                             <CreditsModal />
