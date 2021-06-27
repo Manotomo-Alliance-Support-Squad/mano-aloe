@@ -305,7 +305,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                                 <ProjectCard
                                     username="Revel"
                                     title="Goodbye Coco"
-                                    projectlink="https://youtu.be/900P2WPzl-M"
+                                    projectlink="https://www.youtube.com/embed/900P2WPzl-M"
                                     description={"The time may have been short, but the memes will last a lifetime. So don't cry my friends, and let us send Coco off with laughs in the air and smiles on our faces, as we wish her a good life ahead of her. Please listen to this short song I wrote for Coco and know that this is not the end of a story, but the start of a legend that we can tell our friends without an end."}
                                     thumbnail={Project1Thumb} />
                             </FadeIn>
@@ -323,7 +323,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                                 <ProjectCard
                                     username="Kelanduo"
                                     title="PATH"
-                                    projectlink="https://youtu.be/c-4qmfRqEIQ"
+                                    projectlink="https://www.youtube.com/embed/c-4qmfRqEIQ"
                                     description={"[While Kelanduo wasn't able to provide us with a description, his hard work and dedication tell us much more than words ever could.]"}
                                     thumbnail="http://i3.ytimg.com/vi/c-4qmfRqEIQ/maxresdefault.jpg" />
                             </FadeIn>
