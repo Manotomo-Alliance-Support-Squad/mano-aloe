@@ -1,0 +1,20 @@
+.image-card-thumbnail {
+    width: 100%;
+    max-width: 800px;
+    min-width: 300px;
+    height: auto;
+    transition: box-shadow 0.5s ease;
+}
+
+.image-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.image-card-thumbnail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
