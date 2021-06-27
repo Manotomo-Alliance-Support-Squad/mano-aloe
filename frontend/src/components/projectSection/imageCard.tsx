@@ -20,9 +20,12 @@ export default class ImageCard extends Component<ImageCardProps>{
             <div className="image-card-container">
                 <div className="project-card">
                     <div className="project-card-thumbnail-container">
-                        <a href={this.props.projectlink} target="_blank" rel="noopener noreferrer">
-                            <img src={this.props.thumbnail} className="image-card-thumbnail" />
-                        </a>
+                        <img id="thumbnail" className="image-card-thumbnail" src={this.props.thumbnail} />
+                        <div id="modal" className="modal">
+                            <span className="close">&times;</span>
+                            <img className="modal-content" id="img01" />
+                            <div id="caption"></div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -6,21 +6,17 @@
     transition: box-shadow 0.5s ease;
 }
 
+.image-card-thumbnail:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
 .image-card-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-/* Style the Image Used to Trigger the Modal */
-#thumbnail {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#thumbnail:hover {opacity: 0.9;}
 
 /* The Modal (background) */
 .modal {
