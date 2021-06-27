@@ -324,7 +324,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                                     username="Kelanduo"
                                     title="PATH"
                                     projectlink="https://youtu.be/c-4qmfRqEIQ"
-                                    description={"[While Kelanduo's friend wasn't able to provide us with a description, his hard work and dedication tell us much more than words ever could.]"}
+                                    description={"[While Kelanduo wasn't able to provide us with a description, his hard work and dedication tell us much more than words ever could.]"}
                                     thumbnail="http://i3.ytimg.com/vi/c-4qmfRqEIQ/maxresdefault.jpg" />
                             </FadeIn>
                             <div className="project-separator" />
