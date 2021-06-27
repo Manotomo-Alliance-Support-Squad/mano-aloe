@@ -57,6 +57,7 @@ Necrosis
 
 VintageGhost
 
+Kiwi & Hiroki (Community Message)
 
 # Join the MASS Discord
 

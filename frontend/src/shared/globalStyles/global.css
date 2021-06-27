@@ -51,7 +51,6 @@
     height: 40px;
     width: 100%;
     background-color: var(--separator-background-color);
-    background-image: url(../../assets/cards/AKUKIN_Card_footer.png);
 }
 
 .notice-container {
@@ -96,6 +95,15 @@
     text-align: center;
 }
 
+.global-font {
+    font-family: var(--theme-font) !important;
+    color: white !important;
+}
+
+.global-bold {
+    font-weight: bold !important;
+}
+
 @media (max-width: 430px) {
     .notice-content {
         max-width: 100vw;
@@ -103,4 +111,11 @@
     .notice-container {
         max-width: 100vw;
     }
+}
+
+.line {
+    height: 1px;
+    background-color: white;
+    width: 66.0em;
+    margin: 0 auto;
 }

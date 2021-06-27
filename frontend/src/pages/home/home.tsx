@@ -27,6 +27,7 @@ import '../../components/headerSection/header.css';
 import { Anchor, AnchorSectionPosition } from '../../models/anchor';
 import AnchorMultipleSection, { MultipleAnchorStates } from '../../components/anchor/anchorMultipleSection';
 import { Game } from '../../models/game';
+import CreditsModal from "../../components/modals/credits/creditsModal/creditsModal";
 
 export interface HomePageProps {
 
@@ -324,6 +325,9 @@ Much thanks to Kaichou and this amazing community that she’s helped bring toge
                             {this.renderCardSection(comboCardData)}
                         </FadeIn>
                     </AnchorSupportedSection>
+                    <FadeIn className="fade-in">
+                        <CreditsModal/>
+                    </FadeIn>
                     <div style={{ height: "600px" }} />
                 </div>
                 <AnchorMultipleSection position={AnchorSectionPosition.RIGHT} activeHrefs={activeHrefs} anchors={Anchors} />
