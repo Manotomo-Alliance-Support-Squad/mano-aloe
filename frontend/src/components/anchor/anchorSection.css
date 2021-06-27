@@ -31,6 +31,15 @@
     margin: auto;
     left: 0;
     right: 0;
+    font-family: var(--theme-font);
+    text-shadow: var(--theme-text-shadow);
+    font-size: 1.5rem;
+}
+
+@media (max-width: 800px) {
+    .standalone .anchor-button {
+        font-size: 1rem;
+    }
 }
 
 .anchor-button p {

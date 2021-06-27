@@ -39,7 +39,7 @@
     visibility: visible;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .multiple {
         top: unset;
         right: unset;
