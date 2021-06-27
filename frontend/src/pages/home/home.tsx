@@ -23,6 +23,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AnchorStandaloneBotan from "../../components/anchor/anchorStandaloneBotan";
 
 import ProjectCard from '../../components/projectSection/projectCard';
+import ImageCard from '../../components/projectSection/imageCard';
 import FadeIn from '../../components/fadeInSection/fadeInSection';
 
 //Thumbnails
@@ -284,13 +285,16 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                 <div>
                     <div className="home-hidden-text">Fix home-header from clipping when reloading the page while at topmost or first time load the site</div>
                     <div className="home-header fade-in">
-                        <h1 className="home-header-title">Dear Coco,</h1>
+                        <h1 className="home-header-title">Dear Coco</h1>
                         <div className="home-header-text">
-                            Dear Coco, 
                             You are one of the most remarkable people we have ever known. Your amazing contributions to the community have brought countless overseas viewers down the rabbit hole and, although we are saddened by your decision to graduate, we will always remember and support you. May you fly to ever greater heights.
+                            <br/><br/>For your work, we would like to present you this honorary degree for the Master of Kusa.
                         </div>
-                        <AnchorStandaloneBotan anchor={Anchors[0]} position={AnchorSectionPosition.LEFT} />
                     </div>
+                    <ImageCard
+                        projectlink="https://cdn.discordapp.com/attachments/745465408848527360/858470646824566814/diploma_final.png"
+                        thumbnail="https://cdn.discordapp.com/attachments/745465408848527360/858470646824566814/diploma_final.png" />
+                    <AnchorStandaloneBotan anchor={Anchors[0]} position={AnchorSectionPosition.LEFT} />
                     <div style={{ height: "5rem" }} />
                     <AnchorSupportedSection anchor={Anchors[0]} onVisible={this.onAnchorVisible}>
                         <div className="project-card-section">
