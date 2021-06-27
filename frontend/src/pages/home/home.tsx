@@ -17,7 +17,8 @@ import FadeIn from '../../components/fadeInSection/fadeInSection';
 //Thumbnails
 import Project1Thumb from '../../assets/thumbnails/Goodbye_Coco_thumbnail-Revel.jpg';
 import Project2Thumb from '../../assets/thumbnails/Cocos_Scrapbook_Cover-Capt-Jules.jpg';
-import Project3Thumb from '../../assets/thumbnails/gamethumbnail.png';
+import Project4Thumb from '../../assets/thumbnails/gamethumbnail.png';
+import Project5Thumb from '../../assets/thumbnails/animationthumbnail.png';
 
 // CSS
 import './home.css';
@@ -312,16 +313,25 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                             <FadeIn className="fade-in">
                                 <ProjectCard
                                     username="Capt-Jules"
-                                    title="[COMING SOON] A Scrapbook for Coco"
-                                    projectlink="https://duckduckgo.com"
+                                    title="A Scrapbook for Coco"
+                                    projectlink="https://issuu.com/capt-jules/docs/scrapbook_for_coco_soft_release_ver_"
                                     description={"Hello everyone! Here's a little something for you all! Presenting a small digital scrapbook featuring some of Coco's memorable moments! So, let's take a bit and look back at those happy memories, hope you all enjoy! 💕\n\nOf course, thank you Kaichou for everything you have done in this VTubing world and to this wonderful community for never failing to show your love! It has been a fun ride that I'm sure will keep on going! It may be a sad time for some of us, but things will get better. With that said, thank you and take care, everyone!"}
                                     thumbnail={Project2Thumb} />
                             </FadeIn>
                             <div className="project-separator" />
                             <FadeIn className="fade-in">
                                 <ProjectCard
+                                    username="Kelanduo"
+                                    title="PATH"
+                                    projectlink="https://youtu.be/c-4qmfRqEIQ"
+                                    description={"[While Kelanduo's friend wasn't able to provide us with a description, his hard work and dedication tell us much more than words ever could.]"}
+                                    thumbnail="http://i3.ytimg.com/vi/c-4qmfRqEIQ/maxresdefault.jpg" />
+                            </FadeIn>
+                            <div className="project-separator" />
+                            <FadeIn className="fade-in">
+                                <ProjectCard
                                     username="With love, from fans all across the world."
-                                    title="[COMING SOON] Dragon Legend"
+                                    title="[GAME COMING SOON] Dragon Legend"
                                     projectlink="https://duckduckgo.com"
                                     description={"A seam in the sky birthed They of the dark,\n\
 Then, with fire roared the dragon of new starts,\n\
@@ -329,9 +339,17 @@ Thus fled They with no bite and only bark,\n\
 From she who saves and mends our broken hearts.\n\
 \n\
 Much thanks to Kaichou and this amazing community that she’s helped bring together. What a blessing this wonderful journey has been. Let’s all keep smiling and have many more together! To Kaichou, you may be out of our sights for a little bit, but you’ll never leave our hearts! KIRYU-KAI FOREVER!"}
-                                    thumbnail={Project3Thumb} />
+                                    thumbnail={Project4Thumb} />
                             </FadeIn>
                             <div className="project-separator" />
+                            <FadeIn className="fade-in">
+                                <ProjectCard
+                                    username="BadGrammar"
+                                    title="[ANIMATION COMING SOON] Dragon Legend"
+                                    projectlink="https://duckduckgo.com"
+                                    description={"Hi, from humble cine bundle team, we present you with short video about Coco, combining some of the legacy that she is leaving behind\n\nCoco model - Zany\nAssets modelling and animation - Zingy, 1001powerups, BadGrammar"}
+                                    thumbnail={Project5Thumb} />
+                            </FadeIn><div className="project-separator" />
                         </div>
                     </AnchorSupportedSection>
                     <div style={{ height: "100px" }} />
