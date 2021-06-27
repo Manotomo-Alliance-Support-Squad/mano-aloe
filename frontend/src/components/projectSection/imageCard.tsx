@@ -21,6 +21,7 @@ export default class ImageCard extends Component<ImageCardProps>{
         this.modalImgSrcId = this.modalId + "Imgsrc"
         this.modalCaptionId = this.modalId + "Caption"
         this.renderImgModal = this.renderImgModal.bind(this);
+        this.closeImgModal = this.closeImgModal.bind(this);
     }
 
     renderImgModal(): void {
@@ -38,6 +39,16 @@ export default class ImageCard extends Component<ImageCardProps>{
         }
     }
 
+    closeImgModal(): void {
+        var modal = document.getElementById(this.modalId);
+        var span = document.getElementsByClassName("close")[0];
+        if (!modal || !span) {
+            return
+        } else {
+            modal.style.display = "none";
+        }
+    }
+
 
     render() {
         return (
@@ -48,7 +59,7 @@ export default class ImageCard extends Component<ImageCardProps>{
                             src={this.props.thumbnail}
                             onClick={this.renderImgModal}/>
                         <div id={this.modalId} className="modal">
-                            <span className="close">&times;</span>
+                            <span className="close" onClick={this.closeImgModal}>&times;</span>
                             <img id={this.modalImgSrcId} className="modal-content" src="" />
                             <div id={this.modalCaptionId}></div>
                         </div>
