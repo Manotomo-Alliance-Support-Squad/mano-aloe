@@ -8,8 +8,6 @@ import { Announcement } from "../../models/announcement"
 import { Artwork, MultiArtwork } from "../../models/artwork"
 import { Video } from "../../models/video"
 import AnchorSupportedSection, { handleSectionVisibility } from "../../components/anchorSupportedSection/anchorSupportedSection";
-
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AnchorStandaloneBotan from "../../components/anchor/anchorStandaloneBotan";
 
 import ProjectCard from '../../components/projectSection/projectCard';
@@ -28,9 +26,15 @@ import '../../shared/globalStyles/global.css'
 // Hack for community card before messages
 import '../../components/headerSection/header.css';
 import { Anchor, AnchorSectionPosition } from '../../models/anchor';
-import { MultipleAnchorStates } from '../../components/anchor/anchorMultipleSection';
+import AnchorMultipleSection, { MultipleAnchorStates } from '../../components/anchor/anchorMultipleSection';
 import { Game } from '../../models/game';
 import CreditsModal from "../../components/modals/credits/creditsModal/creditsModal";
+
+// Icon for section
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import MovieIcon from '@material-ui/icons/Movie';
+import EmailIcon from '@material-ui/icons/Email';
+import ErrorIcon from '@material-ui/icons/Error';
 
 export interface HomePageProps {
 
@@ -52,13 +56,18 @@ export interface HomePageState {
 const Anchors: Anchor[] = [
     {
         href: "#projects-anchor",
-        svgIcon: ExpandMoreIcon,
+        svgIcon: MovieIcon,
         text: "Projects",
     },
     {
         href: "#messages-anchor",
-        svgIcon: ExpandMoreIcon,
+        svgIcon: EmailIcon,
         text: "Messages",
+    },
+    {
+        href: "#credits-anchor",
+        svgIcon: ErrorIcon,
+        text: "Credits",
     },
 ]
 
@@ -277,10 +286,10 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                         <h1 className="home-header-title">Dear Coco</h1>
                         <div className="home-header-text">
                             You are one of the most remarkable people we have ever known. Your amazing contributions to the community have brought countless overseas viewers down the rabbit hole and, although we are saddened by your decision to graduate, we will always remember and support you. May you fly to ever greater heights.
-                            <br/><br/>For your work, we would like to present you this honorary degree for the Master of Kusa.
+                            <br /><br />For your work, we would like to present you this honorary degree for the Master of Kusa.
                         </div>
                         <div style={{ height: "5rem" }} />
-                        <AnchorStandaloneBotan anchor={Anchors[0]} position={AnchorSectionPosition.LEFT} />
+                        <AnchorStandaloneBotan anchor={Anchors[0]} svgIcon={ExpandMoreIcon} position={AnchorSectionPosition.LEFT} />
                     </div>
                     <AnchorSupportedSection anchor={Anchors[0]} onVisible={this.onAnchorVisible}>
                         <div style={{ height: "5rem" }} />
@@ -338,11 +347,14 @@ Much thanks to Kaichou and this amazing community that she’s helped bring toge
                             {this.renderCardSection(comboCardData)}
                         </FadeIn>
                     </AnchorSupportedSection>
-                    <FadeIn className="fade-in">
-                        <CreditsModal/>
-                    </FadeIn>
+                    <AnchorSupportedSection anchor={Anchors[2]} onVisible={this.onAnchorVisible}>
+                        <FadeIn className="fade-in">
+                            <CreditsModal />
+                        </FadeIn>
+                    </AnchorSupportedSection>
                     <div style={{ height: "600px" }} />
                 </div>
+                <AnchorMultipleSection position={AnchorSectionPosition.RIGHT} activeHrefs={activeHrefs} anchors={Anchors} />
             </div>
         )
     }
