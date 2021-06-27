@@ -1,13 +1,13 @@
 import { useLocation } from 'react-router-dom';
 import InPageNav from '../../components/inPageNav/inPageNav';
-import InfoIcon from '@material-ui/icons/Info';
+import {GitHub} from "@material-ui/icons";
 
 const creditsNav = [                                                                                                         
     {
-        link: 'https://github.com/Manotomo-Alliance-Support-Squad/aqua-sweet-dreams',                                                      
-        buttonContent: "Credits",                                                                                            
+        link: 'https://github.com/Manotomo-Alliance-Support-Squad/coco-grad',
+        buttonContent: "GitHub",
         page: "",                                                                                                            
-        startIcon: <InfoIcon />                                                                                              
+        startIcon: <GitHub/>
     },                                                                                                                       
 ];
 
@@ -16,5 +16,5 @@ export default function AltNav() {
     if (location.pathname === "/home") {                                                                                      
         return <InPageNav navButtons={creditsNav}/>;                                                                         
     }                                                                                                                        
-    return <span />
+    return <span/>
 }

@@ -1,10 +1,8 @@
 import {Component} from 'react'
-import { Button } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
-import { withStyles } from '@material-ui/core/styles';
-
 import './inPageNav.css';
 import '../../shared/globalStyles/global.css';
+import {NavButton} from "../../shared/components/buttons/navButton/navButton";
 
 
 interface InPageNavState{
@@ -13,17 +11,6 @@ interface InPageNavState{
 interface InPageNavProps{
     navButtons: Array<Object>;
 }
-
-const NavButton = withStyles({
-      containedPrimary: {
-        color: "var(--theme-special-text)",
-        backgroundColor: "var(--theme-special-background)",
-        '&:hover': {
-          backgroundColor: "var(--theme-special-background-alt)",
-        },
-      },
-})(Button);
-
 
 export default class InPageNav extends Component<InPageNavProps, InPageNavState>{
     navButtons: Array<Object>;

@@ -4,21 +4,11 @@ import ComboSection from '../../components/comboSection/comboSection';
 import { Message } from "../../models/message";
 import ManoAloeService from "../../controllers/mano-aloe.service";
 import SessionService from "../../services/session.service";
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import EmailIcon from '@material-ui/icons/Email';
-import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
 import { Announcement } from "../../models/announcement"
 import { Artwork, MultiArtwork } from "../../models/artwork"
 import { Video } from "../../models/video"
-import AnnouncementSection from "../../components/announcementSection/announcementSection";
 import AnchorSupportedSection, { handleSectionVisibility } from "../../components/anchorSupportedSection/anchorSupportedSection";
-import GameSection from '../../components/gamesSection/gameSection';
 
-import ButtonAppBar from '../../components/navigation/navbar';
-import HeaderSection from "../../components/headerSection/header";
-import FooterSection from "../../components/footerSection/footer";
-import AltNav from '../../components/navigation/altnav';
-import AnchorSingleSection from "../../components/anchor/anchorSingleSection";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AnchorStandaloneBotan from "../../components/anchor/anchorStandaloneBotan";
 
@@ -34,13 +24,11 @@ import './home.css';
 import '../../shared/globalStyles/global.css'
 
 // Hack for community card before messages
-import { LanguageContext, LanguageContextValue } from '../../components/languageSwitch/languageContext';
-import MessageCard from '../../components/messageSection/messageCard/messageCard';
 import '../../components/headerSection/header.css';
 import { Anchor, AnchorSectionPosition } from '../../models/anchor';
-import AnchorMultipleSection, { MultipleAnchorStates } from '../../components/anchor/anchorMultipleSection';
-import { ReactComponent as AnchorBotan } from "../../assets/icons/anchorIcon.svg";
+import { MultipleAnchorStates } from '../../components/anchor/anchorMultipleSection';
 import { Game } from '../../models/game';
+import CreditsModal from "../../components/modals/credits/creditsModal/creditsModal";
 
 export interface HomePageProps {
 
@@ -338,6 +326,9 @@ Much thanks to Kaichou and this amazing community that she’s helped bring toge
                             {this.renderCardSection(comboCardData)}
                         </FadeIn>
                     </AnchorSupportedSection>
+                    <FadeIn className="fade-in">
+                        <CreditsModal/>
+                    </FadeIn>
                     <div style={{ height: "600px" }} />
                 </div>
             </div>
