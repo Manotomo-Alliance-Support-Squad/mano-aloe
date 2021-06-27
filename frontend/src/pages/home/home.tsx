@@ -349,7 +349,8 @@ Much thanks to Kaichou and this amazing community that she’s helped bring toge
                                     projectlink="https://duckduckgo.com"
                                     description={"Hi, from humble cine bundle team, we present you with short video about Coco, combining some of the legacy that she is leaving behind\n\nCoco model - Zany\nAssets modelling and animation - Zingy, 1001powerups, BadGrammar"}
                                     thumbnail={Project5Thumb} />
-                            </FadeIn><div className="project-separator" />
+                            </FadeIn>
+                            <div className="project-separator" />
                         </div>
                     </AnchorSupportedSection>
                     <div style={{ height: "100px" }} />
