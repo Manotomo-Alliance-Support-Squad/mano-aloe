@@ -39,6 +39,12 @@
     font-size: 1.5rem;
 }
 
+@media (max-width: 800px) {
+    .standalone .anchor-button {
+        font-size: 1rem;
+    }
+}
+
 .anchor-button p {
     opacity: 0;
     margin: 0;
