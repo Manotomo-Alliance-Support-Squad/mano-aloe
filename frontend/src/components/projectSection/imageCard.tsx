@@ -56,8 +56,8 @@ export default class ImageCard extends Component<ImageCardProps>{
                         <img id={this.props.imageId} className="image-card-thumbnail"
                             src={this.props.thumbnail}
                             onClick={this.renderImgModal}/>
-                        <div id={this.modalId} className="modal">
-                            <span className="close" onClick={this.renderImgModal}>&times;</span>
+                        <div id={this.modalId} className="modal" onClick={this.renderImgModal}>
+                            <span className="close">&times;</span>
                             <img id={this.modalImgSrcId} className="modal-content" src="" />
                             <div id={this.modalCaptionId}></div>
                         </div>
