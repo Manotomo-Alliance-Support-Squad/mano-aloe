@@ -11,13 +11,11 @@
 @keyframes fadein-up {
     0% {
         opacity: 0;
-        margin-top: 50vh;
-        margin-bottom: -50vh;
+        transform: translateY(200px);
     }
     100% {
         opacity: 1;
-        margin-top: unset;
-        margin-bottom: unset;
+        transform: translateY(0);
     }
 }
 
