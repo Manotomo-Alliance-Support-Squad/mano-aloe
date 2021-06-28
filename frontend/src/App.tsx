@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 import './App.css';
@@ -8,8 +8,6 @@ import { LanguageContext, LanguageContextValue } from "./components/languageSwit
 import DisplayedLanguage from "./models/language";
 
 import HomePage from './pages/home/home';
-import { AnchorSectionPosition } from "./models/anchor";
-import { ReactComponent as AnchorBotan } from "./assets/icons/toTopAnchorIcon.svg";
 
 interface AppProps {
 }
