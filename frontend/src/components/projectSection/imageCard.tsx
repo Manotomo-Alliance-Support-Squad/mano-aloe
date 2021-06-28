@@ -26,21 +26,26 @@ export default class ImageCard extends Component<ImageCardProps>{
     renderImgModal(): void {
         var modal = document.getElementById(this.modalId);
         var modalImg = document.getElementById(this.modalImgSrcId) as HTMLImageElement;
-        var modalCaption = document.getElementById(this.modalCaptionId);
-        if (!modal || !modalImg) {
+        var body = document.querySelector("body");
+        if (!modal || !modalImg || !body) {
             return
         }
         
         if (modal.style.display === "block") {
             modal.style.display = "none";
+            // Scrolling enable for non-modal part of the page
+            body.style.overflow = "visible";
             return
         }
         
         modal.style.display = "block";
         modalImg.src = this.props.thumbnail;
+        var modalCaption = document.getElementById(this.modalCaptionId);
         if (modalCaption) {
             modalCaption.innerHTML = this.props.modalCaption ? this.props.modalCaption : "";
         }
+        // Scrolling disabled for non-modal part of the page
+        body.style.overflow = "hidden";
     }
 
     render() {
