@@ -5,9 +5,12 @@
 }
 
 .project-separator {
-    font-family: var(--theme-font);
+}
+
+.project-separator-header {
     text-align: center;
     text-shadow: var(--theme-text-shadow);
+    font-family: var(--theme-font);
 }
 
 .project-card-container {

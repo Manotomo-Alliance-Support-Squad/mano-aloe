@@ -364,7 +364,7 @@ Much thanks to Kaichou and this amazing community that she’s helped bring toge
                             </FadeIn>
                             <div className="project-separator" style={{ height: "15vh" /*guh, hard-coded css*/ }} />
                             <FadeIn className="fade-in">
-                                <div className="project-separator">
+                                <div className="project-separator-header">
                                     <h1>More Amazing Fan-Made Websites</h1>
                                 </div>
                             </FadeIn>
