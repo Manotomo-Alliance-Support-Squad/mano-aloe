@@ -19,6 +19,8 @@ import Project1Thumb from '../../assets/thumbnails/Goodbye_Coco_thumbnail-Revel.
 import Project2Thumb from '../../assets/thumbnails/Cocos_Scrapbook_Cover-Capt-Jules.jpg';
 import Project4Thumb from '../../assets/thumbnails/gamethumbnail.png';
 import Project5Thumb from '../../assets/thumbnails/animationthumbnail.png';
+import Project6Thumb from '../../assets/thumbnails/randomcoco.png';
+import Project7Thumb from '../../assets/thumbnails/pheelgag.png';
 
 // CSS
 import './home.css';
@@ -314,7 +316,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                                 <ProjectCard
                                     username="Capt-Jules"
                                     title="A Scrapbook for Coco"
-                                    projectlink="https://issuu.com/capt-jules/docs/scrapbook_for_coco_soft_release_ver_"
+                                    projectlink="https://issuu.com/capt-jules/docs/scrapbook_for_coco_15fa8943b06163"
                                     description={"Hello everyone! Here's a little something for you all! Presenting a small digital scrapbook featuring some of Coco's memorable moments! So, let's take a bit and look back at those happy memories, hope you all enjoy! 💕\n\nOf course, thank you Kaichou for everything you have done in this VTubing world and to this wonderful community for never failing to show your love! It has been a fun ride that I'm sure will keep on going! It may be a sad time for some of us, but things will get better. With that said, thank you and take care, everyone!"}
                                     thumbnail={Project2Thumb} />
                             </FadeIn>
@@ -330,9 +332,19 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                             <div className="project-separator" />
                             <FadeIn className="fade-in">
                                 <ProjectCard
+                                    username="PheelGagg"
+                                    title="[WIP] Coco's Mini-Letters Collection"
+                                    projectlink=""
+                                    description={"A small group of Kaigainikis from different parts of the world writing individual letters with a twist of puzzle art at the back their pages for Kaichou to piece together!\n\n\
+-art by Clueless weab"}
+                                    thumbnail={Project7Thumb} />
+                            </FadeIn>
+                            <div className="project-separator" />
+                            <FadeIn className="fade-in">
+                                <ProjectCard
                                     username="With love, from fans all across the world."
                                     title="[GAME COMING SOON] Dragon Legend"
-                                    projectlink="https://duckduckgo.com"
+                                    projectlink=""
                                     description={"A seam in the sky birthed They of the dark,\n\
 Then, with fire roared the dragon of new starts,\n\
 Thus fled They with no bite and only bark,\n\
@@ -346,9 +358,34 @@ Much thanks to Kaichou and this amazing community that she’s helped bring toge
                                 <ProjectCard
                                     username="BadGrammar"
                                     title="[ANIMATION COMING SOON]"
-                                    projectlink="https://duckduckgo.com"
+                                    projectlink=""
                                     description={"Hi, from humble cine bundle team, we present you with short video about Coco, combining some of the legacy that she is leaving behind\n\nCoco model - Zany\nAssets modelling and animation - Zingy, 1001powerups, BadGrammar"}
                                     thumbnail={Project5Thumb} />
+                            </FadeIn>
+                            <div className="project-separator" style={{ height: "15vh" /*guh, hard-coded css*/ }} />
+                            <FadeIn className="fade-in">
+                                <div className="project-separator">
+                                    <h1>More Amazing Fan-Made Websites</h1>
+                                </div>
+                            </FadeIn>
+                            <FadeIn className="fade-in">
+                                <ProjectCard
+                                    username=""
+                                    title="[Coming Very Soon] 2D2C Kiryu Coco Graduation Project"
+                                    projectlink=""
+                                    description={"[Site is still in the works, stay tuned for updates!] Check out the 2d2c fan website! The 2d2c guys put a lot of hard work into their projects, so please do pay them a visit!"}
+                                    thumbnail="https://kcgp.tw/static/images/home/bg-2.webp" />
+                            </FadeIn>
+                            <div className="project-separator" />
+                            <FadeIn className="fade-in">
+                                <ProjectCard
+                                    username="Tom"
+                                    title="Random Coco"
+                                    projectlink="https://www.random-co.co/"
+                                    description={"Thank you, sincerely, for everything you’ve done. For Vtubing, for your peers, and for us. You’ve permanently improved the Vtuber ecosystem, constantly pushing the line forward. You’re going to shake heaven and earth with your next step.\n\n\
+You brought levity to me in the miserable 2020. Your fearless self-expression inspired me to try Vtubing myself in 2021! And your karaoke training arc has even pushed me to try to improve my own singing (though I have always loved your voice).\n\n\
+Arigathanks, mf."}
+                                    thumbnail={Project6Thumb} />
                             </FadeIn>
                             <div className="project-separator" />
                         </div>

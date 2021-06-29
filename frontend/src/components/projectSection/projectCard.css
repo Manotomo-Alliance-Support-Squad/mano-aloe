@@ -4,7 +4,11 @@
     text-shadow: var(--theme-text-shadow);
 }
 
-.project-separator {}
+.project-separator {
+    font-family: var(--theme-font);
+    text-align: center;
+    text-shadow: var(--theme-text-shadow);
+}
 
 .project-card-container {
     min-height: 100vh;
@@ -88,7 +92,7 @@
         font-size: 1.2rem;
     }
     .project-separator {
-        height: 10vh;
+        min-height: 10vh;
     }
 
     .project-card-video {
