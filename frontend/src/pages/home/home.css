@@ -7,6 +7,7 @@
     background-repeat: no-repeat, repeat-y;
     background-size: 100% auto, 100% auto;
     background-position: bottom, 0px 0px;
+    background-color: #001d31;
     min-height: 100vh;
 
     display: flex;
