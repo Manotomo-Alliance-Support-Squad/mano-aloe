@@ -393,7 +393,7 @@ Arigathanks, mf."}
                             <FadeIn className="fade-in">
                                 <ProjectCard
                                     username="tam"
-                                    title="The Strongest Luknights"
+                                    title="The Strongest Luknight"
                                     projectlink="https://thestrongestluknight.com/"
                                     description={"The Luknights' graduation present to Coco. You were the greatest Luknight and will forever be remembered!"}
                                     thumbnail={Project9Thumb} />
@@ -404,7 +404,7 @@ Arigathanks, mf."}
                                     username=""
                                     title="The Kaichou Project"
                                     projectlink="http://kaichouproject.net"
-                                    description={"The guys over at the Kaichou Project Discord have been working on another website! Go Check them out!"}
+                                    description={"The guys over at the Kaichou Project Discord have been working on another website! Go Check them out! Their message submissions are still open as well!"}
                                     thumbnail={Project10Thumb} />
                             </FadeIn>
                             <div className="project-separator" />
