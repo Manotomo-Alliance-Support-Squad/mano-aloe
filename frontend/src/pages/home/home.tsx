@@ -22,7 +22,8 @@ import Project5Thumb from '../../assets/thumbnails/animationthumbnail.png';
 import Project6Thumb from '../../assets/thumbnails/randomcoco.png';
 import Project7Thumb from '../../assets/thumbnails/pheelgag.png';
 import Project8Thumb from '../../assets/thumbnails/2d2c.jpg';
-import Project9Thumb from '../../assets/thumbnails/gamethumbnail.png';
+import Project9Thumb from '../../assets/thumbnails/strongestluknights.jpg';
+import Project10Thumb from '../../assets/thumbnails/kaichouproject.png';
 
 // CSS
 import './home.css';
@@ -388,13 +389,23 @@ You brought levity to me in the miserable 2020. Your fearless self-expression in
 Arigathanks, mf."}
                                     thumbnail={Project6Thumb} />
                             </FadeIn>
+                            <div className="project-separator" />
+                            <FadeIn className="fade-in">
+                                <ProjectCard
+                                    username="tam"
+                                    title="The Strongest Luknights"
+                                    projectlink="https://thestrongestluknight.com/"
+                                    description={"The Luknights' graduation present to Coco. You were the greatest Luknight and will forever be remembered!"}
+                                    thumbnail={Project9Thumb} />
+                            </FadeIn>
+                            <div className="project-separator" />
                             <FadeIn className="fade-in">
                                 <ProjectCard
                                     username=""
                                     title="The Kaichou Project"
                                     projectlink="http://kaichouproject.net"
                                     description={"The guys over at the Kaichou Project Discord have been working on another website! Go Check them out!"}
-                                    thumbnail={Project9Thumb} />
+                                    thumbnail={Project10Thumb} />
                             </FadeIn>
                             <div className="project-separator" />
                         </div>
