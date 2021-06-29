@@ -294,12 +294,11 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                     </div>
                     <AnchorSupportedSection anchor={Anchors[0]} onVisible={this.onAnchorVisible}>
                         <div style={{ height: "5rem" }} />
+                        <ImageCard
+                            imageId="cocodiploma"
+                            modalCaption=""
+                            thumbnail="https://cdn.discordapp.com/attachments/745465408848527360/858470646824566814/diploma_final.png" />
                         <div className="project-card-section">
-                            <FadeIn className="fade-in">
-                                <ImageCard
-                                    projectlink="https://cdn.discordapp.com/attachments/745465408848527360/858470646824566814/diploma_final.png"
-                                    thumbnail="https://cdn.discordapp.com/attachments/745465408848527360/858470646824566814/diploma_final.png" />
-                            </FadeIn>
                             <div className="project-separator" />
                             <FadeIn className="fade-in">
                                 <ProjectCard
