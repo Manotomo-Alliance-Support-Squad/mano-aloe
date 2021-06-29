@@ -34,6 +34,16 @@
 
     --theme-font: "Indie Flower", "Charmonman";
     --theme-text-shadow: 0px 0px 3px white;
+
+}
+
+#root {
+    /*
+     * Keeps the background image
+     * from getting cut off at stupid
+     * low horizontal resolutions
+     */
+    overflow: hidden;
 }
 
 body {
