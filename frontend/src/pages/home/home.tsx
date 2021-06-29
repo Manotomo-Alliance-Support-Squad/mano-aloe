@@ -21,7 +21,8 @@ import Project4Thumb from '../../assets/thumbnails/gamethumbnail.png';
 import Project5Thumb from '../../assets/thumbnails/animationthumbnail.png';
 import Project6Thumb from '../../assets/thumbnails/randomcoco.png';
 import Project7Thumb from '../../assets/thumbnails/pheelgag.png';
-import Project8Thumb from '../../assets/thumbnails/2d2c.webp';
+import Project8Thumb from '../../assets/thumbnails/2d2c.jpg';
+import Project9Thumb from '../../assets/thumbnails/gamethumbnail.png';
 
 // CSS
 import './home.css';
@@ -379,13 +380,21 @@ Much thanks to Kaichou and this amazing community that she’s helped bring toge
                             <div className="project-separator" />
                             <FadeIn className="fade-in">
                                 <ProjectCard
-                                    username="Tom"
+                                    username="Tom 'Skeletom' Farro"
                                     title="Random Coco"
                                     projectlink="https://www.random-co.co/"
                                     description={"Thank you, sincerely, for everything you’ve done. For Vtubing, for your peers, and for us. You’ve permanently improved the Vtuber ecosystem, constantly pushing the line forward. You’re going to shake heaven and earth with your next step.\n\n\
 You brought levity to me in the miserable 2020. Your fearless self-expression inspired me to try Vtubing myself in 2021! And your karaoke training arc has even pushed me to try to improve my own singing (though I have always loved your voice).\n\n\
 Arigathanks, mf."}
                                     thumbnail={Project6Thumb} />
+                            </FadeIn>
+                            <FadeIn className="fade-in">
+                                <ProjectCard
+                                    username=""
+                                    title="The Kaichou Project"
+                                    projectlink="http://kaichouproject.net"
+                                    description={"The guys over at the Kaichou Project Discord have been working on another website! Go Check them out!"}
+                                    thumbnail={Project9Thumb} />
                             </FadeIn>
                             <div className="project-separator" />
                         </div>
