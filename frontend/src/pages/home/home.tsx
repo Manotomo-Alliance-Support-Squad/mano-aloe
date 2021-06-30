@@ -24,6 +24,8 @@ import Project7Thumb from '../../assets/thumbnails/pheelgag.png';
 import Project8Thumb from '../../assets/thumbnails/2d2c.jpg';
 import Project9Thumb from '../../assets/thumbnails/strongestluknights.jpg';
 import Project10Thumb from '../../assets/thumbnails/kaichouproject.png';
+import Project11Thumb from '../../assets/thumbnails/cococord.png';
+import Project12Thumb from '../../assets/thumbnails/kiryu-kai.png';
 
 // CSS
 import './home.css';
@@ -421,6 +423,24 @@ Arigathanks, mf."}
                                     projectlink="http://kaichouproject.net"
                                     description={"The guys over at the Kaichou Project Discord have been working on another website! Go Check them out! Their message submissions are still open as well!"}
                                     thumbnail={Project10Thumb} />
+                            </FadeIn>
+                            <div className="project-separator" />
+                            <FadeIn className="fade-in">
+                                <ProjectCard
+                                    username=""
+                                    title="Thank you Coco 会長"
+                                    projectlink="https://nextme.me/"
+                                    description={"The Tatsunoko discord server has put together another amazing website showcasing their amazing projects!"}
+                                    thumbnail={Project11Thumb} />
+                            </FadeIn>
+                            <div className="project-separator" />
+                            <FadeIn className="fade-in">
+                                <ProjectCard
+                                    username=""
+                                    title="桐生会"
+                                    projectlink="https://kiryu-kai.com/for-kiryu-kai/"
+                                    description={"This fan-made site compiled tons of messages from all around the world for the #1 superchatted girl! Go give them a visit!"}
+                                    thumbnail={Project12Thumb} />
                             </FadeIn>
                             <div className="project-separator" />
                         </div>
