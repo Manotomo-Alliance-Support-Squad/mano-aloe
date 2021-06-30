@@ -11,6 +11,11 @@
     text-shadow: 0px 0px 2px white;
 }
 
+/* hopefully this is temporary */
+.base-section ::-webkit-scrollbar {
+    display: none;
+}
+
 /* mobile specific rules */
 @media (max-width: 800px) {
     .base-empty-message {
