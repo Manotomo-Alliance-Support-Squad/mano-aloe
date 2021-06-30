@@ -454,9 +454,7 @@ Arigathanks, mf."}
                         </div>
                     </FadeIn>
                     <AnchorSupportedSection anchor={Anchors[1]} onVisible={this.onAnchorVisible}>
-                        <FadeIn className="fade-in">
-                            {this.renderCardSection(comboCardData)}
-                        </FadeIn>
+                        {this.renderCardSection(comboCardData)}
                     </AnchorSupportedSection>
                     <div style={{ height: "5rem" }} />
                     <AnchorSupportedSection anchor={Anchors[2]} onVisible={this.onAnchorVisible}>
