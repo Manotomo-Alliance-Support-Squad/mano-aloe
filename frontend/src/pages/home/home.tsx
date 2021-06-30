@@ -430,7 +430,7 @@ Arigathanks, mf."}
                                     username=""
                                     title="Thank you Coco 会長"
                                     projectlink="https://nextme.me/"
-                                    description={"The Tatsunoko discord server has put together another amazing website showcasing their amazing projects!"}
+                                    description={"A farewell gift dedicated to Kiryu Coco, our beloved dragon of Hololive"}
                                     thumbnail={Project11Thumb} />
                             </FadeIn>
                             <div className="project-separator" />
