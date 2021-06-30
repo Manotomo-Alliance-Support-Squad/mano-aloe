@@ -4,6 +4,7 @@ import { Announcement } from "../../../models/announcement";
 import { LanguageContext, LanguageContextValue } from "../../../components/languageSwitch/languageContext";
 import DisplayedLanguage from "../../../models/language";
 import { CardStyles } from "../../../shared/components/baseCard/baseCard";
+import FadeIn from '../../../components/fadeInSection/fadeInSection';
 import './baseSection.css'
 
 export interface BaseSectionProps<T> {
@@ -34,12 +35,16 @@ export default abstract class BaseSection<T> extends React.Component<BaseSection
                         return <div className="base-empty-message">Nothing here yet! Check back later!</div>
                     } else {
                         return (
-                            <div className={sectionStyle}>
-                                {this.props.data.map((object: T, idx: number) => {
-                                    return this.renderCard(object, idx % CardStyles.length, language, idx)
-                                }
-                                )}
-                            </div>
+                                <div className={sectionStyle}>
+                                    {this.props.data.map((object: T, idx: number) => {
+                                        return (
+                                            <FadeIn className="fade-in fade-in-expand">
+                                                {this.renderCard(object, idx % CardStyles.length, language, idx)}
+                                            </FadeIn>
+                                               )
+                                    }
+                                    )}
+                                </div>
                         );
                     }
                 }}
