@@ -38,6 +38,10 @@
     margin: auto 0;
     width: 100%;
     transition: opacity 0.6s ease;
+    /* this is necessary so that long 
+     * long words with no whitespace 
+     * won't break the site layout */
+    overflow-wrap: anywhere; 
 }
 
 .message-card-text.left {
@@ -77,8 +81,9 @@
 .message-card-footer-container {
     position: relative;
     width: 100%;
-    height: var(--footer-height);
+    min-height: var(--footer-height);
     float: right;
+    padding-bottom: 5px;
 }
 
 .message-card-footer-text {
