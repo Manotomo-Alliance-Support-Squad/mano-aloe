@@ -311,7 +311,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                                     title="Goodbye Coco"
                                     projectlink="https://www.youtube.com/embed/900P2WPzl-M"
                                     description={"The time may have been short, but the memes will last a lifetime. So don't cry my friends, and let us send Coco off with laughs in the air and smiles on our faces, as we wish her a good life ahead of her. Please listen to this short song I wrote for Coco and know that this is not the end of a story, but the start of a legend that we can tell our friends without an end."}
-                                    thumbnail={Project1Thumb} />
+                                    thumbnail="" />
                             </FadeIn>
                             <div className="project-separator" />
                             <FadeIn className="fade-in">
@@ -329,7 +329,22 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                                     title="PATH"
                                     projectlink="https://www.youtube.com/embed/c-4qmfRqEIQ"
                                     description={"[While Kelanduo wasn't able to provide us with a description, his hard work and dedication tell us much more than words ever could.]"}
-                                    thumbnail="http://i3.ytimg.com/vi/c-4qmfRqEIQ/maxresdefault.jpg" />
+                                    thumbnail="" />
+                            </FadeIn>
+                            <div className="project-separator" />
+                            <FadeIn className="fade-in">
+                                <ProjectCard
+                                    username="Waf"
+                                    title="Thank you, Kaichou (Firework music video)"
+                                    projectlink="https://www.youtube.com/embed/eI6FQKb75yI"
+                                    description={"Thank you for everything you have done, Kaichou.\n\n\
+I made this in a rush since I had less than 3 weeks. Your rendition of Firework gets me feeling a number of emotions. I love it, I love you.\n\n\
+I hope my feelings gets across with how limited it is. I hope this reaches you.\n\n\
+This is the first time I worked THIS hard on a video despite the limited amount of time and effort I can put in, so please let me do something special for you while you're still around.\n\n\
+I cannot thank you enough for the happiness you have given to me alone.\n\n\
+Once again, it has been a pleasure knowing your existence and I can only see you off with this.\n\n\
+Thank you."}
+                                    thumbnail="" />
                             </FadeIn>
                             <div className="project-separator" />
                             <FadeIn className="fade-in">
