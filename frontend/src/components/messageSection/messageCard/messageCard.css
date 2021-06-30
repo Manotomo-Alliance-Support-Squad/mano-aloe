@@ -29,7 +29,7 @@
     padding: 1rem;
 }
 
-::-webkit-scrollbar {
+.message-card ::-webkit-scrollbar {
     display: none;
 }
 
