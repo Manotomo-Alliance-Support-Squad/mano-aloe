@@ -21,7 +21,11 @@ import Project4Thumb from '../../assets/thumbnails/gamethumbnail.png';
 import Project5Thumb from '../../assets/thumbnails/animationthumbnail.png';
 import Project6Thumb from '../../assets/thumbnails/randomcoco.png';
 import Project7Thumb from '../../assets/thumbnails/pheelgag.png';
-import Project8Thumb from '../../assets/thumbnails/2d2c.webp';
+import Project8Thumb from '../../assets/thumbnails/2d2c.jpg';
+import Project9Thumb from '../../assets/thumbnails/strongestluknights.jpg';
+import Project10Thumb from '../../assets/thumbnails/kaichouproject.png';
+import Project11Thumb from '../../assets/thumbnails/cococord.png';
+import Project12Thumb from '../../assets/thumbnails/kiryu-kai.png';
 
 // CSS
 import './home.css';
@@ -309,7 +313,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                                     title="Goodbye Coco"
                                     projectlink="https://www.youtube.com/embed/900P2WPzl-M"
                                     description={"The time may have been short, but the memes will last a lifetime. So don't cry my friends, and let us send Coco off with laughs in the air and smiles on our faces, as we wish her a good life ahead of her. Please listen to this short song I wrote for Coco and know that this is not the end of a story, but the start of a legend that we can tell our friends without an end."}
-                                    thumbnail={Project1Thumb} />
+                                    thumbnail="" />
                             </FadeIn>
                             <div className="project-separator" />
                             <FadeIn className="fade-in">
@@ -327,7 +331,22 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                                     title="PATH"
                                     projectlink="https://www.youtube.com/embed/c-4qmfRqEIQ"
                                     description={"[While Kelanduo wasn't able to provide us with a description, his hard work and dedication tell us much more than words ever could.]"}
-                                    thumbnail="http://i3.ytimg.com/vi/c-4qmfRqEIQ/maxresdefault.jpg" />
+                                    thumbnail="" />
+                            </FadeIn>
+                            <div className="project-separator" />
+                            <FadeIn className="fade-in">
+                                <ProjectCard
+                                    username="Waf"
+                                    title="Thank you, Kaichou (Firework music video)"
+                                    projectlink="https://www.youtube.com/embed/eI6FQKb75yI"
+                                    description={"Thank you for everything you have done, Kaichou.\n\n\
+I made this in a rush since I had less than 3 weeks. Your rendition of Firework gets me feeling a number of emotions. I love it, I love you.\n\n\
+I hope my feelings gets across with how limited it is. I hope this reaches you.\n\n\
+This is the first time I worked THIS hard on a video despite the limited amount of time and effort I can put in, so please let me do something special for you while you're still around.\n\n\
+I cannot thank you enough for the happiness you have given to me alone.\n\n\
+Once again, it has been a pleasure knowing your existence and I can only see you off with this.\n\n\
+Thank you."}
+                                    thumbnail="" />
                             </FadeIn>
                             <div className="project-separator" />
                             <FadeIn className="fade-in">
@@ -379,13 +398,49 @@ Much thanks to Kaichou and this amazing community that she’s helped bring toge
                             <div className="project-separator" />
                             <FadeIn className="fade-in">
                                 <ProjectCard
-                                    username="Tom"
+                                    username="Tom 'Skeletom' Farro"
                                     title="Random Coco"
                                     projectlink="https://www.random-co.co/"
                                     description={"Thank you, sincerely, for everything you’ve done. For Vtubing, for your peers, and for us. You’ve permanently improved the Vtuber ecosystem, constantly pushing the line forward. You’re going to shake heaven and earth with your next step.\n\n\
 You brought levity to me in the miserable 2020. Your fearless self-expression inspired me to try Vtubing myself in 2021! And your karaoke training arc has even pushed me to try to improve my own singing (though I have always loved your voice).\n\n\
 Arigathanks, mf."}
                                     thumbnail={Project6Thumb} />
+                            </FadeIn>
+                            <div className="project-separator" />
+                            <FadeIn className="fade-in">
+                                <ProjectCard
+                                    username="tam"
+                                    title="The Strongest Luknight"
+                                    projectlink="https://thestrongestluknight.com/"
+                                    description={"The Luknights' graduation present to Coco. You were the greatest Luknight and will forever be remembered!"}
+                                    thumbnail={Project9Thumb} />
+                            </FadeIn>
+                            <div className="project-separator" />
+                            <FadeIn className="fade-in">
+                                <ProjectCard
+                                    username=""
+                                    title="The Kaichou Project"
+                                    projectlink="http://kaichouproject.net"
+                                    description={"The guys over at the Kaichou Project Discord have been working on another website! Go Check them out! Their message submissions are still open as well!"}
+                                    thumbnail={Project10Thumb} />
+                            </FadeIn>
+                            <div className="project-separator" />
+                            <FadeIn className="fade-in">
+                                <ProjectCard
+                                    username=""
+                                    title="Thank you Coco 会長"
+                                    projectlink="https://nextme.me/"
+                                    description={"A farewell gift dedicated to Kiryu Coco, our beloved dragon of Hololive"}
+                                    thumbnail={Project11Thumb} />
+                            </FadeIn>
+                            <div className="project-separator" />
+                            <FadeIn className="fade-in">
+                                <ProjectCard
+                                    username=""
+                                    title="桐生会"
+                                    projectlink="https://kiryu-kai.com/for-kiryu-kai/"
+                                    description={"This fan-made site compiled tons of messages from all around the world for the #1 superchatted girl! Go give them a visit!"}
+                                    thumbnail={Project12Thumb} />
                             </FadeIn>
                             <div className="project-separator" />
                         </div>
