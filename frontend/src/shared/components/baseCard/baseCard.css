@@ -49,7 +49,7 @@
      * from segmenting into different columns 
      * at certain resolutions; setting it to
      * visible prevents the card from clipping */
-    overflow: visible;
+    overflow: auto;
     height: 100%;
     scrollbar-width: none;
 }
