@@ -19,6 +19,8 @@ LrJim (Frontend, Backend)
 
 Laska (Frontend)
 
+Ringo (Frontend)
+
 ## Project Creators and Leads
 
 XOF ("Dragon Heart" Game and original arts collection)
