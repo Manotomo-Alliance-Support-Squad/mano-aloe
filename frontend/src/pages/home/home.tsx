@@ -14,6 +14,8 @@ import ProjectCard from '../../components/projectSection/projectCard';
 import ImageCard from '../../components/projectSection/imageCard';
 import FadeIn from '../../components/fadeInSection/fadeInSection';
 
+import DiplomaImage from '../../assets/other/diploma_final.png';
+
 //Thumbnails
 import Project1Thumb from '../../assets/thumbnails/Goodbye_Coco_thumbnail-Revel.jpg';
 import Project2Thumb from '../../assets/thumbnails/Cocos_Scrapbook_Cover-Capt-Jules.jpg';
@@ -304,7 +306,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                         <ImageCard
                             imageId="cocodiploma"
                             modalCaption=""
-                            thumbnail="https://cdn.discordapp.com/attachments/745465408848527360/858470646824566814/diploma_final.png" />
+                            thumbnail={DiplomaImage} />
                         <div className="project-card-section">
                             <div className="project-separator" />
                             <FadeIn className="fade-in">
