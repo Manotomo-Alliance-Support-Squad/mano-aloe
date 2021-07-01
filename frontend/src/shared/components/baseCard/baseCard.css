@@ -51,7 +51,6 @@
      * visible prevents the card from clipping */
     overflow: auto;
     height: 100%;
-    scrollbar-width: none;
 }
 
 .card-content {
