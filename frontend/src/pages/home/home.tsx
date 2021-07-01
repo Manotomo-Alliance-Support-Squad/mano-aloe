@@ -336,6 +336,18 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                             <div className="project-separator" />
                             <FadeIn className="fade-in">
                                 <ProjectCard
+                                    username="jtron"
+                                    title="I'm Glad You're Subaramazing"
+                                    projectlink="https://www.youtube.com/embed/HNu9-kf3A3o"
+                                    description={"This is the result of 3 weeks of work following the announcement of Kiryu Coco's Graduation. I wanted to send her off with a song, being the only thing I have confidence doing, sorta.\n\
+And what better than one about someone trying to be better for the one they love.\n\n\
+Many thanks to the people who lent a voice to the finale, and to all those who wanted too but missed the deadline.\n\n\
+And, of course, a dekailossal arigathanks to the lady who made it all possible. I hope you find a strong path forward from here, and I hope the \"great\" memories of our Japanglish keeps a smile on your face."}
+                                    thumbnail="" />
+                            </FadeIn>
+                            <div className="project-separator" />
+                            <FadeIn className="fade-in">
+                                <ProjectCard
                                     username="Waf"
                                     title="Thank you, Kaichou (Firework music video)"
                                     projectlink="https://www.youtube.com/embed/eI6FQKb75yI"
