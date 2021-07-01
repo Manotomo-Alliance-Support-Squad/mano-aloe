@@ -39,11 +39,11 @@ Kelanduo (World-level Giant Minecraft Fanart)
 
 nicooooooo (Coco brooch and asacoco tail assets)
 
-FriedPeanuts (Coco star hairpin asset)
+[FriedPeanuts (Coco star hairpin asset)](https://twitter.com/PistachiosChips)
 
 Rara (Diploma design and webpage tiling)
 
-Mr. Cres (Site background)
+[Mr. Cres (Site background)](https://www.pixiv.net/en/users/25645372)
 
 Guy (Color consultant)
 
