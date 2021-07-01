@@ -47,7 +47,7 @@ export default class BaseCard<T, P extends BaseCardProps<T>, S extends BaseCardS
             backgroundImage: `url(${CardStyles[this.cardStyleIndex][0]})`,
         };
         return (
-            <InView className={"base-card"} onChange={this.toggleVisibility.bind(this)} skip={loaded} threshold={.8}>
+            <div className="base-card">
                 <div className="card-header" />
                 <div className="card-header-decal-wrapper">
                     <div className="card-header-decal" style={rootStyles} />
@@ -56,7 +56,7 @@ export default class BaseCard<T, P extends BaseCardProps<T>, S extends BaseCardS
                     {content}
                 </div>
                 <div className="card-footer" />
-            </InView>
+            </div>
         );
     }
 }

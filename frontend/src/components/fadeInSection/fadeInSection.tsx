@@ -28,10 +28,8 @@ export default class FadeIn extends Component<FadeInProps> {
 
     render() {
         return (
-            <InView className="fade-in-expand" onChange={(inView, entry) => this.triggerAnimation(inView)} triggerOnce={true}>
-                <div className={this.state.animationClass}>
-                    {this.props.children}
-                </div>
+            <InView className={"fade-in-expand " + this.state.animationClass} onChange={(inView, entry) => this.triggerAnimation(inView)} triggerOnce={true}>
+                {this.props.children}
             </InView>
         );
     }
