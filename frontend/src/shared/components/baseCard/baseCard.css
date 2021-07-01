@@ -47,11 +47,9 @@
     align-items: flex-start;
     /* overflow is required to keep cards 
      * from segmenting into different columns 
-     * at certain resolutions; setting it to
-     * visible prevents the card from clipping */
+     * at certain resolutions */
     overflow: auto;
     height: 100%;
-    scrollbar-width: none;
 }
 
 .card-content {

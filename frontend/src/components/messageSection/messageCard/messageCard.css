@@ -21,16 +21,10 @@
     max-width: 100%;
     margin: 0 0;
     font-size: var(--card-font-size);
-    overflow-y: scroll;
-    scrollbar-width: none;
     margin-right: auto;
     margin-left: auto;
     height: var(--card-text-height);
     padding: 1rem;
-}
-
-::-webkit-scrollbar {
-    display: none;
 }
 
 .message-card-text {
