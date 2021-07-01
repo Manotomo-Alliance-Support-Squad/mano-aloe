@@ -439,7 +439,7 @@ Arigathanks, mf."}
                                     username=""
                                     title="桐生会"
                                     projectlink="https://kiryu-kai.com/for-kiryu-kai/"
-                                    description={"This fan-made site compiled tons of messages from all around the world for the #1 superchatted girl! Go give them a visit!"}
+                                    description={"This fan-made site compiled tons of messages from all around the world from fans, for fans! Go give them a visit!"}
                                     thumbnail={Project12Thumb} />
                             </FadeIn>
                             <div className="project-separator" />
