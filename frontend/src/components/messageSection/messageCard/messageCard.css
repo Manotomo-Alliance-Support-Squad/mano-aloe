@@ -21,10 +21,23 @@
     max-width: 100%;
     margin: 0 0;
     font-size: var(--card-font-size);
+    /* Without overflow-y and scroll-width,
+     * the messagecard becomes horizontally scrollable
+     * when a translation is present bec tl_msg is
+     * pushed outside of the card viewport to the right*/
+    overflow-y: scroll;
+    scrollbar-width: none;
     margin-right: auto;
     margin-left: auto;
     height: var(--card-text-height);
     padding: 1rem;
+}
+
+/* This property is required to hide
+ * the horizontal messagecard scrollbar 
+ * on webkit browsers. See above comment */
+.message-card ::-webkit-scrollbar {
+        display: none;
 }
 
 .message-card-text {
