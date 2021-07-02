@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { InView } from 'react-intersection-observer';
+import { Component } from 'react';
 import "./projectCard.css";
 
 interface ProjectCardProps {
@@ -10,13 +9,7 @@ interface ProjectCardProps {
     projectlink: string,
 }
 
-
 export default class ProjectCard extends Component<ProjectCardProps>{
-
-    constructor(props: ProjectCardProps) {
-        super(props);
-    }
-
     isEmbedYoutubeLink(link: string): boolean {
         return link.includes('youtube') && link.includes('embed');
     }
@@ -25,7 +18,8 @@ export default class ProjectCard extends Component<ProjectCardProps>{
         if (this.isEmbedYoutubeLink(this.props.projectlink)) {
             return (
                 <iframe src={this.props.projectlink}
-                        allowFullScreen className="project-card-content project-card-video"/>
+                        allowFullScreen className="project-card-content project-card-video"
+                        title={this.props.title} />
             )
         } else {
             return (

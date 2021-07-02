@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import { InView } from 'react-intersection-observer';
 import { Launch, Close } from "@material-ui/icons";
 import "./projectCard.css";
 import "./imageCard.css";
@@ -65,11 +64,12 @@ export default class ImageCard extends Component<ImageCardProps>{
                     <div className="project-card-thumbnail-container">
                         <img id={this.props.imageId} className="image-card-thumbnail"
                             src={this.props.thumbnail}
+                            alt={this.props.modalCaption}
                             onClick={this.renderImgModal}/>
                         <div id={this.modalId} className="modal" onClick={this.renderImgModal}>
                             <Close className="close" />
                             <Launch className="pop-out" onClick={this.openWithPrintDialogue} />
-                            <img id={this.modalImgSrcId} className="modal-content" src="" />
+                            <img id={this.modalImgSrcId} className="modal-content" src="" alt={this.props.modalCaption} />
                             <div id={this.modalCaptionId}></div>
                         </div>
                     </div>

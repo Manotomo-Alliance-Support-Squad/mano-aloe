@@ -4,9 +4,6 @@ import './baseCard.css';
 import CardStyle1 from "../../../assets/sprites/FriedPeanuts-star.png";
 import CardStyle2 from "../../../assets/sprites/nicooooooo-brooch.png";
 import CardStyle3 from "../../../assets/sprites/nicooooooo-tail.png";
-import { InView } from 'react-intersection-observer';
-
-import FadeIn from '../../../components/fadeInSection/fadeInSection';
 
 export const CardStyles = [
     [CardStyle1, "var(--main-text-wrapper-background-color)"],
@@ -42,7 +39,6 @@ export default class BaseCard<T, P extends BaseCardProps<T>, S extends BaseCardS
     }
 
     public renderCard(content: JSX.Element): JSX.Element {
-        const { loaded } = this.state;
         const rootStyles: CSS.Properties = {
             backgroundImage: `url(${CardStyles[this.cardStyleIndex][0]})`,
         };

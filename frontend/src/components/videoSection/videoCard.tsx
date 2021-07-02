@@ -63,7 +63,6 @@ export default class VideoCard extends BaseCard<Video, VideoCardProps, VideoCard
     }
 
     renderVideo() {
-        const hasLoaded = this.state.loadingState === ImageLoadingState.Loaded;
         const videoLink = linkToString(this.video.videoLink);
         const artistLink = this.video.artistLink ? linkToString(this.video.artistLink) : "#no_artist_link";
 
