@@ -87,6 +87,8 @@
 
 .message-card-footer-text {
     text-align: right;
+    max-width: 80%;
+    float: right;
 }
 
 .message-card-translate {
