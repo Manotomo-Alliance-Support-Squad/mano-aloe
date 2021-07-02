@@ -12,11 +12,6 @@ interface FadeInState {
 }
 
 export default class FadeIn extends Component<FadeInProps> {
-
-    constructor(props: FadeInProps) {
-        super(props);
-    }
-
     state = {
         animationClass: 'hidden',
     } as FadeInState

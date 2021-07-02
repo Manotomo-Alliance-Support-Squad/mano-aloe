@@ -25,7 +25,7 @@ export default class AnchorMultipleSection extends React.Component<AnchorMultipl
         activeHrefs = activeHrefs.sort((a, b) => a.lastUpdate > b.lastUpdate ? -1 : 1);
 
         const activeClass = activeHrefs.length > 0 && activeHrefs[0].href === anchor.href ? "active" : "";
-        const lastClass = index == anchors.length - 1 ? " last" : "";
+        const lastClass = index === anchors.length - 1 ? " last" : "";
 
         return (
             <div key={anchor.href} className={activeClass + lastClass}>

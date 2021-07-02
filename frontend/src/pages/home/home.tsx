@@ -17,7 +17,6 @@ import FadeIn from '../../components/fadeInSection/fadeInSection';
 import DiplomaImage from '../../assets/other/diploma_final.png';
 
 //Thumbnails
-import Project1Thumb from '../../assets/thumbnails/Goodbye_Coco_thumbnail-Revel.jpg';
 import Project2Thumb from '../../assets/thumbnails/Cocos_Scrapbook_Cover-Capt-Jules.jpg';
 import Project4Thumb from '../../assets/thumbnails/gamethumbnail.png';
 import Project5Thumb from '../../assets/thumbnails/animationthumbnail.png';

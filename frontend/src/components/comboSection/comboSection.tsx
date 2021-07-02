@@ -6,21 +6,12 @@ import ArtworkCard from '../gallery/artworkCard/artworkCard';
 import MultiArtworkCard from '../gallery/artworkCard/multiArtworkCard';
 import VideoCard from '../videoSection/videoCard';
 import MessageCard from "../messageSection/messageCard/messageCard";
-import BaseSection, { BaseSectionProps, BaseSectionState } from "../../shared/components/baseSection/baseSection";
+import BaseSection from "../../shared/components/baseSection/baseSection";
 import { CardStyles } from "../../shared/components/baseCard/baseCard";
 
 import './comboSection.css';
 
-interface ComboSectionProps extends BaseSectionProps<Message | Artwork | Video> {
-}
-
-interface ComboSectionState extends BaseSectionState {
-
-}
-
 export default class ComboSection extends BaseSection<Message | Artwork | Video | MultiArtwork> {
-
-
     renderCard(object: (Message | Artwork | Video | MultiArtwork), cardStyleIndex: number, language: DisplayedLanguage, id: number): JSX.Element {
         // TODO: messagecard-center might not used or needed
         if ("messageID" in object) {

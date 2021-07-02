@@ -1,6 +1,4 @@
 import React from 'react';
-import AnnouncementCard from '../../../components/announcementSection/announcementCard';
-import { Announcement } from "../../../models/announcement";
 import { LanguageContext, LanguageContextValue } from "../../../components/languageSwitch/languageContext";
 import DisplayedLanguage from "../../../models/language";
 import { CardStyles } from "../../../shared/components/baseCard/baseCard";
