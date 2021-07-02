@@ -21,6 +21,11 @@
     max-width: 100%;
     margin: 0 0;
     font-size: var(--card-font-size);
+    /* Without overflow-x hidden,
+     * the messagecard becomes horizontally scrollable
+     * when a translation is present bec tl_msg is
+     * pushed outside of the card viewport to the right*/
+    overflow-x: hidden;
     margin-right: auto;
     margin-left: auto;
     height: var(--card-text-height);
