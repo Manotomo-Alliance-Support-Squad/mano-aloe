@@ -38,7 +38,7 @@ export default abstract class BaseSection<T> extends React.Component<BaseSection
                                 <div className={sectionStyle}>
                                     {this.props.data.map((object: T, idx: number) => {
                                         return (
-                                            <FadeIn className="fade-in fade-in-expand">
+                                            <FadeIn className="fade-in">
                                                 {this.renderCard(object, idx % CardStyles.length, language, idx)}
                                             </FadeIn>
                                                )
