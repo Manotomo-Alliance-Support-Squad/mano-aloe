@@ -89,6 +89,14 @@
 
 /* mobile specific rules */
 @media (max-width: 800px) {
+    /* this prevents the project cards from going outside
+     * the viewport when the viewport is too small */
+    .project-card-container {
+        width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .project-card {
         flex-direction: column-reverse;
         margin-left: 1vw;
