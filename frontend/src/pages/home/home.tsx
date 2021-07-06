@@ -11,6 +11,7 @@ import AnchorSupportedSection, { handleSectionVisibility } from "../../component
 import AnchorStandaloneBotan from "../../components/anchor/anchorStandaloneBotan";
 
 import ProjectCard from '../../components/projectSection/projectCard';
+import MultiProjectCard from '../../components/projectSection/multiProjectCard';
 import ImageCard from '../../components/projectSection/imageCard';
 import FadeIn from '../../components/fadeInSection/fadeInSection';
 
@@ -27,6 +28,12 @@ import Project9Thumb from '../../assets/thumbnails/strongestluknights.jpg';
 import Project10Thumb from '../../assets/thumbnails/kaichouproject.png';
 import Project11Thumb from '../../assets/thumbnails/cococord.png';
 import Project12Thumb from '../../assets/thumbnails/kiryu-kai.png';
+
+//Quick hack for PheelGagg's project
+import pg0 from '../../assets/projects/pheelgagg/pg0.jpg'
+import pg1 from '../../assets/projects/pheelgagg/pg1.jpg'
+import pg2 from '../../assets/projects/pheelgagg/pg2.jpg'
+import pg3 from '../../assets/projects/pheelgagg/pg3.jpg'
 
 // CSS
 import './home.css';
@@ -291,6 +298,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
             <div className="home-root">
                 <div>
                     <div className="home-hidden-text">Fix home-header from clipping when reloading the page while at topmost or first time load the site</div>
+                    
                     <div className="home-header fade-in">
                         <h1 className="home-header-title">Dear Coco</h1>
                         <div className="home-header-text">
@@ -363,13 +371,14 @@ Thank you."}
                             </FadeIn>
                             <div className="project-separator" />
                             <FadeIn className="fade-in">
-                                <ProjectCard
+                                <MultiProjectCard
                                     username="PheelGagg"
-                                    title="[WIP] Coco's Mini-Letters Collection"
+                                    title="Coco's Mini-Letters Collection"
                                     projectlink=""
                                     description={"A small group of Kaigainikis from different parts of the world writing individual letters with a twist of puzzle art at the back their pages for Kaichou to piece together!\n\n\
 -art by Clueless weab"}
-                                    thumbnail={Project7Thumb} />
+                                    images={[Project7Thumb,pg0,pg1,pg2,pg3]}
+                                    />
                             </FadeIn>
                             <div className="project-separator" />
                             <FadeIn className="fade-in">
