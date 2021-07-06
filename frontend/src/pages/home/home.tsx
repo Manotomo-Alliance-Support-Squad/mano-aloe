@@ -412,9 +412,9 @@ Much thanks to Kaichou and this amazing community that she’s helped bring toge
                             <FadeIn className="fade-in">
                                 <ProjectCard
                                     username=""
-                                    title="[WIP] 2D2C Kiryu Coco Graduation Project"
+                                    title="2D2C Kiryu Coco Graduation Project"
                                     projectlink="https://kcgp.tw/en"
-                                    description={"[Their site is still in the works, stay tuned for updates!]\n\nCheck out the 2d2c fan website! The 2d2c guys put a lot of hard work into their projects, so please do pay them a visit!"}
+                                    description={"Check out the 2d2c fan website! The 2d2c guys put a lot of hard work into their projects, so please do pay them a visit!"}
                                     thumbnail={Project8Thumb} />
                             </FadeIn>
                             <div className="project-separator" />

@@ -2,7 +2,6 @@ import { Component } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ArtworkImage from '../gallery/artworkCard/artworkImage';
-import { ExternalLink, stringToLink } from '../../models/url';
 import "./projectCard.css";
 
 interface MultiProjectCardProps {
