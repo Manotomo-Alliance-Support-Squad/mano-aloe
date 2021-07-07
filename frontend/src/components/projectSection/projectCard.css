@@ -36,6 +36,16 @@
     padding: 16px;
 }
 
+.project-card-title {
+    text-decoration: none;
+    color: var(--theme-font);
+}
+
+.project-card-title:visited {
+    text-decoration: none;
+    color: var(--theme-font);
+}
+
 .project-card-description-sign {
     margin-right: 1rem;
     text-align: right;

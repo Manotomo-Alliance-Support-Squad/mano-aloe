@@ -38,7 +38,7 @@ export default class MultiProjectCard extends Component<MultiProjectCardProps>{
                 <div className="project-card">
                     <div className="project-card-description-container right">
                         <h2>
-                            <a href={this.props.projectlink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+                            <a href={this.props.projectlink} target="_blank" rel="noopener noreferrer" className="project-card-title">
                                 {this.props.title}
                             </a>
                         </h2>
