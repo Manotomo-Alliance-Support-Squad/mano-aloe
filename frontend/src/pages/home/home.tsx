@@ -289,7 +289,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
         const { activeHrefs } = this.state;
         return (
             <div className="home-root">
-                <div>
+                <div className="home-container"> 
                     <div className="home-hidden-text">Fix home-header from clipping when reloading the page while at topmost or first time load the site</div>
                     <div className="home-header fade-in">
                         <h1 className="home-header-title">Dear Coco</h1>

@@ -83,3 +83,6 @@
     opacity: 0;
     font-size: 1px;
 }
+.home-container {
+    max-width: 100vw; /*fixing container for "More Website" message*/
+}
