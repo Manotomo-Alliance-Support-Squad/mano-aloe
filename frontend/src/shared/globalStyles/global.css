@@ -113,6 +113,12 @@
     }
 }
 
+@media (max-width: 300px) {
+    .wrapper-overlay {
+        padding: 0;
+    }
+}
+
 .line {
     height: 1px;
     background-color: white;
