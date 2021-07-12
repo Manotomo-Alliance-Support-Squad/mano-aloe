@@ -52,7 +52,11 @@ export default class ArtworkImage extends React.Component<ArtworkProps, ArtworkS
         const { loaded } = this.state;
         const { blurhash, artworkLink } = this.props;
         if (loaded || !blurhash) {
-            return linkToString(artworkLink);
+            if (artworkLink instanceof URL) {
+                return linkToString(artworkLink);
+            } else {
+                return artworkLink ?? "";
+            }
         }
         return this.getBlurImage(blurhash);
     }

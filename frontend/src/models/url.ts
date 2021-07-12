@@ -1,4 +1,4 @@
-export type ExternalLink = URL | null;
+export type ExternalLink = URL | string | null;
 
 export function stringToLink(link: string): ExternalLink {
     let url;
