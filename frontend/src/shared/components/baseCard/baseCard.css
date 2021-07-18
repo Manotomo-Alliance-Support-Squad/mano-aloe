@@ -79,6 +79,9 @@
 }
 
 @media (max-width: 400px) {
+    .card-section {
+        padding: 5px;
+    }
     .base-card {
         --card-text-width: 300px;
     }
