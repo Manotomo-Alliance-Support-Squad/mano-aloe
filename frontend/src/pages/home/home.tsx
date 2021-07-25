@@ -15,26 +15,6 @@ import MultiProjectCard from '../../components/projectSection/multiProjectCard';
 import ImageCard from '../../components/projectSection/imageCard';
 import FadeIn from '../../components/fadeInSection/fadeInSection';
 
-import DiplomaImage from '../../assets/other/diploma_final.png';
-
-//Thumbnails
-import Project2Thumb from '../../assets/thumbnails/Cocos_Scrapbook_Cover-Capt-Jules.jpg';
-import Project4Thumb from '../../assets/thumbnails/gamethumbnail.png';
-import Project5Thumb from '../../assets/thumbnails/animationthumbnail.png';
-import Project6Thumb from '../../assets/thumbnails/randomcoco.png';
-import Project7Thumb from '../../assets/thumbnails/pheelgag.png';
-import Project8Thumb from '../../assets/thumbnails/2d2c.jpg';
-import Project9Thumb from '../../assets/thumbnails/strongestluknights.jpg';
-import Project10Thumb from '../../assets/thumbnails/kaichouproject.png';
-import Project11Thumb from '../../assets/thumbnails/cococord.png';
-import Project12Thumb from '../../assets/thumbnails/kiryu-kai.png';
-
-//Quick hack for PheelGagg's project
-import pg0 from '../../assets/projects/pheelgagg/pg0.jpg'
-import pg1 from '../../assets/projects/pheelgagg/pg1.jpg'
-import pg2 from '../../assets/projects/pheelgagg/pg2.jpg'
-import pg3 from '../../assets/projects/pheelgagg/pg3.jpg'
-
 // CSS
 import './home.css';
 import '../../shared/globalStyles/global.css'
@@ -69,11 +49,12 @@ export interface HomePageState {
     activeHrefs: MultipleAnchorStates[];
 }
 
+// Note: anchor text should be one word
 const Anchors: Anchor[] = [
     {
         href: "#projects-anchor",
         svgIcon: MovieIcon,
-        text: "Projects",
+        text: "Movie",
     },
     {
         href: "#messages-anchor",
@@ -310,161 +291,11 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                     </div>
                     <AnchorSupportedSection anchor={Anchors[0]} onVisible={this.onAnchorVisible}>
                         <div style={{ height: "5rem" }} />
-                        <ImageCard
-                            imageId="cocodiploma"
-                            modalCaption=""
-                            thumbnail={DiplomaImage} />
-                        <div className="project-card-section">
-                            <div className="project-separator" />
-                            <FadeIn className="fade-in">
-                                <ProjectCard
-                                    username="Revel"
-                                    title="Goodbye Coco"
-                                    projectlink="https://www.youtube.com/embed/900P2WPzl-M"
-                                    description={"The time may have been short, but the memes will last a lifetime. So don't cry my friends, and let us send Coco off with laughs in the air and smiles on our faces, as we wish her a good life ahead of her. Please listen to this short song I wrote for Coco and know that this is not the end of a story, but the start of a legend that we can tell our friends without an end."}
-                                    thumbnail="" />
-                            </FadeIn>
-                            <div className="project-separator" />
-                            <FadeIn className="fade-in">
-                                <ProjectCard
-                                    username="Capt-Jules"
-                                    title="A Scrapbook for Coco"
-                                    projectlink="https://issuu.com/capt-jules/docs/scrapbook_for_coco_15fa8943b06163"
-                                    description={"Hello everyone! Here's a little something for you all! Presenting a small digital scrapbook featuring some of Coco's memorable moments! So, let's take a bit and look back at those happy memories, hope you all enjoy! 💕\n\nOf course, thank you Kaichou for everything you have done in this VTubing world and to this wonderful community for never failing to show your love! It has been a fun ride that I'm sure will keep on going! It may be a sad time for some of us, but things will get better. With that said, thank you and take care, everyone!"}
-                                    thumbnail={Project2Thumb} />
-                            </FadeIn>
-                            <div className="project-separator" />
-                            <FadeIn className="fade-in">
-                                <ProjectCard
-                                    username="Kelanduo"
-                                    title="PATH"
-                                    projectlink="https://www.youtube.com/embed/c-4qmfRqEIQ"
-                                    description={"[While Kelanduo wasn't able to provide us with a description, his hard work and dedication tell us much more than words ever could.]"}
-                                    thumbnail="" />
-                            </FadeIn>
-                            <div className="project-separator" />
-                            <FadeIn className="fade-in">
-                                <ProjectCard
-                                    username="jtron"
-                                    title="I'm Glad You're Subaramazing"
-                                    projectlink="https://www.youtube.com/embed/HNu9-kf3A3o"
-                                    description={"This is the result of 3 weeks of work following the announcement of Kiryu Coco's Graduation. I wanted to send her off with a song, being the only thing I have confidence doing, sorta.\n\
-And what better than one about someone trying to be better for the one they love.\n\n\
-Many thanks to the people who lent a voice to the finale, and to all those who wanted too but missed the deadline.\n\n\
-And, of course, a dekailossal arigathanks to the lady who made it all possible. I hope you find a strong path forward from here, and I hope the \"great\" memories of our Japanglish keeps a smile on your face."}
-                                    thumbnail="" />
-                            </FadeIn>
-                            <div className="project-separator" />
-                            <FadeIn className="fade-in">
-                                <ProjectCard
-                                    username="Waf"
-                                    title="Thank you, Kaichou (Firework music video)"
-                                    projectlink="https://www.youtube.com/embed/eI6FQKb75yI"
-                                    description={"Thank you for everything you have done, Kaichou.\n\n\
-I made this in a rush since I had less than 3 weeks. Your rendition of Firework gets me feeling a number of emotions. I love it, I love you.\n\n\
-I hope my feelings gets across with how limited it is. I hope this reaches you.\n\n\
-This is the first time I worked THIS hard on a video despite the limited amount of time and effort I can put in, so please let me do something special for you while you're still around.\n\n\
-I cannot thank you enough for the happiness you have given to me alone.\n\n\
-Once again, it has been a pleasure knowing your existence and I can only see you off with this.\n\n\
-Thank you."}
-                                    thumbnail="" />
-                            </FadeIn>
-                            <div className="project-separator" />
-                            <FadeIn className="fade-in">
-                                <MultiProjectCard
-                                    username="PheelGagg"
-                                    title="Coco's Mini-Letters Collection"
-                                    projectlink=""
-                                    description={"A small group of Kaigainikis from different parts of the world writing individual letters with a twist of puzzle art at the back their pages for Kaichou to piece together!\n\n\
--art by Clueless weab"}
-                                    images={[Project7Thumb,pg0,pg1,pg2,pg3]}
-                                    />
-                            </FadeIn>
-                            <div className="project-separator" />
-                            <FadeIn className="fade-in">
-                                <ProjectCard
-                                    username="With love, from fans all across the world."
-                                    title="[GAME COMING SOON] Dragon Legend"
-                                    projectlink=""
-                                    description={"A seam in the sky birthed They of the dark,\n\
-Then, with fire roared the dragon of new starts,\n\
-Thus fled They with no bite and only bark,\n\
-From she who saves and mends our broken hearts.\n\
-\n\
-Much thanks to Kaichou and this amazing community that she’s helped bring together. What a blessing this wonderful journey has been. Let’s all keep smiling and have many more together! To Kaichou, you may be out of our sights for a little bit, but you’ll never leave our hearts! KIRYU-KAI FOREVER!"}
-                                    thumbnail={Project4Thumb} />
-                            </FadeIn>
-                            <div className="project-separator" />
-                            <FadeIn className="fade-in">
-                                <ProjectCard
-                                    username="BadGrammar"
-                                    title="[ANIMATION COMING SOON]"
-                                    projectlink=""
-                                    description={"Hi, from humble cine bundle team, we present you with short video about Coco, combining some of the legacy that she is leaving behind\n\nCoco model - Zany\nAssets modelling and animation - Zingy, 1001powerups, BadGrammar"}
-                                    thumbnail={Project5Thumb} />
-                            </FadeIn>
-                            <div className="project-separator" style={{ height: "15vh" /*guh, hard-coded css*/ }} />
-                            <FadeIn className="fade-in">
-                                <div className="project-separator-header">
-                                    <h1>More Amazing Fan-Made Websites</h1>
-                                </div>
-                            </FadeIn>
-                            <FadeIn className="fade-in">
-                                <ProjectCard
-                                    username=""
-                                    title="2D2C Kiryu Coco Graduation Project"
-                                    projectlink="https://kcgp.tw/en"
-                                    description={"Check out the 2d2c fan website! The 2d2c guys put a lot of hard work into their projects, so please do pay them a visit!"}
-                                    thumbnail={Project8Thumb} />
-                            </FadeIn>
-                            <div className="project-separator" />
-                            <FadeIn className="fade-in">
-                                <ProjectCard
-                                    username="Tom 'Skeletom' Farro"
-                                    title="Random Coco"
-                                    projectlink="https://www.random-co.co/"
-                                    description={"Thank you, sincerely, for everything you’ve done. For Vtubing, for your peers, and for us. You’ve permanently improved the Vtuber ecosystem, constantly pushing the line forward. You’re going to shake heaven and earth with your next step.\n\n\
-You brought levity to me in the miserable 2020. Your fearless self-expression inspired me to try Vtubing myself in 2021! And your karaoke training arc has even pushed me to try to improve my own singing (though I have always loved your voice).\n\n\
-Arigathanks, mf."}
-                                    thumbnail={Project6Thumb} />
-                            </FadeIn>
-                            <div className="project-separator" />
-                            <FadeIn className="fade-in">
-                                <ProjectCard
-                                    username="tam"
-                                    title="The Strongest Luknight"
-                                    projectlink="https://thestrongestluknight.com/"
-                                    description={"The Luknights' graduation present to Coco. You were the greatest Luknight and will forever be remembered!"}
-                                    thumbnail={Project9Thumb} />
-                            </FadeIn>
-                            <div className="project-separator" />
-                            <FadeIn className="fade-in">
-                                <ProjectCard
-                                    username=""
-                                    title="The Kaichou Project"
-                                    projectlink="http://kaichouproject.net"
-                                    description={"The guys over at the Kaichou Project Discord have been working on another website! Go Check them out! Their message submissions are still open as well!"}
-                                    thumbnail={Project10Thumb} />
-                            </FadeIn>
-                            <div className="project-separator" />
-                            <FadeIn className="fade-in">
-                                <ProjectCard
-                                    username=""
-                                    title="Thank you Coco 会長"
-                                    projectlink="https://nextme.me/"
-                                    description={"A farewell gift dedicated to Kiryu Coco, our beloved dragon of Hololive"}
-                                    thumbnail={Project11Thumb} />
-                            </FadeIn>
-                            <div className="project-separator" />
-                            <FadeIn className="fade-in">
-                                <ProjectCard
-                                    username=""
-                                    title="桐生会"
-                                    projectlink="https://kiryu-kai.com/for-kiryu-kai/"
-                                    description={"This fan-made site compiled tons of messages from all around the world from fans, for fans! Go give them a visit!"}
-                                    thumbnail={Project12Thumb} />
-                            </FadeIn>
-                            <div className="project-separator" />
+                        <div className="main-video-container">
+                        <iframe title="Mano Aloe Fanmade Video" className="video-tag height-width-100"
+                                src="https://www.youtube-nocookie.com/embed/1QdGzRGSuOM?rel=0" frameBorder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen/>
                         </div>
                     </AnchorSupportedSection>
                     <div style={{ height: "100px" }} />
