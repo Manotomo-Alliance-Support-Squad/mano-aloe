@@ -1,14 +1,14 @@
 import { Component } from "react";
 import CSS from "csstype";
 import './baseCard.css';
-import CardStyle1 from "../../../assets/sprites/FriedPeanuts-star.png";
-import CardStyle2 from "../../../assets/sprites/nicooooooo-brooch.png";
-import CardStyle3 from "../../../assets/sprites/nicooooooo-tail.png";
+import CardStyle1 from "../../../assets/cards/card1.svg";
+import CardStyle2 from "../../../assets/cards/card2.svg";
+import CardStyle3 from "../../../assets/cards/card3.svg";
 
 export const CardStyles = [
-    [CardStyle1, "var(--main-text-wrapper-background-color)"],
-    [CardStyle2, "var(--main-text-wrapper-background-color)"],
-    [CardStyle3, "var(--main-text-wrapper-background-color)"],
+    [CardStyle1, "#724683"],
+    [CardStyle2, "#fd418d"],
+    [CardStyle3, "#6e4080"],
 ]
 
 export interface BaseCardProps<T> {
@@ -42,16 +42,16 @@ export default class BaseCard<T, P extends BaseCardProps<T>, S extends BaseCardS
         const rootStyles: CSS.Properties = {
             backgroundImage: `url(${CardStyles[this.cardStyleIndex][0]})`,
         };
+        const contentStyles: CSS.Properties = {
+            // Use `var(--main-background-color)` here if you want to use the same color for all cards
+            backgroundColor: `${CardStyles[this.cardStyleIndex][1]}`,
+        };
         return (
             <div className="base-card">
-                <div className="card-header" />
-                <div className="card-header-decal-wrapper">
-                    <div className="card-header-decal" style={rootStyles} />
-                </div>
-                <div className="card-content">
+                <div className="card-header" style={rootStyles}/>
+                <div className="card-content" style={contentStyles}>
                     {content}
                 </div>
-                <div className="card-footer" />
             </div>
         );
     }
