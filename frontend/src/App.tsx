@@ -7,6 +7,7 @@ import SessionService from "./services/session.service";
 import { LanguageContext, LanguageContextValue } from "./components/languageSwitch/languageContext";
 import DisplayedLanguage from "./models/language";
 
+import ButtonAppBar from './components/navigation/navbar';
 import HeaderSection from "./components/headerSection/header"
 import HomePage from './pages/home/home';
 
@@ -36,6 +37,7 @@ export default class App extends React.Component<AppProps, LanguageContextValue>
     render() {
         return (
             <LanguageContext.Provider value={this.state}>
+                <ButtonAppBar />
                 <HeaderSection />
                 <Switch>
                     <Route exact path='/'>

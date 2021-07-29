@@ -6,7 +6,7 @@
     --theme-color1: #000000; /*root background*/
     --theme-color2: #f05872; /*used for card text*/
     --theme-color3: #fff0e3; /*card bg color and anchor link color*/
-    --theme-color4: #000000; /*Anchor link color*/
+    --theme-color4: #ffffff; /*Anchor link color*/
 
     --theme-color-black: #000;
     --theme-color-white: #fff;
@@ -24,9 +24,8 @@
     --main-background-color: #ffffff;
 
     --header-background: url(assets/backgrounds/header_background.png);
-    --header-background-color: #ffffff;
+    --header-background-color: #333031;
 
-    --header-background-color: #ffffff;
     --separator-background-color: #ffffff;
 
     --card-font-size: 1.6rem;
