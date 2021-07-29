@@ -235,7 +235,6 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                 mainContentArray.concat(this.state.multiArtworks, this.state.artworks, this.state.videos),
                 "manotomo",  // seed to get the same randomization results every time
             );
-            // TODO: create a randomly seeded version of the main content array
             subContentArray = this.state.messages;
 
             indexIncrementSpacing = Math.floor(multimediaCount / this.state.messages.length);
