@@ -279,15 +279,6 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                 <div className="home-container"> 
                     <div className="home-hidden-text">Fix home-header from clipping when reloading the page while at topmost or first time load the site</div>
                     
-                    <div className="home-header fade-in">
-                        <h1 className="home-header-title">Dear Coco</h1>
-                        <div className="home-header-text">
-                            You are one of the most remarkable people we have ever known. Your amazing contributions to the community have brought countless overseas viewers down the rabbit hole and, although we are saddened by your decision to graduate, we will always remember and support you. May you fly to ever greater heights.
-                            <br /><br />For your work, we would like to present you this honorary degree for the Master of Kusa.
-                        </div>
-                        <div style={{ height: "5rem" }} />
-                        <AnchorStandaloneBotan anchor={Anchors[0]} svgIcon={ExpandMoreIcon} position={AnchorSectionPosition.LEFT} />
-                    </div>
                     <AnchorSupportedSection anchor={Anchors[0]} onVisible={this.onAnchorVisible}>
                         <div style={{ height: "5rem" }} />
                         <div className="main-video-container">

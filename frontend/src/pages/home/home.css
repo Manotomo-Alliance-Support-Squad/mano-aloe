@@ -2,7 +2,7 @@
     background-image:
         /* images are layered based on the order they are put in here.
          * footer must go first or it will be covered by tiles */
-        url(../../assets/backgrounds/Background-Footer-by-Mr-Cres.png),
+        var(--main-background),
         url(../../assets/backgrounds/Background-Tile.png);
     background-repeat: no-repeat, repeat-y;
     background-size: 100% auto, 100% auto;
@@ -16,6 +16,7 @@
 }
 
 .home-header {
+    background-image: var(--header-background);
     margin-left: 4rem;
     margin-right: 4rem;
     font-size: 2rem;
