@@ -289,14 +289,14 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                         </div>
                     </AnchorSupportedSection>
                     <div style={{ height: "100px" }} />
-                    <FadeIn className="fade-in">
-                        <div className="home-message-header">
-                            <h3>
-                                Messages
-                            </h3>
-                        </div>
-                    </FadeIn>
                     <AnchorSupportedSection anchor={Anchors[1]} onVisible={this.onAnchorVisible}>
+                        <FadeIn className="fade-in">
+                            <div className="home-message-header">
+                                <h3>
+                                    Messages
+                                </h3>
+                            </div>
+                        </FadeIn>
                         {this.renderCardSection(comboCardData)}
                     </AnchorSupportedSection>
                     <div style={{ height: "5rem" }} />
