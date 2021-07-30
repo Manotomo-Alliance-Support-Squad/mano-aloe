@@ -52,7 +52,7 @@ export interface HomePageState {
 // Note: anchor text should be one word
 const Anchors: Anchor[] = [
     {
-        href: "#projects-anchor",
+        href: "#movie-anchor",
         svgIcon: MovieIcon,
         text: "Movie",
     },
