@@ -305,7 +305,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                             <CreditsModal />
                         </FadeIn>
                     </AnchorSupportedSection>
-                    <div style={{ height: "600px" }} />
+                    <div style={{ height: "200px" }} />
                 </div>
                 <AnchorMultipleSection position={AnchorSectionPosition.RIGHT} activeHrefs={activeHrefs} anchors={Anchors} />
             </div>
