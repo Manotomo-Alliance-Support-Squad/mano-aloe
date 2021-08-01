@@ -277,11 +277,9 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
         const { activeHrefs } = this.state;
         return (
             <div className="home-root">
-                <div className="home-container"> 
-                    <div className="home-hidden-text">Fix home-header from clipping when reloading the page while at topmost or first time load the site</div>
-                    
+                <div className="home-container">                     
+                    <div className="separator" />
                     <AnchorSupportedSection anchor={Anchors[0]} onVisible={this.onAnchorVisible}>
-                        <div style={{ height: "5rem" }} />
                         <div className="main-video-container">
                         <iframe title="Mano Aloe Fanmade Video" className="video-tag height-width-100"
                                 src="https://www.youtube-nocookie.com/embed/1QdGzRGSuOM?rel=0" frameBorder="0"
@@ -289,7 +287,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                                 allowFullScreen/>
                         </div>
                     </AnchorSupportedSection>
-                    <div style={{ height: "100px" }} />
+                    <div className="separator" />
                     <div id="announcements" className="justify-center padding-top">
                         <div className="justify-align-center">
                             <AnnouncementSection data={this.state.announcements} customSectionStyle="single-column notice-container"/>
