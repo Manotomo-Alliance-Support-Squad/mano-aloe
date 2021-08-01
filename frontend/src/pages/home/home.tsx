@@ -9,6 +9,7 @@ import { Artwork, MultiArtwork } from "../../models/artwork"
 import { Video } from "../../models/video"
 import AnchorSupportedSection, { handleSectionVisibility } from "../../components/anchorSupportedSection/anchorSupportedSection";
 import AnchorStandaloneBotan from "../../components/anchor/anchorStandaloneBotan";
+import AnnouncementSection from "../../components/announcementSection/announcementSection"
 
 import ProjectCard from '../../components/projectSection/projectCard';
 import MultiProjectCard from '../../components/projectSection/multiProjectCard';
@@ -289,6 +290,11 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                         </div>
                     </AnchorSupportedSection>
                     <div style={{ height: "100px" }} />
+                    <div id="announcements" className="justify-center padding-top">
+                        <div className="justify-align-center">
+                            <AnnouncementSection data={this.state.announcements} customSectionStyle="single-column notice-container"/>
+                        </div>
+                    </div>
                     <AnchorSupportedSection anchor={Anchors[1]} onVisible={this.onAnchorVisible}>
                         <FadeIn className="fade-in">
                             <div className="home-message-header">
