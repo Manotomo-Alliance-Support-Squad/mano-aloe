@@ -27,9 +27,7 @@ export default class HeaderSection extends Component<HeaderProps, HeaderState>
                         <p>親愛なるアロエ様。短い間ではありましたが、一緒に過ごした時間に心より感謝しております。本当にありがとうございました。アロエ様のご健勝とご多幸をお祈り申し上げます。</p>
                     </div>
                 </div>
-                <div style={{height: 50}}/>
-                <AltNav />
-                <div style={{height: 50}}/>
+                <div style={{height: 100}}/>
             </header>
         )
     }
