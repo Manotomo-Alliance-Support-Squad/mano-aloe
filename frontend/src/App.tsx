@@ -10,6 +10,8 @@ import DisplayedLanguage from "./models/language";
 import ButtonAppBar from './components/navigation/navbar';
 import HeaderSection from "./components/headerSection/header"
 import HomePage from './pages/home/home';
+import GamePage from './pages/game/game';
+import ArtPage from './pages/gallery/art';
 
 interface AppProps {
 }
@@ -43,7 +45,9 @@ export default class App extends React.Component<AppProps, LanguageContextValue>
                     <Route exact path='/'>
                         <Redirect to="/home" />
                     </Route>
-                    <Route path='/home' component={HomePage} />
+                    <Route path='/home' component={HomePage}/>
+                    <Route path='/game' component={GamePage}/>
+                    <Route path='/art' component={ArtPage}/>
                 </Switch>
             </LanguageContext.Provider>
         );
