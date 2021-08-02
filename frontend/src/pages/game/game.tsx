@@ -5,6 +5,10 @@ import SessionService from "../../services/session.service"
 import '../../components/gamesSection/gameSection.css'
 import GameSection from "../../components/gamesSection/gameSection";
 import '../../shared/globalStyles/global.css'
+import AnnouncementCard from '../../components/announcementSection/announcementCard';
+import {Announcement} from "../../models/announcement";
+import DisplayedLanguage from "../../models/language";
+
 
 export interface GamePageProps {
 
@@ -49,12 +53,23 @@ export default class GamePage extends React.Component<GamePageProps, GamePageSta
         }
     }
 
+    renderGameSection() {
+        if (!this.state.games.length) {
+            const emptyAnnouncemment: Announcement = { announcementID: 0, message: "Nothing here! Check back later!" };
+            return <AnnouncementCard object={emptyAnnouncemment} cardStyleIndex={0} language={DisplayedLanguage.Original} />;
+        }
+        else return (
+            <GameSection data={this.state.games}/>
+        )
+
+    }
+
     render() {
         return (
             <section id='anchor'>
                 <div className="separator"/>
                 <div className="wrapper-overlay">
-                    <GameSection data={this.state.games}/>
+                    {this.renderGameSection()}
                 </div>
             </section>
         )
