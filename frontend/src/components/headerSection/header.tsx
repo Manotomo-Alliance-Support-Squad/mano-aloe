@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import AltNav from '../navigation/altnav';
 import '../../shared/globalStyles/global.css';
 import './header.css';
 
@@ -13,10 +12,6 @@ interface HeaderProps {
 
 export default class HeaderSection extends Component<HeaderProps, HeaderState>
 {
-    constructor(props: HeaderProps) {
-        super(props);
-    }
-
     render() {
         return (
             <header id="header" className="app-header">

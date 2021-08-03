@@ -11,9 +11,6 @@ import AnchorSupportedSection, { handleSectionVisibility } from "../../component
 import AnchorStandaloneBotan from "../../components/anchor/anchorStandaloneBotan";
 import AnnouncementSection from "../../components/announcementSection/announcementSection"
 
-import ProjectCard from '../../components/projectSection/projectCard';
-import MultiProjectCard from '../../components/projectSection/multiProjectCard';
-import ImageCard from '../../components/projectSection/imageCard';
 import FadeIn from '../../components/fadeInSection/fadeInSection';
 
 // CSS
@@ -28,7 +25,6 @@ import { Game } from '../../models/game';
 import CreditsModal from "../../components/modals/credits/creditsModal/creditsModal";
 
 // Icon for section
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MovieIcon from '@material-ui/icons/Movie';
 import EmailIcon from '@material-ui/icons/Email';
 import ErrorIcon from '@material-ui/icons/Error';
@@ -273,7 +269,6 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
     }
 
     render() {
-        const comboCardData = this.compileCardData()
         const { activeHrefs } = this.state;
         return (
             <div className="home-root">
@@ -301,7 +296,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                                 </h3>
                             </div>
                         </FadeIn>
-                        {this.renderCardSection(comboCardData)}
+                        {this.renderCardSection(this.state.messages)}
                     </AnchorSupportedSection>
                     <div style={{ height: "5rem" }} />
                     <AnchorSupportedSection anchor={Anchors[2]} onVisible={this.onAnchorVisible}>
