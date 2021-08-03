@@ -42,6 +42,7 @@ export default class MessageCard extends BaseCard<Message, MessageCardProps, Mes
         this.hasTlMsg = this.message.tl_msg != null && this.message.tl_msg !== "";
 
         this.toggleCurrentLanguage = this.toggleCurrentLanguage.bind(this);
+        // TODO: add flag back in
         this.footertext = (this.message.username ? this.message.username : "") + (this.message.country !== "" ? " " + this.message.country : "");
     }
 
