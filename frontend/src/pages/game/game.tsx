@@ -66,12 +66,14 @@ export default class GamePage extends React.Component<GamePageProps, GamePageSta
 
     render() {
         return (
-            <section id='anchor'>
-                <div className="separator"/>
+            <>
+            <div className="separator"/>
+            <div className="home-root">
                 <div className="wrapper-overlay">
                     {this.renderGameSection()}
                 </div>
-            </section>
+            </div>
+            </>
         )
     }
 }
