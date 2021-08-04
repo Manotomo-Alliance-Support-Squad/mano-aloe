@@ -3,6 +3,7 @@ import { Message } from "../../../models/message";
 import DisplayedLanguage from "../../../models/language";
 import { ReactComponent as TranslateBotan } from "../../../assets/icons/translateIcon.svg";
 import "./messageCard.css";
+import { Twemoji } from 'react-emoji-render';
 import BaseCard, { BaseCardProps, BaseCardState } from "../../../shared/components/baseCard/baseCard";
 
 interface MessageCardProps extends BaseCardProps<Message> {
@@ -14,7 +15,7 @@ interface MessageCardState extends BaseCardState {
     globalLanguage: DisplayedLanguage;
 }
 
-function countryCodeToFlag(code: Country): string {
+function countryCodeToFlag(code: string): string {
     // Offset between Latin uppercase A-Z and Countryal Indicator Symbols A-Z
     const RI_OFFSET = 0x1F1A5;
 
@@ -34,6 +35,7 @@ function countryCodeToFlag(code: Country): string {
 export default class MessageCard extends BaseCard<Message, MessageCardProps, MessageCardState> {
     private readonly message: Message;
     private readonly hasTlMsg: boolean;
+    private readonly flag: string;
     private readonly footertext: string;
 
     constructor(props: MessageCardProps) {
@@ -42,8 +44,8 @@ export default class MessageCard extends BaseCard<Message, MessageCardProps, Mes
         this.hasTlMsg = this.message.tl_msg != null && this.message.tl_msg !== "";
 
         this.toggleCurrentLanguage = this.toggleCurrentLanguage.bind(this);
-        // TODO: add flag back in
-        this.footertext = (this.message.username ? this.message.username : "") + (this.message.country !== "" ? " " + this.message.country : "");
+        this.flag = countryCodeToFlag(props.object.country);
+        this.footertext = (this.message.username ? this.message.username : "") + (this.message.country !== "" ? " " + this.flag : "");
     }
 
     state = {
