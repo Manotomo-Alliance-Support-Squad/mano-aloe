@@ -11,8 +11,8 @@ import { CardStyles } from "../../shared/components/baseCard/baseCard";
 
 import './comboSection.css';
 
-export default class ComboSection extends BaseSection<Message | Artwork | Video | Game | MultiArtwork> {
-    renderCard(object: (Message | Artwork | Video | Game | MultiArtwork), cardStyleIndex: number, language: DisplayedLanguage, id: number): JSX.Element {
+export default class ComboSection extends BaseSection<Message | Artwork | Video | MultiArtwork> {
+    renderCard(object: (Message | Artwork | Video | MultiArtwork), cardStyleIndex: number, language: DisplayedLanguage, id: number): JSX.Element {
         // TODO: messagecard-center might not used or needed
         if ("messageID" in object) {
             return (
