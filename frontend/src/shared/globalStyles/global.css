@@ -1,5 +1,5 @@
 :root {
-    --main-color: var(--theme-card-text2);
+    --main-color: var(--theme-color1);
     --main-text-color: var(--theme-card-text1);
     --main-text-wrapper-background-color: var(--theme-card-background);
 }

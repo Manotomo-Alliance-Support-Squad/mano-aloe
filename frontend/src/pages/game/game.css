@@ -1,0 +1,12 @@
+.game-section {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    /* overflow is required to keep cards 
+     * from segmenting into different columns 
+     * at certain resolutions */
+    overflow: auto;
+    height: 100%;
+}

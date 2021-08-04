@@ -59,7 +59,7 @@ export default class GamePage extends React.Component<GamePageProps, GamePageSta
             return <AnnouncementCard object={emptyAnnouncemment} cardStyleIndex={0} language={DisplayedLanguage.Original} />;
         }
         else return (
-            <GameSection data={this.state.games}/>
+            <GameSection data={this.state.games} customSectionStyle="game-section"/>
         )
 
     }
