@@ -3,16 +3,16 @@ import { Message } from "../../models/message";
 import { Video } from "../../models/video";
 import DisplayedLanguage from "../../models/language";
 import ArtworkCard from '../gallery/artworkCard/artworkCard';
+import MessageCard from "../messageSection/messageCard/messageCard";
 import MultiArtworkCard from '../gallery/artworkCard/multiArtworkCard';
 import VideoCard from '../videoSection/videoCard';
-import MessageCard from "../messageSection/messageCard/messageCard";
 import BaseSection from "../../shared/components/baseSection/baseSection";
 import { CardStyles } from "../../shared/components/baseCard/baseCard";
 
 import './comboSection.css';
 
-export default class ComboSection extends BaseSection<Message | Artwork | Video | MultiArtwork> {
-    renderCard(object: (Message | Artwork | Video | MultiArtwork), cardStyleIndex: number, language: DisplayedLanguage, id: number): JSX.Element {
+export default class ComboSection extends BaseSection<Message | Artwork | Video | Game | MultiArtwork> {
+    renderCard(object: (Message | Artwork | Video | Game | MultiArtwork), cardStyleIndex: number, language: DisplayedLanguage, id: number): JSX.Element {
         // TODO: messagecard-center might not used or needed
         if ("messageID" in object) {
             return (
