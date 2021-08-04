@@ -105,6 +105,5 @@
 
 .card-footer {
     height: var(--footer-text-height);
-    background-image: url(../../../assets/cards/coco_card_footer-Rara.png);
     background-size: 100% 100%;
 }
