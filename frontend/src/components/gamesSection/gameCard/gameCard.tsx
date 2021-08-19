@@ -96,6 +96,9 @@ export default class GameCard extends BaseCard<Game, GameCardProps, GameCardStat
                     </div>
                 </div>
                 <div className="game-description">{this.props.object.description}</div>
+                <div className="game-cover-image">
+                    <img src={this.props.object.thumbnail} />
+                </div>
                 <div className="card-footer" />
                 {this.state.renderGame && this.renderGameWindow()}
             </div>
