@@ -10,7 +10,6 @@ import EmailIcon from '@material-ui/icons/Email';
 import ErrorIcon from '@material-ui/icons/Error';
 
 export interface NotFoundPageProps {
-
 }
 
 export interface NotFoundPageState {
@@ -20,18 +19,6 @@ export default class NotFoundPage extends React.Component<NotFoundPageProps, Not
 
     constructor(props: NotFoundPageProps) {
         super(props);
-    }
-
-    state: NotFoundPageState = {
-    }
-
-    componentDidMount() {
-    }
-
-    private getData(): void {
-    }
-
-    onAnchorVisible(isVisible: boolean, activeHref: string) {
     }
 
     render() {
