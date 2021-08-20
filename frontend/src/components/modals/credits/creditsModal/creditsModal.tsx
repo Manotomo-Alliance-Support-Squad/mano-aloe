@@ -17,42 +17,136 @@ interface CreditsModalProps {
 
 export default class CreditsModal extends Component<CreditsModalProps, CreditsModalState> {
 
-    readonly twoDTwoCCollaborators: string[] = [
-        'ChienHS',
-        'Nyanako [NanakoTW]'
-    ];
-
-    readonly websiteContributors: string[] = [
+    readonly webTeam: string[] = [
+        'AreYouW (Frontend, Backend, Devops)',
         'DuongTyler (Frontend, Backend, Devops)',
         'Zapple (Frontend, Backend)',
         'LrJim (Frontend, Backend)',
-        'Laska (Frontend)'
+        'Jesse Zong (Frontend)',
+        'Kuroni (Frontend)',
+        'Laska (Frontend)',
+        'Ringo (Frontend)',
+        'Kyuubei (Design)',
+        'Rhyolite'
     ];
 
-    readonly projectCreatorsAndLeads: string[] = [
-        'XOF ("Dragon Heart" Game and original arts collection)',
-        'Capt-Jules (Digital scrapbook)',
-        'Revel (Original music for Coco)',
-        'PheelGagg (Letters to Coco)',
-        'jtron (Farewell song for Coco)',
-        'BadGrammar (Coco Dance Animation)',
-        'Kelanduo (World-level Giant Minecraft Fanart)'
+    readonly artTeam: string[] = [
+        'Saeki Makai - Birthday Header',
+        'Akatadaiyo - Game character design (manotomo slime)',
+        'goo - Site art team manager',
+        'Fenneko - Skull Manotome / Minor designs',
+        'Nikolai - Fan Art',
+        's.Claw - Fan Art',
+        'Roy Claise - Meme Fan Art',
+        '@IndigoXadeth - Daily Aloe Sketches',
+        'Peanuts - Fan Art',
+        'Kappce_ - Fan Art',
+        'KateLv',
+        'Milki0803 - Fan Art',
+        'Yu',
+        'TakaRex519',
+        'deegeetal - Graphic design for web and cinematography teams',
+        'MomoTomato',
+        'DrawTheOmega - Fan Art',
+        'Plus0ne - Fan Art and Animation',
+        'Kyuubei - Artwork for the web team',
+        'Hiroki - Message card designs and Fan Art',
+        'BaronVonSheep',
+        'RavenTengu - Fan Art',
+        '.grofA - 3D Textures',
+        'Kukie-Nyan',
+        'ソーランSoran',
+        'Killrodx - Fan Art',
+        'Warabii',
+        'Plus0ne - Fan Art, Fan Animation, Osu! Skin',
+        'Zidan3 - Game asset creation in "Ma No Tomo"',
+        'Porukana - Art assets for Aloe Bento game',
+        'DistantHistory',
+        'F.Soulstar - Smug Aloe and Cheerful Debiru artworks',
+        'Naelyan',
+        'Kanagiri',
+        'Duck'
     ];
 
-    readonly artAndDesignContributors: string[] = [
-        'nicooooooo (Coco brooch and asacoco tail assets)',
-        'FriedPeanuts (Coco star hairpin asset)',
-        'Rara (Diploma design and webpage tiling)',
-        'Mr. Cres (Site background)',
-        'Guy (Color consultant)'
+    readonly audioTeam: string[] = [
+        'RavenTengu',
+        'Apoptosis - Audio asset feedback',
+        'Pizzafari/Hælendleof Loc - Game music and Sound design',
+        'Cheese Singles In Your Area - Game BGM'
     ];
-
-    readonly coordinatorsAndOthers: string[] = [
+                                                                                                                                                                                                                                                      
+    readonly gameTeam: string[] = [
+        'Yu',
+        'TakaRex519',
         'Ice',
-        'RazorNaitor',
-        'Necrosis',
+        'Loki\_Magikill',
+        'Lazier Bear',
+        'Cixiny',
+        'RavenTengu',
+        'ZanyDreamer - Mano Aloe\'s Halloween Adventure',
+        'Apoptosis - Level Design and Playtesting',
+        'Pizzafari/Hælendleof Loc - Game music, Testing',
+        'King of Ferrets - Aloe Snake, Games Project Manager',
+        '2ndAdventureGaming - Bento Box Game',
+        'Despair - Game tester',
+        'Senpai - Game tester',
+        'Ashkanz - Programming advice, Document Manager, Idea factory, Bugfixing',
+        '#Huntv3334',
+        'SparkiL',
+        'Huzzah',
+        'Cheese Singles In Your Area - Game BGM',
+        'Schrodinger - Game testing',
+        'Saitô - Aloe\'s Bento Shop Game Dev',
+        'Zidan3 - Game asset creation (boss room) in "Ma No Tomo"',
+        'CinnamonMatcha - Playtesting and translations'
+    ];
+
+    readonly modTeam: string[] = [
+        'TakaRex519',
+        'Ice',
+        'ChivChav',
+        'Callme\_Luthfi',
+        'Senpai',
         'VintageGhost',
-        'Kiwi & Hiroki (Community Message)'
+        'Nephilimus',
+        'RazorNaitor - Organizer',
+        'Arvenn',
+        'Splinter - Discussion channel moderation',
+        'Necrosis - Channel moderation',
+        'The\_Chainwalker - Planning, Community engagement, Server banner, Message relay',
+        'Atsuyas - Asset management, processing and scripting'
+    ];
+
+    readonly secretaries: string[] = [
+        'MomoTomato',
+        'Kiwi - Progress Log'
+    ];
+
+    readonly translationTeam: string[] = [
+        'cokona2 - Tweet translations',
+        'Romanée',                            
+        'Ashichuu',
+        'ChronosK',
+        'ソーランSoran - daily translation of messages',
+        'kurapan',
+        'Atsuyas',
+        'Hyourinmaru',
+        'CinnamonMatcha'
+    ];
+
+    readonly twitterTeam: string[] = [
+        'DrawTheOmega ',                                            
+        'Kyuubei',                                                  
+        'Hiroki',                                                   
+        'Nephilimus',                                               
+        'Tweeter',                                                  
+        'Mr.Mech',                                                  
+        'BaronVonSheep',                                            
+        'myrial',                                                   
+        'Lucas Yeo',                                                
+        'Callme\_Luthfi',                                           
+        'Arvenn',                                                   
+        'Saitô'
     ];
 
     constructor(props: CreditsModalProps) {
@@ -101,11 +195,14 @@ export default class CreditsModal extends Component<CreditsModalProps, CreditsMo
                             Credits
                         </h1>
                         <div>
-                            {this.renderStringList(this.twoDTwoCCollaborators, '2D2C Collaborators')}
-                            {this.renderStringList(this.websiteContributors, 'Website Contributors')}
-                            {this.renderStringList(this.projectCreatorsAndLeads, 'Project Creators and Leads')}
-                            {this.renderStringList(this.artAndDesignContributors, 'Art and Design Contributors')}
-                            {this.renderStringList(this.coordinatorsAndOthers, 'Coordinators and Other Awesome Peoples in the Shadows')}
+                            {this.renderStringList(this.webTeam, 'Website Contributors')}
+                            {this.renderStringList(this.artTeam, 'Art and Design Contributors')}
+                            {this.renderStringList(this.audioTeam, 'Audio Design Contributors')}
+                            {this.renderStringList(this.gameTeam, 'Game Development and Design Contributors')}
+                            {this.renderStringList(this.translationTeam, 'Translators')}
+                            {this.renderStringList(this.secretaries, 'Secretaries')}
+                            {this.renderStringList(this.modTeam, 'Moderators and Organizers')}
+                            {this.renderStringList(this.twitterTeam, 'Twitter Team')}
                         </div>
                         <AltNav/>
                         <div className="credits-padding"/>
