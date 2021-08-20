@@ -1,34 +1,36 @@
 import React from 'react';
-import GallerySection from '../../components/gallery/gallerySection';
-import {Artwork} from "../../models/artwork";
+import {Game} from "../../models/game";
 import ManoAloeService from "../../controllers/mano-aloe.service";
-import SessionService from "../../services/session.service";
+import SessionService from "../../services/session.service"
+import '../../components/gamesSection/gameSection.css'
+import GameSection from "../../components/gamesSection/gameSection";
 import '../../shared/globalStyles/global.css'
-
 import AnnouncementCard from '../../components/announcementSection/announcementCard';
 import {Announcement} from "../../models/announcement";
 import DisplayedLanguage from "../../models/language";
 
-export interface ArtPageProps {
+
+export interface GamePageProps {
 
 }
 
-export interface ArtPageState {
+export interface GamePageState {
     loading: boolean;
-    artworks: Artwork[];
+    games: Game[];
 }
 
-export default class ArtPage extends React.Component<ArtPageProps, ArtPageState> {
+export default class GamePage extends React.Component<GamePageProps, GamePageState> {
 
-    constructor(props: ArtPageProps,
+    constructor(props: GamePageProps,
                 private manoAloeService: ManoAloeService) {
         super(props);
         this.manoAloeService = new ManoAloeService();
+        this.getData = this.getData.bind(this);
     }
 
-    state: ArtPageState = {
+    state: GamePageState = {
         loading: true,
-        artworks: []
+        games: [],
     }
 
     componentDidMount() {
@@ -36,14 +38,14 @@ export default class ArtPage extends React.Component<ArtPageProps, ArtPageState>
     }
 
     private getData(): void {
-        const cachedArtworks: Artwork[] | null = SessionService.getGallery();
-        if (cachedArtworks && cachedArtworks.length) {
-            this.setState({loading: false, artworks: cachedArtworks});
+        const cachedGames: Game[] | null = SessionService.getGame();
+        if (cachedGames && cachedGames.length) {
+            this.setState({loading: false, games: cachedGames});
         } else {
-            this.manoAloeService.getGallery()
-                .then((artworks: Artwork[]) => {
-                    SessionService.saveGallery(artworks);
-                    this.setState({loading: false, artworks});
+            this.manoAloeService.getGame()
+                .then((games: Game[]) => {
+                    SessionService.saveGame(games);
+                    this.setState({loading: false, games});
                 })
                 .catch((error: Error) => {
                     console.error(error);
@@ -51,21 +53,22 @@ export default class ArtPage extends React.Component<ArtPageProps, ArtPageState>
         }
     }
 
-    renderGallerySection() {
-        if (!this.state.artworks.length) {
+    renderGameSection() {
+        if (!this.state.games.length) {
             const emptyAnnouncemment: Announcement = { announcementID: 0, message: "Nothing here! Check back later!" };
             return <AnnouncementCard object={emptyAnnouncemment} cardStyleIndex={0} language={DisplayedLanguage.Original} />;
         }
         else return (
-            <GallerySection data={this.state.artworks}/>
+            <GameSection data={this.state.games} customSectionStyle="game-section"/>
         )
+
     }
 
     render() {
         return (
             <div className="home-root">
                 <div className="wrapper-overlay">
-                    {this.state.loading ? 'Loading...' : this.renderGallerySection()}
+                    {this.renderGameSection()}
                 </div>
             </div>
         )

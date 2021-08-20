@@ -1,15 +1,19 @@
 :root {
     --game-button-color: var(--theme-card-header-background);
     --game-button-hover-color: white;
+    --game-cover-text-color: var(--theme-card-text1);
+    --game-cover-background-color: var(--theme-card-background);
 }
 
 .game-text {
+    color: var(--game-cover-text-color);
     font-size: 24px;
     margin: auto 0;
     padding-left: 10px;
 }
 
 .game-description {
+    color: var(--game-cover-text-color);
     margin: 0 auto;
     font-size: 20px;
     padding: 0 25px;
@@ -74,10 +78,21 @@
     max-width: 600px;
     height: 45vw;
     max-height: 550px;
-    background-color: var(--main-background-color);
+    background-color: var(--game-cover-background-color);
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
     position: relative;
     border-radius: 10px;
+}
+
+.game-cover-image {
+    display: flex;
+    justify-content: center;
+    /*Give the cover image some breathing space on small screens*/
+    padding-bottom: 15px;
+}
+
+.game-cover-image img {
+    max-width: 50%;
 }
 
 .game-cover .card-footer {

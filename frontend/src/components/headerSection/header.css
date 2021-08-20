@@ -4,28 +4,74 @@
 }
 
 .app-header {
-    height: calc(15vh + 64px);
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     font-size: calc(12px + 2vmin);
-    background-image: var(--header-background);
     background-color: var(--header-background-color);
-    background-repeat: repeat;
+    background-image: var(--header-background);
+    background-repeat: no-repeat;
+    background-size: cover;
     /*60% because of navbar offset*/
     background-position: 0 0;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
 }
 
-@media (max-width: 500px) {
-    /*naisu*/
+@media (max-width: 800px) {
     .app-header {
-        height: calc(2vh + 64px);
-        background-position: 0 60%;
-        background-attachment: scroll;
+        min-height: 580px;
+        /*Header background goes into navbar and too far to the side without this*/
+        background-position: 60% 13vh;
     }
+}
+
+.community-message-card {
+    background-image: url(../../assets/cards/card2.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    width: 50%;
+
+    background-color: #fd438c;
+    color: #fff;
+    font-size: 25px;
+}
+
+@media (max-height: 800px) {
+    /*Handle mobile layouts since everything is freaking tiny*/
+    .community-message-card {
+        margin-top: 12vh;
+    }
+}
+
+@media (max-width: 900px) {
+    .community-message-card {
+        width: 90%;
+    }
+}
+
+@media (min-width: 900px) {
+    .community-message-card {
+        position: relative;
+        left: -20vw;
+    }
+}
+
+.community-message-header {
+    padding-top: 14%;
+    justify-content: center;
+    font-size: 40px;
+    text-align: center;
+}
+
+.community-message-body {
+    padding: 20px;
 }
 
 @keyframes fadeIn {
@@ -35,9 +81,4 @@
     100% {
         opacity: 1;
     }
-}
-
-.headerArt {
-    height: 100%;
-    max-width: 100%;
 }

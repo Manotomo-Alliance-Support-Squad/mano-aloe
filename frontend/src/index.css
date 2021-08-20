@@ -6,28 +6,27 @@
     --theme-color1: #000000; /*root background*/
     --theme-color2: #f05872; /*used for card text*/
     --theme-color3: #fff0e3; /*card bg color and anchor link color*/
-    --theme-color4: #000000; /*Anchor link color*/
+    --theme-color4: #ffffff; /*Anchor link color*/
 
     --theme-color-black: #000;
     --theme-color-white: #fff;
 
-    --theme-card-text1: #202020;
+    --theme-card-text1: #ffffff;
     --theme-card-text2: #000000;
-    --theme-card-background: #ffffff;
+    --theme-card-background: #724683;
     --theme-card-header-background: #ffffff;
 
     --theme-special-text: #f0f0f0;
-    --theme-special-background: #843057;
-    --theme-special-background-alt: #FF985C;
+    --theme-special-background: #724683;
+    --theme-special-background-alt: #fd418d;
 
-    --main-background: url(assets/backgrounds/Background-Footer-by-Mr-Cres.png);
+    --main-background: url(assets/backgrounds/content_bg_tile.svg);
     --main-background-color: #ffffff;
 
-    --header-background: url(assets/backgrounds/header-bg-by-Chainwalker.png);
-    --header-background-color: #ffffff;
+    --header-background: url(assets/backgrounds/header_background.png);
+    --header-background-color: #333031;
 
-    --header-background-color: #ffffff;
-    --separator-background-color: #ffffff;
+    --separator-background-color: #fd418d;
 
     --card-font-size: 1.6rem;
     --credits-font-size: 1.2rem;

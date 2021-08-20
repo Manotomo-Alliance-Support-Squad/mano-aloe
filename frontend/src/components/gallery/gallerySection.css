@@ -1,6 +1,6 @@
 .gallery-section {
     --card-height: 550px;
-    --card-width: var(--card-height);
+    --card-width: 666px;
 
     display: flex;
     flex-wrap: wrap;
