@@ -63,14 +63,11 @@ export default class ArtPage extends React.Component<ArtPageProps, ArtPageState>
 
     render() {
         return (
-            <>
-            <div className="separator"/>
             <div className="home-root">
                 <div className="wrapper-overlay">
                     {this.state.loading ? 'Loading...' : this.renderGallerySection()}
                 </div>
             </div>
-            </>
         )
     }
 }
