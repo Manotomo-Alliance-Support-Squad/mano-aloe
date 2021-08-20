@@ -1,0 +1,31 @@
+.error-not-found-container {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% + 4.25rem);
+    align-items: center;
+    justify-content: center;
+    background-color: var(--theme-color1);
+    flex-direction: column;
+}
+
+.error-not-found-title {
+    width: 100%;
+    font-family: var(--theme-font);
+    color: var(--theme-color-white);
+    font-size: 10vw; /*be big font no matter the viewport size*/
+    text-align: center;
+}
+
+.error-not-found-content {
+    width: 100%;
+    font-family: var(--theme-font);
+    color: var(--theme-color-white);
+    font-size: 2vw;
+    text-align: center;
+}
+
+#header {
+}
