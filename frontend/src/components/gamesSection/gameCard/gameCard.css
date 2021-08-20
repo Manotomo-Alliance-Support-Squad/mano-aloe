@@ -87,6 +87,8 @@
 .game-cover-image {
     display: flex;
     justify-content: center;
+    /*Give the cover image some breathing space on small screens*/
+    padding-bottom: 15px;
 }
 
 .game-cover-image img {
