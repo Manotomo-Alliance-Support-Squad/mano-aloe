@@ -10,6 +10,7 @@ import { Video } from "../../models/video"
 import AnchorSupportedSection, { handleSectionVisibility } from "../../components/anchorSupportedSection/anchorSupportedSection";
 import AnchorStandaloneBotan from "../../components/anchor/anchorStandaloneBotan";
 import AnnouncementSection from "../../components/announcementSection/announcementSection"
+import HeaderSection from "../../components/headerSection/header"
 
 import FadeIn from '../../components/fadeInSection/fadeInSection';
 
@@ -271,6 +272,8 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
     render() {
         const { activeHrefs } = this.state;
         return (
+            <>
+            <HeaderSection />
             <div className="home-root">
                 <div className="home-container">                     
                     <div className="separator" />
@@ -308,6 +311,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
                 </div>
                 <AnchorMultipleSection position={AnchorSectionPosition.RIGHT} activeHrefs={activeHrefs} anchors={Anchors} />
             </div>
+            </>
         )
     }
 }

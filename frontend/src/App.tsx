@@ -8,7 +8,6 @@ import { LanguageContext, LanguageContextValue } from "./components/languageSwit
 import DisplayedLanguage from "./models/language";
 
 import ButtonAppBar from './components/navigation/navbar';
-import HeaderSection from "./components/headerSection/header"
 import HomePage from './pages/home/home';
 import GamePage from './pages/game/game';
 import ArtPage from './pages/gallery/art';
@@ -41,7 +40,6 @@ export default class App extends React.Component<AppProps, LanguageContextValue>
         return (
             <LanguageContext.Provider value={this.state}>
                 <ButtonAppBar />
-                <HeaderSection />
                 <Switch>
                     <Route exact path='/'>
                         <Redirect to="/home" />

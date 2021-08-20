@@ -20,12 +20,11 @@
     background-attachment: fixed;
 }
 
-@media (max-width: 500px) {
-    /*naisu*/
+@media (max-width: 800px) {
     .app-header {
-        height: calc(2vh + 64px);
-        background-position: 0 60%;
-        background-attachment: scroll;
+        min-height: 580px;
+        /*Header background goes into navbar and too far to the side without this*/
+        background-position: 60% 13vh;
     }
 }
 
