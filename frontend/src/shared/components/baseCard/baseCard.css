@@ -90,16 +90,18 @@
     height: 80px;
     background-size: 100%;
     background-position-x: center;
-    background-image: url(../../../assets/cards/coco_card_footer-Rara.png);
+    background-repeat: no-repeat;
 }
 
 @media (max-width: 768px) {
     .card-header {
+        height: 25vh;
     }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 425px) {
     .card-header {
+        height: 12vh;
     }
 }
 
