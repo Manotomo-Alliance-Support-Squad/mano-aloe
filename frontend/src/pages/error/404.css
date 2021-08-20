@@ -4,7 +4,7 @@
     top: 0px;
     left: 0px;
     width: 100%;
-    height: calc(100% + 4.25rem);
+    height: 100%;
     align-items: center;
     justify-content: center;
     background-color: var(--theme-color1);
@@ -25,7 +25,4 @@
     color: var(--theme-color-white);
     font-size: 2vw;
     text-align: center;
-}
-
-#header {
 }
