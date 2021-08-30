@@ -11,6 +11,7 @@ import ButtonAppBar from './components/navigation/navbar';
 import HomePage from './pages/home/home';
 import GamePage from './pages/game/game';
 import ArtPage from './pages/gallery/art';
+import NotFoundPage from './pages/error/404';
 
 interface AppProps {
 }
@@ -46,6 +47,7 @@ export default class App extends React.Component<AppProps, LanguageContextValue>
                     <Route path='/home' component={HomePage}/>
                     <Route path='/game' component={GamePage}/>
                     <Route path='/art' component={ArtPage}/>
+                    <Route path='*' component={NotFoundPage}/>
                 </Switch>
             </LanguageContext.Provider>
         );
