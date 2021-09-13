@@ -87,21 +87,28 @@
 }
 
 .card-header {
-    height: 80px;
+    height: 16vw;
     background-size: 100%;
     background-position-x: center;
     background-repeat: no-repeat;
 }
 
-@media (max-width: 768px) {
+/*As more columns show up the vw calculation needs to be specifically adjusted*/
+@media (min-width: 1024px) {
     .card-header {
-        height: 25vh;
+        height: 8vw;
     }
 }
 
-@media (max-width: 425px) {
+@media (min-width: 1440px) {
     .card-header {
-        height: 12vh;
+        height: 6vw;
+    }
+}
+
+@media (min-width: 1440px) {
+    .card-header {
+        height: 4vw;
     }
 }
 
