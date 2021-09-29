@@ -3,6 +3,15 @@
  * https://jestjs.io/docs/en/configuration.html
  */
 
+module.exports = {
+  moduleNameMapper: {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/tests/__mocks__/fileMock.js",
+    '\\.(css|less)$': '<rootDir>/src/tests/__mocks__/styleMock.js',
+
+  }
+};
+
+
 export default {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -31,7 +40,7 @@ export default {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  // coverageProvider: "babel",
+  coverageProvider: "v8",
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
@@ -191,4 +200,5 @@ export default {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+
 };

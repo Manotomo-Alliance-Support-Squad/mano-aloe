@@ -1,3 +1,4 @@
+import React from 'react';
 import { useLocation } from 'react-router-dom';
 import InPageNav from '../../components/inPageNav/inPageNav';
 import {GitHub} from "@material-ui/icons";
