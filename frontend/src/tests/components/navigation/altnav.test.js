@@ -1,6 +1,6 @@
 import React from 'react';
 import routeData from 'react-router';
-import AltNav from "../components/navigation/altnav";
+import AltNav from "../../../components/navigation/altnav";
 
 const mockLocation = {
     pathname: '/welcome',
