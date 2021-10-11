@@ -82,3 +82,41 @@
         opacity: 1;
     }
 }
+
+
+.app-birthday-header {
+    background-image: url(https://cdn.discordapp.com/attachments/745063266694201444/770662475015651338/HB_Aloe.png) !important;
+    height: calc(100vh - 40px);  /* full screen - navbar height - bottom anchor thingy*/
+    background-size: 100%;
+    background-color: #ffffff;
+    background-position: center center;
+}
+
+#manotomo1 {
+    position: absolute;
+    width: 400px;
+    left: 10px;
+    bottom: 50px;
+    z-index: 0;
+}
+
+#manotomo2 {
+    position: absolute;
+    width: 200px;
+    right: 10px;
+    bottom: 50px;
+    z-index: 0;
+}
+
+.birthday-card {
+    z-index: 2;
+    animation: fadeIn 4s;
+    max-width: 500px;
+    position: relative;
+    left: 0px;
+}
+
+.bday-msg-container {
+    height: 100%;
+    background-color: #fd418d;
+}
