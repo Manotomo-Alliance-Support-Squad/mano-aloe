@@ -40,12 +40,7 @@ export default class HeaderSection extends Component<HeaderProps, HeaderState>
                     <img id="manotomo1" src={Manotomo1}/>
                     <img id="manotomo2" src={Manotomo2}/>
                 </header>
-                <div className="separator">
-                    <AnchorLink offset='120' href='#bday-card'>
-                        <ArrowDropDownCircleOutlinedIcon className="anchor-link" style={{width: 36, height:36}}/>
-                    </AnchorLink>
-                </div>
-                <div id="bday-card" className="justify-align-center bday-msg-container">
+                <div id="bday-card" className="bday-msg-container">
                     <div className="community-message-card birthday-card">
                         <h1 className="community-message-header">Happy Birthday, Aloe</h1>
                         <div className="community-message-body text-center">
