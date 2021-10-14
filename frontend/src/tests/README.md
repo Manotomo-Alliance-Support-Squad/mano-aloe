@@ -1,6 +1,6 @@
 # Frontend Unit Tests
 
-We're using jest for our frontend unit tests. This will be primarily testing for component accuracy.
+We're using jest for our frontend unit tests. This will be primarily testing for component accuracy. If you're looking for the E2E tests, look in `frontend/test/`.
 
 ## Installation
 
@@ -15,6 +15,10 @@ Running from the commandline, jest will do test discovery in child folders, so m
 
 jest src/tests/<foldername>/test.module.js
 ```
+
+## Adding Tests
+
+If you are adding tests, please structure them in the same way under `src`. For example, a test for `src/components/headerSection/header.tsx` should go under `src/tests/components/headerSection/header.test.js`.
 
 ## Future Plans
 
