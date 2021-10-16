@@ -8,13 +8,19 @@ For easy local runs of the test, it's recommended that you install jest globally
 
 ## Running the Tests
 
-Running from the commandline, jest will do test discovery in child folders, so make sure you run from the `frontend` directory. If you want to run a particular test file do
+When runing from the commandline and jest will do test discovery in child folders. To properly do source discovery, make sure you run from the `frontend` directory. 
+
+If you have jest installed globally, and you want to run a particular test file do:
 
 ```bash
 # you should be in frontend/
 
 jest src/tests/<foldername>/test.module.js
 ```
+
+To run the entire unit test suite, use `npm test`. You can use it anywhere within the `frontend` directory.
+
+If you want to use your global `jest` you need to be in `frontend`.
 
 ## Adding Tests
 
