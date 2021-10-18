@@ -15,6 +15,7 @@ Website for the messages of support from the [Mano Aloe Support Squad (M.A.S.S)]
 - DuongTyler - Backend work and small frontend contributions, helped coordinate with other teams, system administartion
 - Laska - Frontend shenanigans
 - Kuroni - Frontend development
+- LrJim - Frontend development
 
 ### Artwork Team
 
