@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import '../../shared/globalStyles/global.css';
 import './header.css';
+import './birthday_header.css';
 
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import ArrowDropDownCircleOutlinedIcon from '@material-ui/icons/ArrowDropDownCircleOutlined';
