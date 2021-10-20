@@ -87,21 +87,47 @@
 }
 
 .card-header {
-    height: 80px;
+    width: 100%;
+    height: 58px;  /* for some small phone sideway resolutions */
     background-size: 100%;
     background-position-x: center;
     background-repeat: no-repeat;
 }
 
-@media (max-width: 768px) {
+/*As more or less columns and card sizes show up the header calculation needs to be adjusted*/
+@media (min-width: 425px) {
     .card-header {
-        height: 25vh;
+        height: 60px;
     }
 }
 
-@media (max-width: 425px) {
+@media (min-width: 500px) {
     .card-header {
-        height: 12vh;
+        height: 85px;
+    }
+}
+
+@media (min-width: 640px) {
+    .card-header {
+        height: 120px;
+    }
+}
+
+@media (min-width: 800px) {
+    .card-header {
+        height: 60px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-header {
+        height: 80px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .card-header {
+        height: 120px;
     }
 }
 
