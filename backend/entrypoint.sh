@@ -1,5 +1,5 @@
 #!/bin/bash
-if test -f /data/app.db; then mv /data/app.db /mnt/main/server/app.db; fi
+if test -f /data/app.db; then cp /data/app.db /mnt/main/server/app.db; fi
 if test -f /data/messages.csv; then /mnt/venv/bin/python3 /mnt/update_db.py -t MESSAGES -c /data/messages.csv; fi
 if test -f /data/gallery.csv; then /mnt/venv/bin/python3 /mnt/update_db.py -t GALLERY -c /data/gallery.csv; fi
 if test -f /data/multigallery.csv; then /mnt/venv/bin/python3 /mnt/update_db.py -t MULTIGALLERY -c /data/multigallery.csv; fi
