@@ -186,5 +186,27 @@ Website for the messages of support from the [Mano Aloe Support Squad (M.A.S.S)]
 
 _and many many more..._
 
-## License
+# Getting Started
+
+## Docker
+
+### Requirements
+- docker/podman with docker-compose
+
+### Steps to Run
+1. clone the repo
+2. in the root of the repo, run ``docker-compose up`` or ``podman-compose up``
+3. Profit
+
+### Developing Frontend
+1. make changes
+2. in frontend folder, be sure to run ``npm run-script build`` to make a build folder for the docker image
+3. make sure to build a clean docker image for up to date changes. That or you could just mount the build folder into the docker image.
+
+### Developing Backend
+1. make changes
+2. in the backend folder, build a new image with ``docker build``
+3. in the root of the repo, make a data folder and place the csv or app.db file in there to input data into the backend.
+
+# License
 [MIT](https://choosealicense.com/licenses/mit/)
