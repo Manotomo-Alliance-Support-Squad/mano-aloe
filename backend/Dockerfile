@@ -21,4 +21,3 @@ RUN venv/bin/python3 manage.py db migrate
 RUN venv/bin/python3 manage.py create_db
 
 ENTRYPOINT ["/bin/bash", "/mnt/entrypoint.sh"]
-#ENTRYPOINT ["/mnt/venv/bin/waitress-serve", "--listen=0.0.0.0:3000", "main.server:app"]
