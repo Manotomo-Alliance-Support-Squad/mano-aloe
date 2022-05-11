@@ -7,6 +7,7 @@ esbuild.build({
     entryPoints: ["./src/App.tsx"],
     bundle: true,
     outfile: "es-www/out.js",
+    tsconfig: "./tsconfig.json",
     plugins: [
         svgrPlugin(),
     ],
