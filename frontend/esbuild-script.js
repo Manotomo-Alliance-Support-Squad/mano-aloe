@@ -6,7 +6,7 @@ esbuild.build({
     logLevel: "info",
     entryPoints: ["./src/App.tsx"],
     bundle: true,
-    outfile: "out.js",
+    outfile: "es-www/out.js",
     plugins: [
         svgrPlugin(),
     ],
@@ -14,6 +14,6 @@ esbuild.build({
         '.png': 'file',
         '.svg': 'file',
     },
-    external: ['*.svg']
+    external: ['*.svg']  // Temp hack to get around url() in css not building
   })
   .catch(() => process.exit(1));
