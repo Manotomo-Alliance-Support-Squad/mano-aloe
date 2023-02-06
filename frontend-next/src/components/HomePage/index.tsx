@@ -40,6 +40,8 @@ interface MessageResponse {
   messages: Array<Message>;
 }
 
+const CARD_WIDTH = "360px";
+
 export default function Home() {
   const { data, fetching, error } = useGetRequest<MessageResponse>({
     url: `${config.backendurl}/api/messages`,
@@ -67,15 +69,15 @@ export default function Home() {
 
   return (
     <>
-      <Box minW="360px" padding="1rem" paddingBottom="0">
-        <Center>
-          <SimpleGrid
-            minChildWidth="320px"
-            width="100%"
-            gridGap="1rem"
-            alignItems="center"
-          >
-            <Box width="320px">
+      <Box padding="1rem" paddingBottom="0">
+        <SimpleGrid
+          minChildWidth={CARD_WIDTH}
+          width="100%"
+          gridGap="1rem"
+          alignItems="center"
+        >
+          <Center>
+            <Box width={CARD_WIDTH}>
               <BaseCard idx={0} paddingTop="40px">
                 <Box width="300px">
                   <CardHeader>
@@ -92,7 +94,9 @@ export default function Home() {
                 </Box>
               </BaseCard>
             </Box>
-            <Box width="320px">
+          </Center>
+          <Center>
+            <Box width={CARD_WIDTH}>
               <BaseCard idx={1} paddingTop="40px">
                 <Box width="300px">
                   <CardHeader>
@@ -109,10 +113,10 @@ export default function Home() {
                 </Box>
               </BaseCard>
             </Box>
-          </SimpleGrid>
-        </Center>
+          </Center>
+        </SimpleGrid>
       </Box>
-      <Box padding="1rem" columnGap="1rem" sx={{ columnWidth: "360px" }}>
+      <Box padding="1rem" columnGap="1rem" sx={{ columnWidth: CARD_WIDTH }}>
         {messages?.map((message, idx) => (
           <MessageCard
             key={message.messageID}
