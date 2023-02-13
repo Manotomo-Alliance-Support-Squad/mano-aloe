@@ -1,17 +1,47 @@
-import { useEffect, useState } from "react";
-import {
-  Box,
-  Card,
-  CardBody,
-  CardFooter,
-  Flex,
-  Switch,
-  Text,
-} from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Box, CardFooter, Flex, SlideFade, Text } from "@chakra-ui/react";
+import { InView } from "react-intersection-observer";
 import BaseCard from "../../BaseCard";
 import { LANGUAGE } from "../../../contexts/LanguageContext";
-import { CARD_STYLES } from "../../../assets/cards";
 import { Message } from "../index";
+
+const SlideInOnVisible = React.memo(
+  ({ children }: { children: JSX.Element }) => {
+    const [loaded, setLoaded] = useState(false);
+    return (
+      <InView as="div" onChange={(inView) => setLoaded(inView)} triggerOnce>
+        <SlideFade in={loaded} offsetY="200px">
+          {children}
+        </SlideFade>
+      </InView>
+    );
+  }
+);
+
+const MessageFooter = React.memo(({ username }: { username: string }) => {
+  return (
+    <CardFooter paddingTop="0">
+      <Flex flexDirection="row-reverse" w="100%">
+        <Text>{username}</Text>
+      </Flex>
+    </CardFooter>
+  );
+});
+
+const Padding = React.memo(() => <Box h="15%" />);
+
+const CustomCardBody = React.memo(({ children }: { children: JSX.Element }) => (
+  <div
+    style={{
+      backgroundColor: "#fff4",
+      margin: "1rem",
+      padding: "1rem",
+      borderRadius: "10px",
+    }}
+  >
+    {children}
+  </div>
+));
 
 interface MessageCardProps {
   idx: number;
@@ -21,47 +51,47 @@ interface MessageCardProps {
 
 export default function MessageCard(props: MessageCardProps) {
   const { message, idx, globalLanguage } = props;
-  const [showTL, setShowTL] = useState(false);
 
-  useEffect(() => {
-    // this sucks.
-    setShowTL(globalLanguage === LANGUAGE.JP);
-  }, [globalLanguage, setShowTL]);
+  const showTL = globalLanguage === LANGUAGE.JP;
 
   return (
-    <BaseCard idx={idx} paddingTop="15%">
-      <Box h="15%"/>
-      <CardBody bgColor="#fff4" margin="1rem" rounded="10px">
-        <Box width={0} float="left">
-          <Text
-            width="300px"
-            visibility={!showTL ? "visible" : "hidden"}
-          >
-            {message.orig_msg}
-          </Text>
-        </Box>
-        <Box width={0} float="left">
-          <Text
-            width="300px"
-            visibility={showTL ? "visible" : "hidden"}
-          >
-            {message.tl_msg}
-          </Text>
-        </Box>
-      </CardBody>
-      <CardFooter paddingTop="0">
-        <Text color="text">GLB</Text>
-        <Switch
-          isDisabled={message.tl_msg === "" && message.tl_msg === undefined}
-          colorScheme="whiteAlpha"
-          isChecked={showTL}
-          onChange={(e) => setShowTL(e.target.checked)}
-        />
-        <Text>JP</Text>
-        <Flex flexDirection="row-reverse" w="100%">
-          <Text>{message.username}</Text>
-        </Flex>
-      </CardFooter>
-    </BaseCard>
+    <SlideInOnVisible>
+      <BaseCard idx={idx} paddingTop="15%">
+        <Padding />
+        <CustomCardBody>
+          <div style={{ display: "flex" }}>
+            <div
+              style={{
+                float: "left",
+                width: 0,
+                height: "100%",
+                opacity: !showTL ? 1 : 0,
+                zIndex: !showTL ? 1 : 0,
+                userSelect: !showTL ? "auto" : "none",
+                transition: "opacity 0.4s ease",
+              }}
+            >
+              <p style={{ width: "300px", color: "#fff" }}>
+                {message.orig_msg}
+              </p>
+            </div>
+            <div
+              style={{
+                float: "left",
+                width: 0,
+                height: "100%",
+                opacity: showTL ? 1 : 0,
+                zIndex: showTL ? 1 : 0,
+                userSelect: showTL ? "auto" : "none",
+                transition: "opacity 0.4s ease",
+              }}
+            >
+              <p style={{ width: "300px", color: "#fff" }}>{message.tl_msg}</p>
+            </div>
+          </div>
+        </CustomCardBody>
+        <MessageFooter username={message.username} />
+      </BaseCard>
+    </SlideInOnVisible>
   );
 }

@@ -8,7 +8,7 @@ interface BaseCardProps {
   paddingTop?: string;
 }
 
-export default function BaseCard<T>(props: T & BaseCardProps) {
+export default React.memo(function BaseCard<T>(props: T & BaseCardProps) {
   const { idx, paddingTop, children } = props;
   return (
     <Card
@@ -25,4 +25,4 @@ export default function BaseCard<T>(props: T & BaseCardProps) {
       {children}
     </Card>
   );
-}
+});

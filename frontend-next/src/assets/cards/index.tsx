@@ -5,16 +5,13 @@ import CardStyle3 from './card3.svg';
 export const CARD_STYLES = [
     {
         header: CardStyle1,
-        backgroundColor: 'purple.600',
-        // contentBackgroundColor: 'purple.300',
+        backgroundColor: 'brand.purple.600',
     },
     {
         header: CardStyle2,
-        backgroundColor: 'pink.200',
-        // contentBackgroundColor: 'pink.300',
+        backgroundColor: 'brand.pink.200',
     },
     {
         header: CardStyle3,
-        backgroundColor: 'purple2.700',
-        // contentBackgroundColor: 'purple2.300',
+        backgroundColor: 'brand.purple.650',
     }];

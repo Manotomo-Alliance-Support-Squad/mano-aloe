@@ -19,7 +19,7 @@ import {
 const AppShell = () => {
   return (
     <>
-      <Box position="fixed" width="100%" zIndex={1}>
+      <Box position="fixed" width="100%" zIndex={100}>
         <Header />
       </Box>
       <Box visibility={"hidden"}>
