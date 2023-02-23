@@ -1,6 +1,7 @@
-export const config = {
-    host: window.location.hostname,
-    url: `${window.location.protocol}//${window.location.hostname}`,
-    // backendurl: `${window.location.protocol}//${window.location.hostname}`,
-    backendurl: `https://manoaloe.manotomo.com`,
+interface ConfigProps {
+  backendurl: URL;
+}
+
+export const config: ConfigProps = {
+  backendurl: new URL(import.meta.env.VITE_BACKEND_URL),
 };

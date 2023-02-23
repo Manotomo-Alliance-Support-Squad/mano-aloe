@@ -3,13 +3,12 @@ import { Box, CardFooter, Flex, SlideFade, Text } from "@chakra-ui/react";
 import { InView } from "react-intersection-observer";
 import BaseCard from "../../BaseCard";
 import { LANGUAGE } from "../../../contexts/LanguageContext";
-import { Message } from "../index";
 
 const SlideInOnVisible = React.memo(
   ({ children }: { children: JSX.Element }) => {
     const [loaded, setLoaded] = useState(false);
     return (
-      <InView as="div" onChange={(inView) => setLoaded(inView)} triggerOnce>
+      <InView as="div" delay={100} onChange={(inView) => setLoaded(inView)} triggerOnce>
         <SlideFade in={loaded} offsetY="200px">
           {children}
         </SlideFade>
@@ -42,6 +41,14 @@ const CustomCardBody = React.memo(({ children }: { children: JSX.Element }) => (
     {children}
   </div>
 ));
+
+export interface Message {
+  id: string;
+  orig_msg: string;
+  tl_msg: string | null;
+  username: string;
+  country: string | null;
+}
 
 interface MessageCardProps {
   idx: number;

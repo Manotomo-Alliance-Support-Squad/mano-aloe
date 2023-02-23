@@ -5,9 +5,10 @@ import {
   Outlet,
 } from "react-router-dom";
 import { Box, ChakraProvider } from "@chakra-ui/react";
+import RspcProvider from "./rspc";
 import Home from "./components/HomePage";
 import Games from "./components/GamesPage";
-import Gallery from "./components/GamesPage";
+import Gallery from "./components/GalleryPage";
 import Header from "./components/Header";
 import ErrorPage from "./components/ErrorPage";
 import { theme } from "./theme";
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         index: true,
-        element: <Navigate to="/home"/>
+        element: <Navigate to="/home" />,
       },
       {
         path: "/home",
@@ -62,9 +63,11 @@ function App() {
 
   return (
     <ChakraProvider theme={theme}>
-      <LanguageContext.Provider value={languageState}>
-        <RouterProvider router={router} />
-      </LanguageContext.Provider>
+      <RspcProvider>
+        <LanguageContext.Provider value={languageState}>
+          <RouterProvider router={router} />
+        </LanguageContext.Provider>
+      </RspcProvider>
     </ChakraProvider>
   );
 }

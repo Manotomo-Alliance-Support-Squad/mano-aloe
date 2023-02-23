@@ -1,0 +1,37 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:15
+    ports:
+      - "127.0.0.1:5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=manoaloe
+      - POSTGRES_USER=manotomodev
+      - POSTGRES_DB=manotomo
+    volumes:
+      - "postgres_volume:/var/lib/postgresql/data:z"
+
+  frontend:
+    build: 
+      context: frontend-next
+      dockerfile: dev.Dockerfile
+    ports:
+      - "127.0.0.1:5173:5173"
+      - "127.0.0.1:3010:3010"
+    environment:
+      - ""
+    volumes:
+      - "./frontend-next:/build:z"
+
+  backend:
+    build: ./backend-next
+    environment:
+      - DATABASE_URL=postgres://manotomodev:manoaloe@db/manotomo
+    ports:
+      - "127.0.0.1:8080:8080"
+    dependencies:
+      - db
+
+volumes:
+  postgres_volume:

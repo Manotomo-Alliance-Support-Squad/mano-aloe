@@ -23,6 +23,7 @@ import {
 import { FaGamepad, FaImages } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { rspc } from "../../rspc";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { useGetRequest } from "../../services/ApiService";
 import { config } from "../../config";
@@ -33,18 +34,6 @@ import BaseCard from "../BaseCard";
 import HeaderBackground from "../../assets/background/header_background.png";
 import HeaderBackgroundBirthday from "../../assets/background/header_background_birthday.png";
 import ManotomoCake from "../../assets/sprites/manotomo_cake.png";
-
-export interface Message {
-  messageID: number;
-  orig_msg: string;
-  tl_msg: string;
-  username: string;
-  country: string;
-}
-
-interface MessageResponse {
-  messages: Array<Message>;
-}
 
 const CARD_WIDTH = 360;
 const CARD_PADDING = 16;
@@ -69,69 +58,13 @@ const CommunityMessageCard = () => (
   </Box>
 );
 
-export default function Home() {
-  const { data, fetching, error } = useGetRequest<MessageResponse>({
-    url: `${config.backendurl}/api/messages`,
-  });
-  const { language } = useLanguage();
-  const messages = data?.messages;
-  const ref = useRef<null | HTMLDivElement>(null);
-
-  const [columnCount, setColumnCount] = useState(1);
-  const innerWidth =
-    columnCount * CARD_WIDTH + CARD_PADDING + columnCount * CARD_PADDING;
-
-  useLayoutEffect(() => {
-    const handleResize = () => {
-      if (ref.current !== null) {
-        const { width } = ref.current.getBoundingClientRect();
-        if (width >= 5 * CARD_WIDTH + 6 * CARD_PADDING) {
-          setColumnCount(5);
-        } else if (width >= 4 * CARD_WIDTH + 5 * CARD_PADDING) {
-          setColumnCount(4);
-        } else if (width >= 3 * CARD_WIDTH + 4 * CARD_PADDING) {
-          setColumnCount(3);
-        } else if (width >= 2 * CARD_WIDTH + 3 * CARD_PADDING) {
-          setColumnCount(2);
-        } else {
-          setColumnCount(1);
-        }
-      }
-    };
-
-    // first render needs to check if we can fit more columns
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  if (fetching) {
-    return (
-      <Box padding="1rem">
-        <Skeleton height="500px" rounded="1rem" />
-      </Box>
-    );
-  }
-
-  if (error === undefined) {
-    return (
-      <Alert status="error" variant="solid">
-        <AlertIcon />
-        <AlertTitle>An error occurred while fetching resources</AlertTitle>
-        <AlertDescription>Please try reloading the page</AlertDescription>
-      </Alert>
-    );
-  }
-
+const FeaturedSection = () => {
   const today = new Date();
-  const isBirthday = (today.getDate() === 28 && today.getMonth() === 9);
-
+  const isBirthday = today.getDate() === 28 && today.getMonth() === 9;
   return (
     <>
       {isBirthday ? (
-        <Image src={HeaderBackgroundBirthday}></Image>
+        <Image src={HeaderBackgroundBirthday} />
       ) : (
         <Box
           padding="2rem"
@@ -172,6 +105,82 @@ export default function Home() {
           </Center>
         </SimpleGrid>
       </Box>
+    </>
+  );
+};
+
+export default function Home() {
+  const { data, isLoading, error } = rspc.useQuery(['messages.messages']);
+  const { language } = useLanguage();
+  const messages = data?.messages;
+  const ref = useRef<null | HTMLDivElement>(null);
+
+  const [columnCount, setColumnCount] = useState(1);
+  const innerWidth =
+    columnCount * CARD_WIDTH + CARD_PADDING + columnCount * CARD_PADDING;
+
+  useLayoutEffect(() => {
+    const handleResize = () => {
+      if (ref.current !== null) {
+        const { width } = ref.current.getBoundingClientRect();
+        if (width >= 5 * CARD_WIDTH + 6 * CARD_PADDING) {
+          setColumnCount(5);
+        } else if (width >= 4 * CARD_WIDTH + 5 * CARD_PADDING) {
+          setColumnCount(4);
+        } else if (width >= 3 * CARD_WIDTH + 4 * CARD_PADDING) {
+          setColumnCount(3);
+        } else if (width >= 2 * CARD_WIDTH + 3 * CARD_PADDING) {
+          setColumnCount(2);
+        } else {
+          setColumnCount(1);
+        }
+      } else {
+        // fallback to window width
+        const width = window.innerWidth;
+        if (width >= 5 * CARD_WIDTH + 6 * CARD_PADDING) {
+          setColumnCount(5);
+        } else if (width >= 4 * CARD_WIDTH + 5 * CARD_PADDING) {
+          setColumnCount(4);
+        } else if (width >= 3 * CARD_WIDTH + 4 * CARD_PADDING) {
+          setColumnCount(3);
+        } else if (width >= 2 * CARD_WIDTH + 3 * CARD_PADDING) {
+          setColumnCount(2);
+        } else {
+          setColumnCount(1);
+        }
+      }
+    };
+    // first render needs to check if we can fit more columns
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, [ref.current]);
+
+  if (isLoading && !messages) {
+    return (
+      <>
+        <FeaturedSection />
+        <Box padding="1rem">
+          <Skeleton height="500px" rounded="1rem" />
+        </Box>
+      </>
+    );
+  }
+
+  if (error !== null|| !messages) {
+    return (
+      <Alert status="error" variant="solid">
+        <AlertIcon />
+        <AlertTitle>An error occurred while fetching resources</AlertTitle>
+        <AlertDescription>Please try reloading the page</AlertDescription>
+      </Alert>
+    );
+  }
+
+  return (
+    <>
+      <FeaturedSection />
       <Flex width="100%" ref={ref} justifyContent="center">
         <Box
           padding="1rem"
@@ -179,9 +188,9 @@ export default function Home() {
           columnGap="1rem"
           sx={{ columnCount: columnCount, columnWidth: CARD_WIDTH }}
         >
-          {messages?.map((message, idx) => (
+          {messages.map((message, idx) => (
             <MessageCard
-              key={message.messageID}
+              key={message.id}
               idx={idx}
               message={message}
               globalLanguage={language}
