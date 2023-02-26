@@ -13,11 +13,11 @@ FROM chef as app-builder
 ENV SQLX_OFFLINE=true
 COPY --from=builder /app/* .
 COPY . .
-RUN cargo build
-RUN ls /app/target/debug/
+RUN cargo build --release
+RUN ls /app/target/release/
 
 FROM debian:11-slim as runtime
 EXPOSE 4000
 WORKDIR app
-COPY --from=app-builder /app/target/debug/backend-next /usr/local/bin
+COPY --from=app-builder /app/target/release/backend-next /usr/local/bin
 ENTRYPOINT ["/usr/local/bin/backend-next"]

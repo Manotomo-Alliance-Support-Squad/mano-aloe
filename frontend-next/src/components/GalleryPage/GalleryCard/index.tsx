@@ -48,7 +48,7 @@ export default function GalleryCard(props: GalleryCardProps) {
           <Heading size="md">{title}</Heading>
           <Text>
             by{" "}
-            {artistLink !== "" ? (
+            {artistLink !== "" && artistLink !== null ? (
               <>
                 <Link href={artistLink}>{username}</Link>
                 <ExternalLinkIcon paddingLeft={1} />

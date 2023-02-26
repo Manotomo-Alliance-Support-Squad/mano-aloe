@@ -168,7 +168,7 @@ export default function Home() {
     );
   }
 
-  if (error !== null|| !messages) {
+  if (error !== null || !messages) {
     return (
       <Alert status="error" variant="solid">
         <AlertIcon />
@@ -212,6 +212,7 @@ export default function Home() {
           </ButtonGroup>
         </Center>
       </Box>
+      
     </>
   );
 }

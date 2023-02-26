@@ -2,6 +2,7 @@ import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 import brand from "./colors";
 import styles from "./styles";
 
+import Accordion from "./components/Accordion";
 import Skeleton from "./components/Skeleton";
 import Button from "./components/Button";
 import Heading from "./components/Heading";
@@ -15,6 +16,7 @@ export const theme = extendTheme(
     },
     styles,
     components: {
+      Accordion,
       Skeleton,
       Button,
       Heading,
