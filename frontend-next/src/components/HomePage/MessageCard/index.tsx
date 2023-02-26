@@ -59,7 +59,7 @@ interface MessageCardProps {
 export default function MessageCard(props: MessageCardProps) {
   const { message, idx, globalLanguage } = props;
 
-  const showTL = globalLanguage === LANGUAGE.JP;
+  const showTL = globalLanguage === LANGUAGE.JP && message.tl_msg;
 
   return (
     <SlideInOnVisible>
