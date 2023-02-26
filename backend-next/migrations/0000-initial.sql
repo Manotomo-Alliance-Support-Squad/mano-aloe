@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS gallery (
   username varchar(128) NOT NULL,
   title varchar(256) NOT NULL,
   art_link text NOT NULL,
-  artist_link text,
+  artist_link text
 );
 
 CREATE TABLE IF NOT EXISTS games (
@@ -23,5 +23,5 @@ CREATE TABLE IF NOT EXISTS games (
   game_description text NOT NULL,
   git_link text,
   game_link text NOT NULL,
-  thumbnail text,
+  thumbnail text
 );
