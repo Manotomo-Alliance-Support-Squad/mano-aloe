@@ -186,5 +186,12 @@ Website for the messages of support from the [Mano Aloe Support Squad (M.A.S.S)]
 
 _and many many more..._
 
+
+## Running with Docker
+
+To build all services and run them, run
+
+`docker-compose up`
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
